@@ -1,5 +1,5 @@
 {
-    "id": "9e9a2c80-166e-459e-8373-9c18268f323f",
+    "id": "226fd3b9-20ea-4ffe-acb9-62b3ed07749a",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "draw_window",

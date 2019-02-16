@@ -4,14 +4,16 @@
 view_enabled					= true;
 view_visible[0]					= true;
 
-global.view_width				= 240;
+global.view_width				= global.intended_width;
+global.view_height				= global.intended_height;
 width							= global.view_width;
-width_to						= width;
-global.view_height				= 135;
 height							= global.view_height;
+width_to						= width;
 height_to						= height;
 
-global.camera = camera_create();
+global.draw_ratio				= global.view_width / global.intended_width;
+
+global.camera					= camera_create();
 
 var vm = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);
 var pm = matrix_build_projection_ortho(global.view_width, global.view_height, 1, 32000);

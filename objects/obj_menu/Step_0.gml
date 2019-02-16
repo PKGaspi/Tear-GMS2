@@ -16,18 +16,18 @@ if (input_esc_p) {
 
 if (!global.pause) exit;
 
-input_up_p		= keyboard_check_pressed(global.key_up);
-input_down_p	= keyboard_check_pressed(global.key_down);
-input_left_p	= keyboard_check_pressed(global.key_left);
-input_left_h	= keyboard_check(global.key_left);
-input_right_p	= keyboard_check_pressed(global.key_right);
-input_right_h	= keyboard_check(global.key_right);
-input_enter_p	= keyboard_check_pressed(global.key_accept);
+var input_up_p		= keyboard_check_pressed(global.key_up);
+var input_down_p	= keyboard_check_pressed(global.key_down);
+var input_left_p	= keyboard_check_pressed(global.key_left);
+var input_left_h	= keyboard_check(global.key_left);
+var input_right_p	= keyboard_check_pressed(global.key_right);
+var input_right_h	= keyboard_check(global.key_right);
+var input_enter_p	= keyboard_check_pressed(global.key_accept);
 
-var ds_grid		= menu_pages[page];
-var ds_height	= ds_grid_height(ds_grid);
+var ds_grid			= menu_pages[page];
+var ds_height		= ds_grid_height(ds_grid);
 
-var v_move_p	= input_down_p - input_up_p;
+var v_move_p		= input_down_p - input_up_p;
 
 if (v_move_p != 0) {
 	menu_option[page] += v_move_p;

@@ -28,9 +28,9 @@ var slider_radious				= x_sprite_buffer / 4;
 draw_set_font(fnt_menu);
 
 var font_size					= font_get_size(fnt_menu);
-var text_scale_normal			= .022 * (gwidth / font_size);
-var text_scale_selected			= .028 * (gwidth / font_size);
-var text_scale_title			= .050 * (gwidth / font_size);
+var text_scale_normal			= 22;
+var text_scale_selected			= 28;
+var text_scale_title			= 50;
 
 var select_scale				= text_scale_selected / text_scale_normal;
 var select_offset				= x_sprite_buffer / 2;
@@ -46,7 +46,7 @@ var c_back						= c_black;
 var c_inside					= global.c_purple_0;
 
 // ---------- Background ----------
-draw_window(x_window, y_window, gwidth - x_window, gheight - y_window, 1, c_back, c_accent, c_inside, .8);
+draw_window_background(x_window, y_window, gwidth - x_window, gheight - y_window, 1, c_accent, c_inside, c_back, .8);
 
 // ---------- Title ----------
 draw_set_alpha(1);
@@ -54,8 +54,7 @@ draw_set_valign(fa_top);
 draw_set_halign(fa_middle);
 draw_set_color(c_selected);
 var text = ds_grid[# 4, ds_height - 1];
-draw_text_transformed(x_start, y_buffer_title, text[lang], text_scale_title, text_scale_title, 0);
-
+draw_text_size(x_start, y_buffer_title, text[lang], text_scale_title);
 
 // ---------- Left side ----------
 draw_set_color(c_unselected);
@@ -81,12 +80,12 @@ repeat (ds_height) {
 		x_offset = - select_offset;
 		draw_set_color(c_selected);
 		draw_sprite_ext(sprite, 0, x_left - x_sprite_buffer * 1.5 + x_offset, y_left, sprite_scale * select_scale, sprite_scale * select_scale, 0, -1, 1);
-		draw_text_transformed(x_left + x_offset, y_left, text[lang], text_scale_selected, text_scale_selected, 0);
+		draw_text_size(x_left + x_offset, y_left, text[lang], text_scale_selected);
 		draw_set_color(c_unselected);
 	}
 	else {
 		draw_sprite_ext(sprite, 0, x_left - x_sprite_buffer * 1.5 + x_offset, y_left, sprite_scale, sprite_scale, 0, c_unselected, 1);
-		draw_text_transformed(x_left + x_offset, y_left, text[lang], text_scale_normal, text_scale_normal, 0);
+		draw_text_size(x_left + x_offset, y_left, text[lang], text_scale_normal);
 	}
 	yy++;
 }
@@ -124,11 +123,11 @@ repeat (ds_height) {
 
 			if (selected) {
 				draw_set_color(c_selected);
-				draw_text_transformed(x_right, y_right, left_shift + current_array[current_val] + right_shift, text_scale_selected, text_scale_selected, 0);
+				draw_text_size(x_right, y_right, left_shift + current_array[current_val] + right_shift, text_scale_selected);
 				draw_set_color(c_unselected);
 			}
 			else {
-				draw_text_transformed(x_right, y_right, left_shift + current_array[current_val] + right_shift, text_scale_normal, text_scale_normal, 0);
+				draw_text_size(x_right, y_right, left_shift + current_array[current_val] + right_shift, text_scale_normal);
 			}
 			break;
 		}
@@ -143,13 +142,13 @@ repeat (ds_height) {
 				len = floor(len * select_scale);
 				draw_line(x_right, y_right, x_right + len, y_right);
 				draw_circle(x_right + (circle_pos * len), y_right, slider_radious, false);
-				draw_text_transformed(x_right + len + x_buffer_right, y_right, string(floor(circle_pos * 100)) + "%", text_scale_selected, text_scale_selected, 0);
+				draw_text_size(x_right + len + x_buffer_right, y_right, string(floor(circle_pos * 100)) + "%", text_scale_selected);
 				draw_set_color(c_unselected);
 			}
 			else {
 				draw_line(x_right, y_right, x_right + len, y_right);
 				draw_circle(x_right + (circle_pos * len), y_right, slider_radious, false);
-				draw_text_transformed(x_right + len + x_buffer_right, y_right, string(floor(circle_pos * 100)) + "%", text_scale_normal, text_scale_normal, 0);
+				draw_text_size(x_right + len + x_buffer_right, y_right, string(floor(circle_pos * 100)) + "%", text_scale_normal);
 			}
 			break;
 		}
@@ -160,12 +159,12 @@ repeat (ds_height) {
 				draw_set_color(c_selected);
 				scale *= select_scale;
 				draw_sprite_ext(toggle_sprite, current_val, x_right + toggle_buffer, y_right, scale, scale, 0, c_selected, 1);
-				draw_text_transformed(x_right + 3 * (toggle_buffer), y_right, boolean_to_yesno(current_val), text_scale_selected, text_scale_selected, 0);
+				draw_text_size(x_right + 3 * (toggle_buffer), y_right, boolean_to_yesno(current_val), text_scale_selected);
 				draw_set_color(c_unselected);
 			}
 			else {
 				draw_sprite_ext(toggle_sprite, current_val, x_right + toggle_buffer, y_right, scale, scale, 0, c_unselected, 1);
-				draw_text_transformed(x_right + 3 * (toggle_buffer), y_right, boolean_to_yesno(current_val), text_scale_normal, text_scale_normal, 0);
+				draw_text_size(x_right + 3 * (toggle_buffer), y_right, boolean_to_yesno(current_val), text_scale_normal);
 			}
 			break;
 		}
@@ -186,7 +185,7 @@ repeat (ds_height) {
 				draw_text(x_right, y_right, string_val);
 				draw_set_color(c_unselected);
 			}
-			draw_text_transformed(x_right, y_right, string_val, text_scale_normal, text_scale_normal, 0);
+			draw_text_size(x_right, y_right, string_val, text_scale_normal);
 		}
 	}
 	yy++;
