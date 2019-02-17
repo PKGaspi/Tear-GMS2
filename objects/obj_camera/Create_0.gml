@@ -11,6 +11,9 @@ height							= global.view_height;
 width_to						= width;
 height_to						= height;
 
+x								= global.view_width / 2;
+y								= global.view_height / 2;
+
 global.draw_ratio				= global.view_width / global.intended_width;
 
 global.camera					= camera_create();
