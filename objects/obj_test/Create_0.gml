@@ -1,4 +1,4 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-draw = true
+draw = false
 long_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ligula lacus. Vivamus sed laoreet turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque a metus non lacus vulputate vehicula non sed lectus. Mauris a felis a tellus cursus vehicula vitae in elit. Maecenas egestas porttitor ipsum a venenatis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec facilisis iaculis magna sit amet blandit. Mauris sapien lectus, laoreet mollis lacus ut, mollis feugiat sapien. Proin luctus lectus vitae erat molestie, eu suscipit erat ultricies. Fusce non enim sit amet justo consequat molestie at a ligula. Nulla hendrerit, leo vitae porttitor suscipit, nisl risus scelerisque quam, quis semper ex purus suscipit magna. Vestibulum sagittis nulla eu libero finibus molestie. Mauris id semper ipsum. Duis ullamcorper erat pulvinar justo dignissim gravida. Suspendisse vel est ultricies, eleifend velit et, laoreet nunc.";

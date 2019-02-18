@@ -23,7 +23,8 @@ var _y2 = argument3;
 var _text = argument4;
 var _options = argument5;
 var _actions = argument6;
-var _default_option = clamp(argument7, 0, array_length_1d(_options));
+var _n_actions = array_length_1d(_options);
+var _default_option = clamp(argument7, 0, _n_actions);
 
 var _border_scale = argument8;
 
@@ -52,6 +53,8 @@ with (instance_create_layer(0, 0, "Hidden", obj_window_question)) {
 	alpha_back = _alpha_back;
 	
 	active = true;
-	
+	select_bump = array_create(_n_actions);
+	select_bump_cap = 4;
+
 	alarm[0] = 0; // Do not destroy.
 }

@@ -5,6 +5,10 @@ audio_group_load(audiogroup_soundeffects);
 
 global.pause				= false;
 global.c_purple_0			= $952f5d;
+var c_hue					= color_get_hue(global.c_purple_0);
+var c_sat					= color_get_saturation(global.c_purple_0);
+var c_val					= color_get_value(global.c_purple_0);
+global.c_purple_1			= make_color_hsv(c_hue, c_sat + 50, c_val);
 
 config_load();
 config_save();

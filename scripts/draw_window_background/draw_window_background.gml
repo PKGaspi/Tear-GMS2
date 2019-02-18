@@ -22,9 +22,8 @@ var c_back = argument7;
 
 var back_alpha = argument8;
 
-// Save old color and alpha.
-var c_old = draw_get_color();
-var a_old = draw_get_alpha();
+// Save old drawing parameters.
+var d_par = save_drawing_parameters();
 
 // Background.
 draw_set_alpha(back_alpha);
@@ -34,6 +33,5 @@ draw_rectangle(0, 0, global.view_width, global.view_height, false);
 // Window.
 draw_window(x1, y1, x2, y2, border_scale, c_border, c_inside);
 
-// Restore old color and alpha.
-draw_set_color(c_old);
-draw_set_alpha(a_old);
+// Restore old drawing parameters.
+restore_drawing_parameters(d_par);
