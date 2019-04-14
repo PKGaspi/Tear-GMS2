@@ -41,7 +41,7 @@ ds_menu_settings = create_menu_page(
 	[["Change Language",			"Cambiar idioma"],			spr_settings_language,			menu_element_type.shift,					set_language,				get_language_num(global.language),	["English", "Español"]		],
 	[["Video settings",				"Ajustes de vídeo"],		spr_settings_video,				menu_element_type.page_transfer,			menu_page.video																		],
 	[["Audio settings",				"Ajustes de sonido"],		spr_settings_audio,				menu_element_type.page_transfer,			menu_page.audio																		],
-	[["Control settings",			"Ajustes de controles"],	spr_settings_control,			menu_element_type.page_transfer,			menu_page.controls																	],
+	[["Control settings",			"Controles"],	spr_settings_control,			menu_element_type.page_transfer,			menu_page.controls																	],
 	[["Misc settings",				"Otros ajustes"],			spr_settings_other,				menu_element_type.page_transfer,			menu_page.misc																		],
 	[["Back",						"Atrás"],					spr_back,						menu_element_type.page_transfer,			menu_page.pause,			["Settings", "Ajustes"]									]
 );
