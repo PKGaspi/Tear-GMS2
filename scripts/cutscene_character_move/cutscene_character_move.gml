@@ -5,6 +5,8 @@
 /// @arg3 relative? Wether the x and y coordinates are relative or absolute.
 /// @arg4 spd The speed of the movement.
 
+if (global.pause) exit;
+
 var obj = argument0;
 var relative = argument3;
 var spd = argument4;

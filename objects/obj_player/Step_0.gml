@@ -1,6 +1,7 @@
 /// @description Movement and a lot more.
-if (global.pause) exit;
+if (global.pause || global.cutscene) exit; // Finish if movement is not allowed.
 
+// Inputs.
 var h_input_h						= keyboard_check(global.key_right) - keyboard_check(global.key_left);
 var v_input_h						= keyboard_check(global.key_down) - keyboard_check(global.key_up);
 var run_input_h						= keyboard_check(global.key_run);
