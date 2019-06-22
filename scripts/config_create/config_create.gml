@@ -1,12 +1,12 @@
 /// @desc Creates a configuration file with default values.
 
-conf = ds_map_create();
+var conf = ds_map_create();
 
 // Language.
-conf[? "language"] = os_get_language();
+conf[? "language"]			 = os_get_language();
 
 // Video.
-conf[? "resolution"] = 1;
+conf[? "resolution"]		= 1;
 
 conf[? "fullscreen"]		= false;
 conf[? "antialiasing"]		= 0;

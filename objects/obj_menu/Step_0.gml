@@ -5,12 +5,16 @@ if (input_esc_p) {
 	page = 0;
 	global.pause = !global.pause;
 	if (global.pause) {
+		audio_play_sound(snd_menu_enter, 1, false);
 		var i = 0;
 		var array_len = array_length_1d(menu_pages);
 		repeat (array_len) {
 			menu_option[i] = 0;
 			i++;
 		}
+	}
+	else {
+		audio_play_sound(snd_menu_leave, 1, false);
 	}
 }
 
@@ -30,6 +34,7 @@ var ds_height		= ds_grid_height(ds_grid);
 var v_move_p		= input_down_p - input_up_p;
 
 if (v_move_p != 0) {
+	audio_play_sound(snd_menu_move, 1, false);
 	menu_option[page] += v_move_p;
 	if (menu_option[page] > ds_height - 1) menu_option[page] = 0; 
 	if (menu_option[page] < 0) menu_option[page] = ds_height - 1;
@@ -44,8 +49,12 @@ else if (input_enter_p) {
 		case menu_element_type.page_transfer: {
 			var menu_entry = menu_option[page];
 			if (menu_entry == ds_height - 1) { // If it's the last entry.
+				audio_play_sound(snd_menu_leave, 1, false);
 				config_save();
 				menu_option[page] = 0; // Don't save back as previous entry.
+			}
+			else {
+				audio_play_sound(snd_menu_enter, 1, false);
 			}
 			page = ds_grid[# 3, menu_entry];
 			break;
@@ -77,9 +86,17 @@ if (h_move_h != 0) {
 if (h_move_p != 0) {
 	switch (ds_grid[# 2, menu_option[page]]) {
 		case menu_element_type.shift: {
-			var current_val = ds_grid[# 4, menu_option[page]];
+			var new_val = ds_grid[# 4, menu_option[page]] + h_move_p;
 			var current_array = ds_grid[# 5, menu_option[page]];
-			ds_grid[# 4, menu_option[page]] = clamp(current_val + h_move_p, 0, array_length_1d(current_array) - 1);
+			var current_len = array_length_1d(current_array);
+			
+			if (0 <= new_val && new_val < current_len) {
+				audio_play_sound(snd_menu_enter, 1, false);
+			}
+			else {
+				audio_play_sound(snd_menu_leave, 1, false);
+			}
+			ds_grid[# 4, menu_option[page]] = clamp(new_val, 0, current_len - 1);
 			script_execute(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 			break;
 		}

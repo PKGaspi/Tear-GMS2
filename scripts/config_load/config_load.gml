@@ -1,15 +1,8 @@
 /// @desc Loads all config into global variables.
-// Read the config file.
 
-if (file_exists("config.ini")) {
-	global.config = ds_map_secure_load("config.ini");
-}
-else {
-	global.config = config_create();
-	config_save();
-}
+// Copy config into global.config ds map.
+config_open();
 
-// /*
 //ini_open("config.ini");
 
 // Language.
@@ -37,6 +30,7 @@ global.key_right			= global.config[? "key_right"];
 global.key_up				= global.config[? "key_up"];
 global.key_down				= global.config[? "key_down"];
 
+ds_map_destroy(global.config);
 
 // Apply changes if any.
 window_set_fullscreen(global.fullscreen);
@@ -45,5 +39,3 @@ set_antialiasing(global.antialiasing);
 audio_master_gain(global.master_volume);
 audio_group_set_gain(audiogroup_music, global.music_volume, 0);
 audio_group_set_gain(audiogroup_soundeffects, global.sound_volume, 0);
-
-// */
