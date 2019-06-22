@@ -23,9 +23,9 @@ enum menu_element_type {
 
 var aa_array;
 var i = 0;
-var array_len = array_length_1d(global.antialiasing_values);
+var array_len = array_length_1d(global.ANTIALIASING_VALUES);
 repeat (array_len) {
-	aa_array[i] = string(global.antialiasing_values[i]) + "x";
+	aa_array[i] = string(global.ANTIALIASING_VALUES[i]) + "x";
 	i++;
 }
 

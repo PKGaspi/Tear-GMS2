@@ -4,8 +4,8 @@
 view_enabled					= true;
 view_visible[0]					= true;
 
-global.view_width				= global.intended_width;
-global.view_height				= global.intended_height;
+global.view_width				= global.INTENDED_WIDTH;
+global.view_height				= global.INTENDED_HEIGHT;
 width							= global.view_width;
 height							= global.view_height;
 width_to						= width;
@@ -14,7 +14,7 @@ height_to						= height;
 x								= global.view_width / 2;
 y								= global.view_height / 2;
 
-global.draw_ratio				= global.view_width / global.intended_width;
+global.draw_ratio				= global.view_width / global.INTENDED_WIDTH;
 
 global.camera					= camera_create();
 
@@ -36,7 +36,7 @@ zoom_sp							= 0;
 
 // Setting up the game window and application surface.
 // window_resize(global.display_width / 2, global.display_height / 2);
-surface_resize(application_surface, global.display_width, global.display_height);
+surface_resize(application_surface, global.DISPLAY_WIDTH, global.DISPLAY_HEIGHT);
 
 display_set_gui_size(global.view_width, global.view_height);
 alarm[0] = 1; // Set v-sync and aa.

@@ -607,6 +607,14 @@
             }
         },
         {
+            "Key": "a2c8e150-b191-4055-9756-12efe1d19355",
+            "Value": {
+                "id": "c3767438-43c5-453e-95d4-ededa009f9dd",
+                "resourcePath": "scripts\\config_create\\config_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a3a7f005-3c6e-4195-b3d8-2af0a756ceba",
             "Value": {
                 "id": "2b49b581-ec16-46e7-8556-47391e934067",
@@ -1051,6 +1059,7 @@
         "528b7d54-f143-46a4-833d-6b3e689bf38b",
         "65be8539-fa83-4dc3-a531-ca1ba41813ec",
         "92ab53d1-d3d8-4d8a-8d12-44e6f0a1894c",
+        "a2c8e150-b191-4055-9756-12efe1d19355",
         "808b7a94-0dac-454d-bd28-2e5032bc1240",
         "3d20ba32-ecfb-4556-9937-617fcf90a110",
         "3084b759-21b5-4a73-8328-f5bbd270cbaa",

@@ -6,5 +6,5 @@ if (instance_exists(obj_camera) && object_index != obj_camera) {
 }
 else if (object_index == obj_camera) {
 	global.antialiasing = argument0;
-	display_reset(global.antialiasing_values[global.antialiasing], global.vsync);
+	display_reset(ANTIALIASING_VALUES[global.antialiasing], global.vsync);
 }
