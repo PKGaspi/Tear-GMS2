@@ -1,3 +1,4 @@
+draw_set_alpha(1);
 var i = 0;
 repeat (spr_layer_type.height) {
 	if (spr_layers[i] != noone) {

@@ -3,8 +3,6 @@
 // Copy config into global.config ds map.
 config_open();
 
-//ini_open("config.ini");
-
 // Language.
 global.language				= global.config[? "language"];
 

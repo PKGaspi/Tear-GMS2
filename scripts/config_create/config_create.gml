@@ -1,4 +1,5 @@
 /// @desc Creates a configuration file with default values.
+/// @ret config A default configuration ds_map.
 
 var conf = ds_map_create();
 

@@ -5,8 +5,9 @@ audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_soundeffects);
 
 // Control variables.
-global.pause				= false;
-global.cutscene				= false;
+global.pause				= false; // Whether the game is paused.
+global.cutscene				= false; // Whether the game is running a cutscene.
+global.hacked				= false; // Whether some secure file is modified.
 
 // Video constants.
 global.INTENDED_WIDTH		= 240;
