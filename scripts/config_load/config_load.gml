@@ -21,12 +21,13 @@ global.sound_volume			= clamp(global.config[? "sound_volume"], 0, 100);
 global.audio_muted			= bool(global.config[? "audio_muted"]);
 
 // Control.
-global.key_run				= global.config[? "key_run"];
-global.key_accept			= global.config[? "key_accept"];
 global.key_left				= global.config[? "key_left"];
 global.key_right			= global.config[? "key_right"];
 global.key_up				= global.config[? "key_up"];
 global.key_down				= global.config[? "key_down"];
+global.key_run				= global.config[? "key_run"];
+global.key_accept			= global.config[? "key_accept"];
+global.key_jump				= global.config[? "key_jump"];
 
 ds_map_destroy(global.config);
 
@@ -34,6 +35,4 @@ ds_map_destroy(global.config);
 window_set_fullscreen(global.fullscreen);
 set_resolution(global.resolution);
 set_antialiasing(global.antialiasing);
-audio_master_gain(global.master_volume);
-audio_group_set_gain(audiogroup_music, global.music_volume, 0);
-audio_group_set_gain(audiogroup_soundeffects, global.sound_volume, 0);
+set_volume();

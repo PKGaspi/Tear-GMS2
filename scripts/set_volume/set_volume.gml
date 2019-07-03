@@ -1,24 +1,5 @@
-/// @desc Changes volume to a given value.
-/// @arg New value.
+/// @desc Changes volume to the ones in the global variables.
 
-var type = menu_option[page];
-
-// TO-DO: Put testing sounds.
-
-switch (type) {
-	case 0: {
-		global.master_volume = argument0;
-		audio_master_gain(global.master_volume);
-		break;
-	}
-	case 1: {
-		global.music_volume = argument0;
-		audio_group_set_gain(audiogroup_music, global.music_volume, 0);
-		break;
-	}
-	case 2: {
-		global.sound_volume = argument0;
-		audio_group_set_gain(audiogroup_soundeffects, global.sound_volume, 0);
-		break;
-	}
-}
+audio_master_gain(get_volume(global.master_volume));
+audio_group_set_gain(audiogroup_music, get_volume(global.music_volume), 0);
+audio_group_set_gain(audiogroup_soundeffects, get_volume(global.sound_volume), 0);

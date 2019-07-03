@@ -19,14 +19,12 @@ name				= "Keia";
 age					= 17;
 
 // ----------- MOVEMENT -----------
-h_speed				= 1;
-v_speed				= 1;
-h_run_extra_speed	= 1.5;
-v_run_extra_speed	= 1.5;
+// TODO: Adjust values.
+move_speed				= 1;
+jump_speed				= 4;
 
-dir					= 0;
+grav						= -.3;
+move_speed_run_multiplier	= 1.5;
 
-x_move				= 0;
-y_move				= 0;
-
+// Temp.
 obj_camera.follow	= self;

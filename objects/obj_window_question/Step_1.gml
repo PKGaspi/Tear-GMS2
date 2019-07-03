@@ -7,7 +7,7 @@ var input_up_p		= keyboard_check_pressed(global.key_up);
 var input_down_p	= keyboard_check_pressed(global.key_down);
 var input_left_p	= keyboard_check_pressed(global.key_left);
 var input_right_p	= keyboard_check_pressed(global.key_right);
-var input_enter_p	= keyboard_check_pressed(global.key_accept);
+var input_accept_p	= keyboard_check_pressed(global.key_accept);
 
 var h_move_p		= input_right_p - input_left_p;
 
@@ -34,7 +34,7 @@ repeat (actions_len) {
 }
 
 // Execute action.
-if (input_enter_p) {
+if (input_accept_p) {
 	script_execute(actions[selected]);
 	instance_destroy(); // Closes the menu.
 }

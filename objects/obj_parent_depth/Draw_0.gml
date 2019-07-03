@@ -1,2 +1,2 @@
-/// @description Don't draw itself.
-//
+/// @description Draw itself by default.
+draw_self();

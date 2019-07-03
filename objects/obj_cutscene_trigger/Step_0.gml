@@ -1,9 +1,6 @@
 /// @description Cutscene trigger condition.
-
-//TODO: Add condition here.
-if (!instance_exists(obj_cutscene)) {
-	if (keyboard_check_pressed(vk_space)) {
-		cutscene_create(scene_info);
-		instance_destroy();
-	}
+// TODO: Add condition here.
+if (!global.cutscene && false) {
+	cutscene_create(scene_info);
+	instance_destroy();
 }

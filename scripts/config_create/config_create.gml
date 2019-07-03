@@ -22,9 +22,10 @@ conf[? "audio_muted"]		= false;
 // Control.
 conf[? "key_run"]			= vk_control;
 conf[? "key_accept"]		= vk_enter;
-conf[? "key_left"]			= vk_left;
-conf[? "key_right"]			= vk_right;
-conf[? "key_up"]			= vk_up;
-conf[? "key_down"]			= vk_down;
+conf[? "key_left"]			= ord("A");
+conf[? "key_right"]			= ord("D");
+conf[? "key_up"]			= ord("W");
+conf[? "key_down"]			= ord("S");
+conf[? "key_jump"]			= vk_space;
 
 return conf;
