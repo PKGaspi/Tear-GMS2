@@ -1,5 +1,8 @@
 /// @description Initialize everything.
 
+// Destroy if there is another instance of this object.
+event_inherited();
+
 // Load audio groups.
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_soundeffects);
@@ -52,4 +55,9 @@ instance_create_layer(x, y, "Hidden", obj_menu);
 instance_create_layer(x, y, "Hidden", obj_draw);
 
 alarm[0] = 2; // Fixes fullscreen to window size.
+
+if (debug_mode) {
+	instance_create_layer(0, 0, "Hidden", obj_debug);
+	room_goto(rm_test);
+}
 // */

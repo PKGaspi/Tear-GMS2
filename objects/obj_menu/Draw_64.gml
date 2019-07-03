@@ -79,12 +79,16 @@ repeat (ds_height) {
 	if (selected) {
 		x_offset = - select_offset;
 		draw_set_color(c_selected);
-		draw_sprite_ext(sprite, 0, x_left - x_sprite_buffer * 1.5 + x_offset, y_left, sprite_scale * select_scale, sprite_scale * select_scale, 0, -1, 1);
+		if ( sprite != noone) {
+			draw_sprite_ext(sprite, 0, x_left - x_sprite_buffer * 1.5 + x_offset, y_left, sprite_scale * select_scale, sprite_scale * select_scale, 0, -1, 1);
+		}
 		draw_text_size(x_left + x_offset, y_left, text[lang], text_scale_selected);
 		draw_set_color(c_unselected);
 	}
 	else {
-		draw_sprite_ext(sprite, 0, x_left - x_sprite_buffer * 1.5 + x_offset, y_left, sprite_scale, sprite_scale, 0, c_unselected, 1);
+		if ( sprite != noone) {
+			draw_sprite_ext(sprite, 0, x_left - x_sprite_buffer * 1.5 + x_offset, y_left, sprite_scale, sprite_scale, 0, c_unselected, 1);
+		}
 		draw_text_size(x_left + x_offset, y_left, text[lang], text_scale_normal);
 	}
 	yy++;

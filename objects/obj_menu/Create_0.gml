@@ -1,5 +1,8 @@
 /// @description Variables for the menu.
 
+// Destroy if there is another instance of this object.
+event_inherited();
+
 enum menu_page {
 	pause,
 	settings,

@@ -1,5 +1,5 @@
 /// @description Movement and a lot more.
-if (global.pause || global.cutscene) exit; // Finish if movement is not allowed.
+if (global.pause || global.cutscene || global.debug_menu) exit; // Finish if movement is not allowed.
 
 // Inputs.
 var h_input_h						= keyboard_check(global.key_right) - keyboard_check(global.key_left);
@@ -44,5 +44,3 @@ z += z_move;
 // Reset movement at the end of each frame.
 x_move = 0;
 y_move = 0;
-
-show_debug_message(string(z) + " - " + string(z_move) + " - " + string(y));

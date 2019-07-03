@@ -1,5 +1,7 @@
 /// @description Camera values initialization.
 
+// Destroy if there is another instance of this object.
+event_inherited();
 // Setting up the camera.
 view_enabled					= true;
 view_visible[0]					= true;
