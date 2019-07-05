@@ -16,7 +16,6 @@ var accept_p = keyboard_check_pressed(global.key_accept) || mouse_check_button_p
 selected += v_move_p;
 if (selected >= menu_lines) selected = 0;
 if (selected <= -1) selected = menu_lines - 1;
-show_debug_message(string(selected));
 
 switch (selected) {
 	case 0: // Create instance of:
@@ -42,6 +41,12 @@ switch (selected) {
 	if (accept_p) {
 		var inst = instance_position(mouse_x, mouse_y, all);
 		instance_destroy(inst, false);
+	}
+	break;
+	
+	case 3: // Delete instance in mouse:
+	if (accept_p) {
+		game_restart();
 	}
 	break;
 }
