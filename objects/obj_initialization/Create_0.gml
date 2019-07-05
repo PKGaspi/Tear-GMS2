@@ -8,9 +8,12 @@ audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_soundeffects);
 
 // Control variables.
-global.pause				= false; // Whether the game is paused.
-global.cutscene				= false; // Whether the game is running a cutscene.
-global.hacked				= false; // Whether some secure file is modified.
+global.pause				= false; // Whether the game is paused or not.
+global.cutscene				= false; // Whether a cutscene is running or not.
+global.debug_menu			= false; // Whether the debug menu is active or not.
+global.hacked				= false; // Whether some secure file is modified or not.
+global.initialized			= false; // Whether the game has already initialized befor.
+global.cameras				= array_create(0); // Cameras array.
 
 // Video constants.
 global.INTENDED_WIDTH		= 240;
@@ -56,8 +59,4 @@ instance_create_layer(x, y, "Hidden", obj_draw);
 
 alarm[0] = 2; // Fixes fullscreen to window size.
 
-if (debug_mode) {
-	instance_create_layer(0, 0, "Hidden", obj_debug);
-	room_goto(rm_test);
-}
 // */

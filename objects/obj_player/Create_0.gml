@@ -17,6 +17,7 @@ spr_layers[spr_layer_type.jacket]		= spr_jacket_000_d;
 // ----------- INFO -----------
 name				= "Keia";
 age					= 17;
+player_id			= instance_number(object_index) - 1;
 
 // ----------- MOVEMENT -----------
 // TODO: Adjust values.
@@ -27,4 +28,5 @@ grav						= -.3;
 move_speed_run_multiplier	= 1.5;
 
 // Temp.
-obj_camera.follow	= self;
+//global.cameras[player_id] = instance_create_layer(x, y, "Hidden", obj_camera);
+camera_follow_me(player_id);

@@ -30,7 +30,6 @@ if (global.debug_menu) {
 
 }
 
-
 if (show_info) {
 	// Draw info and stats.
 	draw_text_size(0, line * text_line_space, "---------- INFO ----------", text_scale); line++;
@@ -38,5 +37,6 @@ if (show_info) {
 	draw_text_size(0, line * text_line_space, "Mouse position: " + string(mouse_x) + " " + string(mouse_y), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "FPS: " + string(fps) + " | Number of instancese: " + string(instance_count), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "Display resolution: " + string(global.DISPLAY_WIDTH) + "x" + string(global.DISPLAY_HEIGHT) + " | Window size: " + string(global.RESOLUTIONS[0, global.resolution]) + "x" + string(global.RESOLUTIONS[1, global.resolution]) + " | Fullscreen: " + boolean_to_yesno(global.fullscreen), text_scale); line++;
+	draw_text_size(0, line * text_line_space, "Camera position: " + string(global.cameras[0].x) + " " + string(global.cameras[0].y) + " | Camera following: " + string(global.cameras[0].follow) + " | Camera zoom: " + string(global.cameras[0].zoom), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "Version: v" + string(GM_version) + " | Build date: " + date_datetime_string(GM_build_date), text_scale); line++;
 }
