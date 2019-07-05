@@ -23,6 +23,8 @@ if (global.debug_menu) {
 	draw_text_size(2, line * text_line_space, "Create instance of an object under the mouse. ----------- <" + object_get_name(obj_index) + ">", text_scale); line++;
 	draw_text_size(2, line * text_line_space, "Go to selected room. ----------- <" + room_get_name(rm_index) + ">", text_scale); line++;
 	draw_text_size(2, line * text_line_space, "Destroy instance under mouse.", text_scale); line++;
+	draw_text_size(2, line * text_line_space, "Make the camera follow an object under the mouse.", text_scale); line++;
+	draw_text_size(2, line * text_line_space, "Teleport player under mouse  position.", text_scale); line++;
 	draw_text_size(2, line * text_line_space, "Restart the game.", text_scale); line++;
 
 	// Draw a circle that marks the selected entry.
