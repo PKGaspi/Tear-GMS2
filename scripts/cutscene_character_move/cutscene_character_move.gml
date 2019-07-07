@@ -28,7 +28,7 @@ var yy = y_dest;
 with (obj) {
 	// TODO: Set moving sprite index here.
 	
-	if (point_distance(x, y, xx, yy) >= spd) {
+	if (spd != 0 && point_distance(x, y, xx, yy) >= spd) {
 		var dir = point_direction(x, y, xx, yy);
 		var ldirx = lengthdir_x(spd, dir);
 		var ldiry = lengthdir_y(spd, dir);

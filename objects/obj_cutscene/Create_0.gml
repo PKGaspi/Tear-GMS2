@@ -1,4 +1,5 @@
 /// @description Variable initialization.
+event_inherited();
 
 global.cutscene = true;
 

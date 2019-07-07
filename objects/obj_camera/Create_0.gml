@@ -1,4 +1,5 @@
 /// @description Camera values initialization.
+event_inherited();
 
 // Destroy if there is another instance of this object.
 

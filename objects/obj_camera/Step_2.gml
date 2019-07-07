@@ -23,8 +23,8 @@ if (width != width_to || height != height_to) {
 if (follow != noone && instance_exists(follow)) {
 	var follow_x = follow.x;
 	var follow_y = follow.y;
-	if (!(follow_x - width / 2 <= 0 || follow_x + width / 2 >= room_width)) x_to = follow_x;
-	if (!(follow_y - height / 2 <= 0 || follow_y + height / 2 >= room_height)) y_to = follow_y;
+	x_to = follow_x;
+	y_to = follow_y;
 	x += (x_to - x) / delay;
 	y += (y_to - y) / delay;
 	

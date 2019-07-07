@@ -60,7 +60,14 @@ switch (selected) {
 	}
 	break;
 	
-	case 5: // Delete instance in mouse:
+	case 5: // Show/hide invisible objects:
+	if (accept_p) {
+		with(obj_parent_invisible) visible = !visible;
+		show_invisible = !show_invisible;
+	}
+	break;
+	
+	case 6: // Delete instance in mouse:
 	if (accept_p) {
 		game_restart();
 	}

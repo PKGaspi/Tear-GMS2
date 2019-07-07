@@ -10,3 +10,6 @@ camera_set_proj_mat(camera, pm);
 
 view_set_visible(camera_index, true);
 view_set_camera(camera_index, camera);
+
+x = follow.x;
+y = follow.y;
