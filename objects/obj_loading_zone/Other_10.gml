@@ -18,6 +18,7 @@ cutscene_create([
 	[cutscene_character_move, player_id, x_move, y_move, true, player_spd],
 	[cutscene_wait, .3],
 	[cutscene_room_goto, rm],
+	[cutscene_wait, fade_hold],
 	[cutscene_screen_fade, 1],
 	[cutscene_character_move, player_id, x_new, y_new, false, 0],
 	[cutscene_character_move, player_id, x_move, y_move, true, player_spd],

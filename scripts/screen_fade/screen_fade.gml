@@ -14,5 +14,6 @@ else {
 		frames = argument[0] * room_speed;
 		color = argument[1];
 		fade = 1; // Fade out.
+		alarm[0] = 0;
 	}
 }

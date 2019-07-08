@@ -10,9 +10,12 @@ if (keyboard_check_pressed(vk_f11)) {
 if (!global.debug_menu) exit;
 
 var h_move_p = keyboard_check_pressed(global.key_right) - keyboard_check_pressed(global.key_left);
+var h_move_h = keyboard_check(global.key_right) - keyboard_check(global.key_left);
 var v_move_p = keyboard_check_pressed(global.key_down) - keyboard_check_pressed(global.key_up);
 var accept_p = keyboard_check_pressed(global.key_accept) || mouse_check_button_pressed(mb_left);
 var accept_h = mouse_check_button(mb_right);
+var run_h	 = keyboard_check(global.key_run);
+
 selected += v_move_p;
 if (selected >= menu_lines) selected = 0;
 if (selected <= -1) selected = menu_lines - 1;
@@ -60,14 +63,26 @@ switch (selected) {
 	}
 	break;
 	
-	case 5: // Show/hide invisible objects:
+	case 5: // Zoom camera in and out:
+	if (run_h) {
+		global.cameras[0].zoom += h_move_h * .02;
+	}
+	else {
+		global.cameras[0].zoom += h_move_p * .01;
+	}
+	if (accept_p) {
+		camera_zoom(global.cameras[0].zoom, 0);
+	}
+	break;
+	
+	case 6: // Show/hide invisible objects:
 	if (accept_p) {
 		with(obj_parent_invisible) visible = !visible;
 		show_invisible = !show_invisible;
 	}
 	break;
 	
-	case 6: // Delete instance in mouse:
+	case 7: // Delete instance in mouse:
 	if (accept_p) {
 		game_restart();
 	}

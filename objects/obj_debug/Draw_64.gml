@@ -25,6 +25,7 @@ if (global.debug_menu) {
 	draw_text_size(2, line * text_line_space, "Destroy instance under mouse.", text_scale); line++;
 	draw_text_size(2, line * text_line_space, "Make the camera follow an object under the mouse.", text_scale); line++;
 	draw_text_size(2, line * text_line_space, "Teleport player under mouse  position.", text_scale); line++;
+	draw_text_size(2, line * text_line_space, "Zoom camera in (right) and out (left). Camera zoom: " + string(global.cameras[0].zoom), text_scale); line++;
 	draw_text_size(2, line * text_line_space, "Show / hide invisible objects.", text_scale); line++;
 	draw_text_size(2, line * text_line_space, "Restart the game.", text_scale); line++;
 
@@ -35,11 +36,12 @@ if (global.debug_menu) {
 
 if (show_info) {
 	// Draw info and stats.
+	var c = global.cameras[0];
 	draw_text_size(0, line * text_line_space, "---------- INFO ----------", text_scale); line++;
 	draw_text_size(0, line * text_line_space, "Current room: " + room_get_name(room) + " | Room size: " + string(room_width) + "x" + string(room_height), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "Mouse position: " + string(mouse_x) + " " + string(mouse_y), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "FPS: " + string(fps) + " | Number of instancese: " + string(instance_count), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "Display resolution: " + string(global.DISPLAY_WIDTH) + "x" + string(global.DISPLAY_HEIGHT) + " | Window size: " + string(global.RESOLUTIONS[0, global.resolution]) + "x" + string(global.RESOLUTIONS[1, global.resolution]) + " | Fullscreen: " + boolean_to_yesno(global.fullscreen), text_scale); line++;
-	draw_text_size(0, line * text_line_space, "Camera position: " + string(global.cameras[0].x) + " " + string(global.cameras[0].y) + " | Camera following: " + string(global.cameras[0].follow) + " | Camera zoom: " + string(global.cameras[0].zoom), text_scale); line++;
+	draw_text_size(0, line * text_line_space, "Camera position: " + string(c.x) + " " + string(c.y) + " | Camera following: " + string(c.follow) + " | Camera zoom: " + string(c.zoom), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "Version: v" + string(GM_version) + " | Build date: " + date_datetime_string(GM_build_date), text_scale); line++;
 }

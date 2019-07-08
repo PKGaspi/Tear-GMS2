@@ -12,5 +12,5 @@ rm_index					= 0;
 show_invisible				= true;
 
 selected					= 0;
-menu_lines					= 7; // The number of entries in the debug menu.
+menu_lines					= 8; // The number of entries in the debug menu.
 info_lines					= 7; // The number of info lines in the debug menu.

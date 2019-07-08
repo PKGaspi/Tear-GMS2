@@ -12,15 +12,13 @@ height							= global.view_height;
 width_to						= width;
 height_to						= height;
 
-//x								= global.view_width / 2;
-//y								= global.view_height / 2;
-
 global.draw_ratio				= global.view_width / global.INTENDED_WIDTH;
 
 camera							= camera_create();
 camera_index					= array_length_1d(global.cameras);
 global.cameras[camera_index]	= self;
 
+// Destroy the camera that is going to be replaced.
 camera_destroy(view_camera[camera_index]);
 
 // Setting up zoom and camera movement.
@@ -32,7 +30,6 @@ zoom							= 1;
 zoom_sp							= 0;
 
 // Setting up the game window and application surface.
-// window_resize(global.display_width / 2, global.display_height / 2);
 surface_resize(application_surface, global.DISPLAY_WIDTH, global.DISPLAY_HEIGHT);
 
 display_set_gui_size(global.view_width, global.view_height);

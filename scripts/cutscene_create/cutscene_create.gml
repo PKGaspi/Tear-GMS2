@@ -1,6 +1,7 @@
 /// @desc Creates a cutscene with the given scenes.
 /// @arg0 scene_info
 
+if (argument0 == -1) exit;
 var cutscene = instance_create_layer(0, 0, "Hidden", obj_cutscene);
 with (cutscene) {
 	scene_info = argument0;

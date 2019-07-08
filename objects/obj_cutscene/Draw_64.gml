@@ -1,6 +1,6 @@
 /// @description Draw black bars if activated.
 if (bars) {
-	// TODO: improve bars animation.
+	// TODO: improve bars animation. Maybe move this to a dedicated object.
 	var bar_height = global.view_height / (10 * sqrt(bars_timer + 1));
 	draw_set_color(c_black);
 	draw_set_alpha(1);

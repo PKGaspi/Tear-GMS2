@@ -2,7 +2,7 @@
     "id": "d26644a5-6865-4ce9-92b0-d7151620f5a8",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_room_loadingbox",
+    "name": "obj_loading_zone",
     "eventList": [
         {
             "id": "7bdb7f21-217f-4a6f-ba94-ffd5d34ea463",
