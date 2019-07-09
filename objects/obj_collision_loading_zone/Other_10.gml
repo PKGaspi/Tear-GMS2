@@ -24,4 +24,4 @@ cutscene_create([
 	[cutscene_character_move, player_id, x_move, y_move, true, player_spd],
 ]);
 
-instance_destroy(self, false); // Destroy this trigger to avoid duplication.
+//instance_destroy(self, false); // Destroy this trigger to avoid duplication.

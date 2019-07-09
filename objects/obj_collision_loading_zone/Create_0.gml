@@ -1,4 +1,6 @@
 /// @description Variable initialization.
+
+// Inherit the parent event
 event_inherited();
 
 // Loading zone atributes.
@@ -17,4 +19,6 @@ y_relative = true;
 // Auxiliar variables.
 active = false;
 
+// Debug only.
+image_index = 0;
 alarm[0] = 1;

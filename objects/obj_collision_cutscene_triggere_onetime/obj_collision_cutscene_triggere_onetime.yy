@@ -1,33 +1,33 @@
 {
-    "id": "57aec59e-29b6-4c03-9fde-91f5511dc815",
+    "id": "fa965d8a-c54f-4abe-a788-a946c708fb8f",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_cutscene_trigger",
+    "name": "obj_collision_cutscene_triggere_onetime",
     "eventList": [
         {
-            "id": "4c156a4d-9a22-4e46-8958-27e5f4f34690",
+            "id": "61f5468f-6bd9-4cd4-8d0c-b5d53f303a4a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 10,
+            "eventtype": 7,
+            "m_owner": "fa965d8a-c54f-4abe-a788-a946c708fb8f"
+        },
+        {
+            "id": "b9b86a15-67c5-4376-b26c-ef83a188c6df",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "57aec59e-29b6-4c03-9fde-91f5511dc815"
-        },
-        {
-            "id": "3fb6e853-7ab9-4da7-8f7c-ad1612650de1",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "57aec59e-29b6-4c03-9fde-91f5511dc815"
+            "m_owner": "fa965d8a-c54f-4abe-a788-a946c708fb8f"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "57aec59e-29b6-4c03-9fde-91f5511dc815",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -43,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "353bebd4-3e6e-4745-8797-401253449e96",
     "visible": true
 }

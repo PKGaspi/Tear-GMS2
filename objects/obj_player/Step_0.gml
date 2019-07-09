@@ -47,7 +47,7 @@ y_move = 0;
 
 // Collisions.
 #region // Loading box colision.
-var box = instance_place(x, y, obj_loading_zone);
+var box = instance_place(x, y, obj_parent_collision_box);
 if (box != noone) {
 	with (box) event_perform(ev_other, ev_user0);
 }

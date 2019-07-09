@@ -9,7 +9,7 @@ if (alpha <= abs(fade) && active) {
 		alpha = fade;
 	}
 	if (alpha <= 0) {
-		instance_destroy();
+		instance_destroy(self, false);
 	}
 }
 
