@@ -4,7 +4,7 @@
 var d_par = save_drawing_parameters();
 
 // Draw main window shadow.
-draw_window(x1 + global.draw_ratio, y1 + global.draw_ratio, x2 + global.draw_ratio, y2 + global.draw_ratio, 1, c_black, c_black);
+draw_window(spr_window_menu_border, x1 + global.draw_ratio, y1 + global.draw_ratio, x2 + global.draw_ratio, y2 + global.draw_ratio, true);
 // Draw main window.
 draw_window_background(x1, y1, x2, y2, 1, c_border, c_inside, c_black, alpha_back);
 
@@ -52,9 +52,9 @@ repeat (ar_len) {
 	}
 	
 	// Draw window shadow.
-	draw_window(window_x - window_width / 2 + global.draw_ratio, window_y - window_height / 2 + global.draw_ratio, window_x + window_width / 2 + global.draw_ratio, window_y + window_height / 2 + global.draw_ratio, border_scale, c_black, c_black);
+	// draw_window(spr_window_menu_border, window_x - window_width / 2 + global.draw_ratio, window_y - window_height / 2 + global.draw_ratio, window_x + window_width / 2 + global.draw_ratio, window_y + window_height / 2 + global.draw_ratio);
 	// Draw window.
-	draw_window(window_x - window_width / 2, window_y - window_height / 2, window_x + window_width / 2, window_y + window_height / 2, border_scale, c_box_border, c_box_inside);
+	draw_window(spr_window_menu_border, window_x - window_width / 2, window_y - window_height / 2, window_x + window_width / 2, window_y + window_height / 2, true);
 	// Draw option text.
 	draw_set_color(c_box_text);
 	draw_text_ext_size((x1 + x2) * (i + 1) / (ar_len + 1), y2 - 20, options[i], 1, window_width / 2, options_size);

@@ -31,7 +31,7 @@ draw_set_color(c_back);
 draw_rectangle(0, 0, global.view_width, global.view_height, false);
 
 // Window.
-draw_window(x1, y1, x2, y2, border_scale, c_border, c_inside);
+draw_window(spr_window_menu_border, x1, y1, x2, y2, true);
 
 // Restore old drawing parameters.
 restore_drawing_parameters(d_par);

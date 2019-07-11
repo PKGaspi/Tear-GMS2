@@ -1,34 +1,69 @@
-/// @desc Draws a window in the given position with the given colors.
-/// @arg0 x1 The x position of the left border of the window.
-/// @arg1 y1 The y position of the top border of the window.
-/// @arg2 x2 The x position of the right border of the window.
-/// @arg3 y2 The y position of the bottom border of the window.
-/// @arg4 border_scale The scale of the border.
-/// @arg5 color_border The color of the border.
-/// @arg6 colot_inside The color of the inside.
+/// @desc Draws a window in the given position with the given window sprite.
+/// @arg0 sprite Index of the sprite to draw.
+/// @arg1 x1 The x position of the left border of the window.
+/// @arg2 y1 The y position of the top border of the window.
+/// @arg3 x2 The x position of the right border of the window.
+/// @arg4 y2 The y position of the bottom border of the window.
+/// @arg5 scale Whether to scale the sprites (true) or to draw them multiple times.
 
-var x1 = argument0;
-var y1 = argument1;
-var x2 = argument2;
-var y2 = argument3;
+// Arguments.
+var sprite = argument0;
 
-var border_scale = argument4;
+var x1 = argument1;
+var y1 = argument2;
+var x2 = argument3;
+var y2 = argument4;
 
-var c_border = argument5;
-var c_inside = argument6;
+var scale = argument5;
 
-// Save old color and alpha.
-var c_old = draw_get_color();
-var a_old = draw_get_alpha();
+// The size of each tile.
+var size = sprite_get_width(sprite) / 3;
 
-// Inside.
-draw_set_color(c_inside);
+// The width and height of the border.
+var width = x2 - x1;
+var height = y2 - y1;
+
+// The numbers of whole columns and rows to draw.
+var columns = width div size;
+var rows = height div size;
+
+// The size of the small extra collumn and/or row.
+// They will be drawn by making each collumn and/or 
+// row a little bit larger.
+var extra_column = width % size;
+var extra_row = height % size;
+
+// Scale in case the drawing is made streched.
+var x_scale = columns - 2 + extra_column / size;
+var y_scale = rows - 2 + extra_row / size;
+
+// Small scale in case there is an extra column and/or row.
+var x_scale_tile = x_scale / (columns - 2);
+var y_scale_tile = y_scale / (rows - 2);
+
+// ----- DRAWING ------
 draw_set_alpha(1);
-draw_rectangle(x1 + global.draw_ratio, y1 + global.draw_ratio, x2 - global.draw_ratio - border_scale, y2 - global.draw_ratio - border_scale, false);
 
-// White border.
-draw_border(x1, y1, x2, y2, border_scale, c_border);
+// Draw the border.
+draw_border(sprite, x1, y1, x2, y2, scale);
 
-// Restore old color and alpha.
-draw_set_color(c_old);
-draw_set_alpha(a_old);
+// --- MIDDLE ---
+if (scale) {
+	// Middle centre.
+	draw_sprite_part_ext(sprite, 0, size, size, size, size, x1 + size * x_scale_tile, y1 + size * y_scale_tile, x_scale, y_scale, c_white, 1);
+}
+else {
+	var i = 1;
+	repeat (columns - 2) {
+		
+		var j = 1;
+		repeat (rows - 2) {
+			// Middle centre.
+			draw_sprite_part_ext(sprite, 0, size, size, size, size, x1 + i * size * x_scale_tile, y1 + j * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
+			
+			j++;
+		}
+		
+		i++;
+	}
+}

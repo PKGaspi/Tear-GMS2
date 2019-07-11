@@ -82,3 +82,4 @@ repeat (array_len) {
 	menu_option[i] = 0;
 	i++;
 }
+window_inside_offset = 0;

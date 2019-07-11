@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "00c64a3b-44db-4273-a831-b4d7f8d6daaa",
+            "Value": {
+                "id": "05e541dd-a7da-4e9e-8c4e-3c415da9d70a",
+                "resourcePath": "views\\00c64a3b-44db-4273-a831-b4d7f8d6daaa.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0391125f-c6b4-4e19-a507-a23c3375c3b8",
             "Value": {
                 "id": "12eeff4c-59b5-4bfd-a6e6-a73f7610461e",
@@ -52,6 +60,14 @@
                 "id": "7ca8e6ae-6af1-4dbb-a444-f979772db849",
                 "resourcePath": "sprites\\spr_settings_audio_sounds\\spr_settings_audio_sounds.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "05815905-08ed-4f89-b914-2f31b2948d6c",
+            "Value": {
+                "id": "17c2b2ac-909d-4fd6-b1f4-b13962210838",
+                "resourcePath": "scripts\\gamesave_save\\gamesave_save.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -391,11 +407,35 @@
             }
         },
         {
+            "Key": "4c62884d-5d6d-44ec-b16f-a3051945f981",
+            "Value": {
+                "id": "e824003e-5242-4560-8b94-372a4749f922",
+                "resourcePath": "views\\4c62884d-5d6d-44ec-b16f-a3051945f981.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4e7dd026-6c33-4eb0-bd6e-c29a72d4f96c",
             "Value": {
                 "id": "e512355b-b86c-4035-8f52-057c73187eeb",
                 "resourcePath": "sprites\\spr_settings_video_vsync\\spr_settings_video_vsync.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4f6a9fb3-e896-47e3-b0a1-cb9929e7734d",
+            "Value": {
+                "id": "710cbcc7-1dd3-403d-99c5-d3790143944d",
+                "resourcePath": "scripts\\gamesave_load\\gamesave_load.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "503c9c5d-9665-404d-89c6-3d9a6661b031",
+            "Value": {
+                "id": "62b13391-a99e-4f39-a61e-82ab2aa92458",
+                "resourcePath": "scripts\\bestiary_create\\bestiary_create.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -615,6 +655,14 @@
             }
         },
         {
+            "Key": "7dbb67cb-be59-4b96-8262-4eb3dab8a4b3",
+            "Value": {
+                "id": "099f532b-3426-4678-b02d-a60b575970c1",
+                "resourcePath": "scripts\\gamesave_create_hacked\\gamesave_create_hacked.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7e47eb92-52ac-4a14-b2aa-5d40b11dab85",
             "Value": {
                 "id": "8fc953ef-18ee-4138-bf20-325ef304316b",
@@ -631,6 +679,14 @@
             }
         },
         {
+            "Key": "8026bfb0-45fe-4435-926d-6edfcc02735a",
+            "Value": {
+                "id": "c1a0ec81-55d9-4096-98ee-cd4c5ddae26e",
+                "resourcePath": "scripts\\gamesave_open\\gamesave_open.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "806753d5-37af-4aa5-a169-e03248250350",
             "Value": {
                 "id": "3efcc13e-d254-4936-97c9-b94dfda2a143",
@@ -644,6 +700,14 @@
                 "id": "06cb53b0-0433-4fdd-b9e2-8d598cae64f1",
                 "resourcePath": "scripts\\config_load\\config_load.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "82a9737b-a4f4-426d-b970-8619b5b0d9f8",
+            "Value": {
+                "id": "0ff7de29-d854-4461-b8ae-eb3f3da86671",
+                "resourcePath": "sprites\\spr_window_menu_border\\spr_window_menu_border.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1103,6 +1167,14 @@
             }
         },
         {
+            "Key": "dce6d28d-375a-454c-85d8-f73b1be528d8",
+            "Value": {
+                "id": "f0f9f663-514a-401d-bdb6-8236a301cdc3",
+                "resourcePath": "scripts\\gamesave_create\\gamesave_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ddb12fb4-e255-4d14-9697-344f85351418",
             "Value": {
                 "id": "9af12288-c6d5-4373-a88e-8614841efdb0",
@@ -1271,6 +1343,14 @@
             }
         },
         {
+            "Key": "f32ebbb8-dd6d-4a8e-a612-49cc062a5728",
+            "Value": {
+                "id": "a424b30c-e7b7-4400-b319-69442b33bd45",
+                "resourcePath": "sprites\\spr_window_menu_inside\\spr_window_menu_inside.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "da453e91-c1bf-4c76-905b-2b9122a3badd",
@@ -1355,6 +1435,12 @@
         "b903fb88-4c10-4863-830f-baee626d4c5e",
         "793f0bc8-4bd0-4b44-8744-9c4cecd83fab",
         "c9e314fa-e9f9-4360-9db8-360573e79a31",
+        "8026bfb0-45fe-4435-926d-6edfcc02735a",
+        "4f6a9fb3-e896-47e3-b0a1-cb9929e7734d",
+        "05815905-08ed-4f89-b914-2f31b2948d6c",
+        "dce6d28d-375a-454c-85d8-f73b1be528d8",
+        "7dbb67cb-be59-4b96-8262-4eb3dab8a4b3",
+        "503c9c5d-9665-404d-89c6-3d9a6661b031",
         "e7ffa642-3fa6-4656-bfee-6252f3b6776b",
         "5a52e946-35c0-452b-a173-693260e43e50",
         "230dce48-b046-46e3-b0fc-759ecad84004",

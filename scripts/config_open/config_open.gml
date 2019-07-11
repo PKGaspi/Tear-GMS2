@@ -9,7 +9,6 @@ else {
 	global.config = config_create();
 }
 
-
 if (!ds_exists(global.config, ds_type_map)) {
 	// This executes if the game loads a modified game.
 	global.config = config_create();
