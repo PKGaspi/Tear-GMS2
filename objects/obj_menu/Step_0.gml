@@ -2,16 +2,25 @@
 
 var input_esc_p = keyboard_check_pressed(vk_escape);
 if (input_esc_p) {
-	page = 0;
 	global.pause = !global.pause;
 	if (global.pause) {
+		// TODO: Make a script and object for a window with animated background and handle it all in that object.
+
 		audio_play_sound(snd_menu_enter, 1, false);
+		// Clean the menu variables.
+		page = 0;
 		var i = 0;
 		var array_len = array_length_1d(menu_pages);
 		repeat (array_len) {
 			menu_option[i] = 0;
 			i++;
 		}
+		// Randomize the background movement direction.
+		do {
+			var x1 = random_range(-1, 1);
+			var y1 = random_range(-1, 1);
+		} until (x1 != 0 && y1 != 0)
+		window_inside_dir = point_direction(0, 0, x1, y1);
 	}
 	else {
 		audio_play_sound(snd_menu_leave, 1, false);
@@ -27,11 +36,12 @@ var input_left_h	= keyboard_check(global.key_left);
 var input_right_p	= keyboard_check_pressed(global.key_right);
 var input_right_h	= keyboard_check(global.key_right);
 var input_enter_p	= keyboard_check_pressed(global.key_accept);
+var input_run_h     = keyboard_check(global.key_run);
+
+var v_move_p		= input_down_p - input_up_p;
 
 var ds_grid			= menu_pages[page];
 var ds_height		= ds_grid_height(ds_grid);
-
-var v_move_p		= input_down_p - input_up_p;
 
 if (v_move_p != 0) {
 	audio_play_sound(snd_menu_move, 1, false);
@@ -75,7 +85,7 @@ if (h_move_h != 0) {
 		case menu_element_type.slider: {
 			var current_val = ds_grid[# 4, menu_option[page]];
 			var current_array = ds_grid[# 5, menu_option[page]];
-			current_val = current_val + sign(h_move_h) * abs(current_array[0] - current_array[1]) / 100;
+			current_val += sign(h_move_p + h_move_h * input_run_h) * abs(current_array[0] - current_array[1]) / 100;
 			ds_grid[# 4, menu_option[page]] = clamp(current_val, current_array[0], current_array[1]);
 			script_execute(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
 			break;

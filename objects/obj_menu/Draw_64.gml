@@ -49,8 +49,12 @@ var border_sprite				= spr_window_menu_border_deep_purple;
 window_inside_offset += 1.2/room_speed;
 window_inside_offset %= sprite_get_width(inside_sprite) / 12;
 
-draw_window(inside_sprite, x_window - window_inside_offset, y_window - window_inside_offset, gwidth - x_window - window_inside_offset, gheight - y_window - window_inside_offset, false);
-//draw_border(border_sprite, x_window, y_window, gwidth - x_window, gheight - y_window, false);
+var x_offset = sign(lengthdir_x(1, window_inside_dir)) * window_inside_offset;
+var y_offset = sign(lengthdir_y(1, window_inside_dir)) * window_inside_offset;
+
+// TODO: Make a script and object for a window with animated background and handle it all in that object.
+draw_window(inside_sprite, x_window + x_offset, y_window + y_offset, gwidth - x_window + x_offset, gheight - y_window + y_offset, false);
+draw_border(border_sprite, x_window, y_window, gwidth - x_window, gheight - y_window, false);
 
 // ---------- Title ----------
 draw_set_alpha(1);
@@ -101,8 +105,6 @@ repeat (ds_height) {
 draw_line_width_outline(x_start, y_start - y_buffer, x_start, y_left + y_buffer, line_width, c_selected_border, c_selected, text_border);
 
 // ---------- Right side ----------
-draw_set_color(c_unselected);
-draw_set_alpha(1);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_left);
 
@@ -145,6 +147,17 @@ repeat (ds_height) {
 				draw_line_width_outline(x_right, y_right + y_line_offset, x_right + len, y_right + y_line_offset, line_width, c_selected_border, c_selected, text_border);
 				draw_circle_outline(x_right + (circle_pos * len), y_right + y_line_offset, slider_radious, c_selected_border, c_selected, .2);
 				draw_text_outline_size(x_right + len + x_buffer_right, y_right, string(floor(circle_pos * 100)) + "%", c_selected_border, c_selected, text_border, text_scale_selected);
+
+				// Draw advise.
+				draw_set_valign(fa_middle);
+				draw_set_halign(fa_center);
+				
+				var text = ["You can adjust the value faster by pressing the run button while doing so.", "Puedes ajustar el valor más rápido si pulsas el botón de correr mientras lo haces."]
+				draw_text_outline_size(x_start,  y_left + y_buffer + text_scale_normal / 2, text[lang], c_selected_border, c_selected, text_border, text_scale_normal / 2);
+				
+				draw_set_valign(fa_middle);
+				draw_set_halign(fa_left);
+
 			}
 			else {
 				draw_line_width(x_right, y_right + y_line_offset, x_right + len, y_right + y_line_offset, line_width);

@@ -49,7 +49,7 @@ draw_border(sprite, x1, y1, x2, y2, scale);
 
 // --- MIDDLE ---
 if (scale) {
-	// Middle centre.
+	// Middle center.
 	draw_sprite_part_ext(sprite, 0, size, size, size, size, x1 + size * x_scale_tile, y1 + size * y_scale_tile, x_scale, y_scale, c_white, 1);
 }
 else {
@@ -58,7 +58,7 @@ else {
 		
 		var j = 1;
 		repeat (rows - 2) {
-			// Middle centre.
+			// Middle center.
 			draw_sprite_part_ext(sprite, 0, size, size, size, size, x1 + i * size * x_scale_tile, y1 + j * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
 			
 			j++;

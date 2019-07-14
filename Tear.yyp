@@ -255,10 +255,18 @@
             }
         },
         {
+            "Key": "289d670f-f460-46a2-b514-c42b7fd2f72a",
+            "Value": {
+                "id": "a90eb337-3bba-4767-add6-d65ed0d88788",
+                "resourcePath": "scripts\\cutscene_variable_global_set\\cutscene_variable_global_set.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "29dd1781-cadf-4944-9436-57d066414015",
             "Value": {
                 "id": "33a7c962-4784-45b2-8c66-5e7cd45518b7",
-                "resourcePath": "scripts\\cutscene_variable_set\\cutscene_variable_set.yy",
+                "resourcePath": "scripts\\cutscene_variable_instance_set\\cutscene_variable_instance_set.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1536,6 +1544,7 @@
         "923c1650-ecf0-43a6-82f1-8f3ead8a0eb5",
         "e3a750af-1cb4-4d23-baba-943af6fffe80",
         "29dd1781-cadf-4944-9436-57d066414015",
+        "289d670f-f460-46a2-b514-c42b7fd2f72a",
         "d0c37f98-1662-4167-916d-1a2ee4485faa",
         "247bcb84-3d75-4485-bdcd-0f54edc9b40f",
         "806753d5-37af-4aa5-a169-e03248250350",

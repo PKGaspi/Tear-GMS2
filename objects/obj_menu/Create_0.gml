@@ -82,4 +82,7 @@ repeat (array_len) {
 	menu_option[i] = 0;
 	i++;
 }
+
+// Window inside animation variables.
 window_inside_offset = 0;
+window_inside_dir	 = point_direction(0, 0, 1, 1);

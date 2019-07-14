@@ -67,9 +67,9 @@ else {
 
 	var i = 1;
 	repeat (columns - 2) {
-		// Top centre.
+		// Top center.
 		draw_sprite_part_ext(sprite, 0, size, 0, size, size, x1 + i * size * x_scale_tile, y1, x_scale_tile, y_scale_tile, c_white, 1);
-		// Bottom centre.
+		// Bottom center.
 		draw_sprite_part_ext(sprite, 0, size, 2 * size, size, size, x1 + i * size * x_scale_tile, y1 + (rows - 1) * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
 		i++;	
 	}
@@ -81,12 +81,4 @@ else {
 		draw_sprite_part_ext(sprite, 0, 2 * size, size, size, size, x1 + (columns - 1) * size * x_scale_tile, y1 + i * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
 		i++;
 	}
-	/*
-	repeat (rows - 2) {
-		// Middle left.
-		draw_sprite_part_ext(sprite, 0, 0, size, size, size, x1, y1 + i * size + (extra_row / (rows - 2)) * (i - 1), x_scale_tile, y_scale_tile, c_white, 1);
-		// Middle right.
-		draw_sprite_part_ext(sprite, 0, 2 * size, size, size, size, x1 + (columns - 1) * size + extra_column, y1 + i * size + (extra_row / (rows - 2)) * (i - 1), x_scale_tile, y_scale_tile, c_white, 1);
-		i++;
-	} // */
 }
