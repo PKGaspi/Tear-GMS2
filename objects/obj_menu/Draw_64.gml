@@ -45,11 +45,11 @@ var c_accent					= c_white;
 var c_back						= c_black;
 var c_inside					= global.c_purple_0;
 
-window_inside_offset += 1/room_speed;
-window_inside_offset %= sprite_get_width(spr_window_menu_inside) / 6;
+window_inside_offset += 3/room_speed;
+window_inside_offset %= sprite_get_width(spr_window_menu_inside) / 12;
 
 // ---------- Background ----------
-draw_window(spr_window_menu_inside, x_window, y_window, gwidth - x_window, gheight - y_window, false);
+draw_window(spr_window_menu_inside, x_window - window_inside_offset, y_window - window_inside_offset, gwidth - x_window - window_inside_offset, gheight - y_window - window_inside_offset, false);
 draw_window(spr_window_menu_border, x_window, y_window, gwidth - x_window, gheight - y_window, false);
 //draw_window_background(x_window, y_window, gwidth - x_window, gheight - y_window, 1, c_accent, c_inside, c_back, .8);
 
