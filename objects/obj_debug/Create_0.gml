@@ -3,9 +3,9 @@
 // Destroy if there is another instance of this object.
 event_inherited();
 
-show_info					= false
-text_scale					= 12;
-text_line_space				= 4;
+show_info					= false;
+text_scale					= 6;
+text_line_space				= 2;
 
 obj_index					= 0;
 rm_index					= 0;

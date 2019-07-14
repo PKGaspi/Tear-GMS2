@@ -43,11 +43,9 @@ switch (display_aa) {
 global.ANTIALIASING_VALUES	= tmp;
 
 // Color variables.
-global.c_purple_0			= $952f5d;
-var c_hue					= color_get_hue(global.c_purple_0);
-var c_sat					= color_get_saturation(global.c_purple_0);
-var c_val					= color_get_value(global.c_purple_0);
-global.c_purple_1			= make_color_hsv(c_hue, c_sat + 50, c_val);
+global.c_purple_0				= color_change_endianness($ab47bc);
+global.c_deep_purple_0			= color_change_endianness($311b92);
+global.c_deep_purple_1			= color_change_endianness($000063);
 
 // Load configuration.
 config_load();
