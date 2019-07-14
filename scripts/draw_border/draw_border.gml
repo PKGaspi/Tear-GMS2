@@ -45,11 +45,11 @@ var y_scale_tile = y_scale / (rows - 2);
 // Top left.
 draw_sprite_part_ext(sprite, 0, 0, 0, size, size, x1, y1, x_scale_tile, y_scale_tile, c_white, 1);
 // Top right.
-draw_sprite_part_ext(sprite, 0, 2 * size, 0, size, size, x1 + (columns - 1) * size + extra_column * x_scale_tile, y1, x_scale_tile, y_scale_tile, c_white, 1);
+draw_sprite_part_ext(sprite, 0, 2 * size, 0, size, size, x1 + (columns - 1) * size * x_scale_tile, y1, x_scale_tile, y_scale_tile, c_white, 1);
 // Bottom left.
-draw_sprite_part_ext(sprite, 0, 0, 2 * size, size, size, x1, y1 + (rows - 1) * size + extra_row * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
+draw_sprite_part_ext(sprite, 0, 0, 2 * size, size, size, x1, y1 + (rows - 1) * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
 // Bottom rigth.
-draw_sprite_part_ext(sprite, 0, 2 * size, 2 * size, size, size, x1 + (columns - 1) * size + extra_column * x_scale_tile, y1 + (rows - 1) * size + extra_row * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
+draw_sprite_part_ext(sprite, 0, 2 * size, 2 * size, size, size, x1 + (columns - 1) * size * x_scale_tile, y1 + (rows - 1) * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
 
 if (scale) {
 	// --- EDGES ---
@@ -58,9 +58,9 @@ if (scale) {
 	// Middle left.
 	draw_sprite_part_ext(sprite, 0, 0, size, size, size, x1, y1 + size * y_scale_tile, x_scale_tile, y_scale, c_white, 1);
 	// Middle right.
-	draw_sprite_part_ext(sprite, 0, 2 * size, size, size, size, x1 + (columns - 1) * size + extra_column * x_scale_tile, y1 + size * y_scale_tile, x_scale_tile, y_scale, c_white, 1);
+	draw_sprite_part_ext(sprite, 0, 2 * size, size, size, size, x1 + (columns - 1) * size * x_scale_tile, y1 + size * y_scale_tile, x_scale_tile, y_scale, c_white, 1);
 	// Bottom centre.
-	draw_sprite_part_ext(sprite, 0, size, 2 * size, size, size, x1 + size * x_scale_tile, y1 + (rows - 1) * size + extra_row * y_scale_tile, x_scale, y_scale_tile, c_white, 1);
+	draw_sprite_part_ext(sprite, 0, size, 2 * size, size, size, x1 + size * x_scale_tile, y1 + (rows - 1) * size * y_scale_tile, x_scale, y_scale_tile, c_white, 1);
 }
 else {
 	// Stretch the edges just a little bit.
@@ -70,7 +70,7 @@ else {
 		// Top centre.
 		draw_sprite_part_ext(sprite, 0, size, 0, size, size, x1 + i * size * x_scale_tile, y1, x_scale_tile, y_scale_tile, c_white, 1);
 		// Bottom centre.
-		draw_sprite_part_ext(sprite, 0, size, 2 * size, size, size, x1 + i * size * x_scale_tile, y1 + (rows - 1) * size + extra_row * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
+		draw_sprite_part_ext(sprite, 0, size, 2 * size, size, size, x1 + i * size * x_scale_tile, y1 + (rows - 1) * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
 		i++;	
 	}
 	i = 1;
@@ -78,7 +78,7 @@ else {
 		// Middle left.
 		draw_sprite_part_ext(sprite, 0, 0, size, size, size, x1, y1 + i * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
 		// Middle right.
-		draw_sprite_part_ext(sprite, 0, 2 * size, size, size, size, x1 + (columns - 1) * size + extra_column * x_scale_tile, y1 + i * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
+		draw_sprite_part_ext(sprite, 0, 2 * size, size, size, size, x1 + (columns - 1) * size * x_scale_tile, y1 + i * size * y_scale_tile, x_scale_tile, y_scale_tile, c_white, 1);
 		i++;
 	}
 	/*

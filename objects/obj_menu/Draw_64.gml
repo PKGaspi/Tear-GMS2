@@ -49,10 +49,8 @@ window_inside_offset += 1/room_speed;
 window_inside_offset %= sprite_get_width(spr_window_menu_inside) / 6;
 
 // ---------- Background ----------
-//draw_window(spr_window_menu_inside, x_window, y_window, gwidth - x_window, gheight - y_window, false);
-//draw_window(spr_window_menu_border, x_window, y_window, gwidth - x_window, gheight - y_window, false);
-draw_window(spr_window_menu_border, 20, 20, 70, 70, false);
-draw_window(spr_window_menu_inside, 80, 20, 130, 70, false);
+draw_window(spr_window_menu_inside, x_window, y_window, gwidth - x_window, gheight - y_window, false);
+draw_window(spr_window_menu_border, x_window, y_window, gwidth - x_window, gheight - y_window, false);
 //draw_window_background(x_window, y_window, gwidth - x_window, gheight - y_window, 1, c_accent, c_inside, c_back, .8);
 
 // ---------- Title ----------
