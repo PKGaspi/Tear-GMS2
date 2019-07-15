@@ -1,37 +1,35 @@
-/// @desc Draws a window in the given position with the given colors and a background.
-/// @arg0 x1 The x position of the left border of the window.
-/// @arg1 y1 The y position of the top border of the window.
-/// @arg2 x2 The x position of the right border of the window.
-/// @arg3 y2 The y position of the bottom border of the window.
-/// @arg4 border_scale The scale of the border.
-/// @arg5 color_border The color of the border.
-/// @arg6 color_inside The color of the inside.
-/// @arg7 color_back The color of the back.
-/// @arg8 back_alpha The alpha of the back.
+/// @desc Draws a window in the given position with the given window sprite and background color.
+/// @arg0 sprite Index of the sprite to draw.
+/// @arg1 x1 The x position of the left border of the window.
+/// @arg2 y1 The y position of the top border of the window.
+/// @arg3 x2 The x position of the right border of the window.
+/// @arg4 y2 The y position of the bottom border of the window.
+/// @arg5 scale Whether to scale the sprites (true) or to draw them multiple times.
+/// @arg6 background_color The color of the background.
+/// @arg7 back_alpha The alpha of the background.
 
-var x1 = argument0;
-var y1 = argument1;
-var x2 = argument2;
-var y2 = argument3;
 
-var border_scale = argument4;
+// Arguments.
+var sprite = argument0;
 
-var c_border = argument5;
-var c_inside = argument6;
-var c_back = argument7;
+if (sprite == noone) {
+	exit;
+}
 
-var back_alpha = argument8;
+var x1 = argument1;
+var y1 = argument2;
+var x2 = argument3;
+var y2 = argument4;
 
-// Save old drawing parameters.
-var d_par = save_drawing_parameters();
+var scale = argument5;
+
+var c_back = argument6;
+var back_alpha = argument7;
 
 // Background.
 draw_set_alpha(back_alpha);
 draw_set_color(c_back);
-draw_rectangle(0, 0, global.view_width, global.view_height, false);
+draw_rectangle_color(0, 0, global.view_width, global.view_height, c_back, c_back, c_back, c_back, false);
 
 // Window.
-draw_window(spr_window_menu_border, x1, y1, x2, y2, true);
-
-// Restore old drawing parameters.
-restore_drawing_parameters(d_par);
+draw_window(sprite, x1, y1, x2, y2, scale);

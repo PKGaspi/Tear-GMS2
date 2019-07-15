@@ -6,7 +6,7 @@ var d_par = save_drawing_parameters();
 // Draw main window shadow.
 draw_window(spr_window_menu_border, x1 + global.draw_ratio, y1 + global.draw_ratio, x2 + global.draw_ratio, y2 + global.draw_ratio, true);
 // Draw main window.
-draw_window_background(x1, y1, x2, y2, 1, c_border, c_inside, c_black, alpha_back);
+draw_window_background(spr_window_menu_border, x1, y1, x2, y2, 1, c_black, alpha_back);
 
 // Draw main text.
 draw_set_halign(fa_center);

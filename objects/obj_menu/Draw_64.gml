@@ -36,25 +36,9 @@ var text_border					= 1;
 var select_scale				= text_scale_selected / text_scale_normal;
 var select_offset				= x_sprite_buffer / 2;
 
-var x_window					= x_sprite_buffer;
-var y_window					= x_sprite_buffer;
-
 var c_selected					= color_change_endianness($fdd835);
 var c_selected_border			= global.c_deep_purple_0;
 var c_unselected				= c_white;
-
-var inside_sprite				= spr_window_menu_inside_blue_gray;
-var border_sprite				= spr_window_menu_border_deep_purple;
-// ---------- Background ----------
-window_inside_offset += 1.2/room_speed;
-window_inside_offset %= sprite_get_width(inside_sprite) / 12;
-
-var x_offset = sign(lengthdir_x(1, window_inside_dir)) * window_inside_offset;
-var y_offset = sign(lengthdir_y(1, window_inside_dir)) * window_inside_offset;
-
-// TODO: Make a script and object for a window with animated background and handle it all in that object.
-draw_window(inside_sprite, x_window + x_offset, y_window + y_offset, gwidth - x_window + x_offset, gheight - y_window + y_offset, false);
-draw_border(border_sprite, x_window, y_window, gwidth - x_window, gheight - y_window, false);
 
 // ---------- Title ----------
 draw_set_alpha(1);
@@ -78,7 +62,18 @@ var yy = 0;
 repeat (ds_height) {
 	
 	var x_offset = 0;
-	y_left	= y_start + (yy * y_buffer);
+	y_left = y_start + (yy * y_buffer);
+	
+	if ((mouse_active) && 
+		(y_left - y_buffer / 2 < mouse_y && mouse_y < y_left + y_buffer / 2) &&
+		(x_left + x_offset - x_sprite_buffer * 3 < mouse_x && mouse_x < gwidth - (x_left + x_offset - x_sprite_buffer * 3))) {
+		// If the mouse is in the position of this line.
+		if (menu_option[page] != yy) {
+			menu_option[page] = yy;
+			audio_play_sound(snd_menu_move, 1, false);
+		}
+		
+	}
 	
 	text = ds_grid[# 0, yy];
 	var sprite = ds_grid[# 1, yy];

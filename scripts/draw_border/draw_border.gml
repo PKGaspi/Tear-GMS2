@@ -9,6 +9,10 @@
 // Arguments.
 var sprite = argument0;
 
+if (sprite == noone) {
+	exit;
+}
+
 var x1 = argument1;
 var y1 = argument2;
 var x2 = argument3;

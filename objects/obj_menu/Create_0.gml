@@ -83,6 +83,10 @@ repeat (array_len) {
 	i++;
 }
 
-// Window inside animation variables.
-window_inside_offset = 0;
-window_inside_dir	 = point_direction(0, 0, 1, 1);
+// Window.
+window = noone;
+
+// Mouse selection.
+x_mouse_old = mouse_x;
+y_moude_old = mouse_y;
+mouse_active = false;
