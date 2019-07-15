@@ -82,13 +82,13 @@ repeat (ds_height) {
 	var selected = yy == menu_option[page];
 	if (selected) {
 		x_offset = - select_offset;
-		if ( sprite != noone) {
+		if (sprite != noone) {
 			draw_sprite_ext_outline(sprite, 0, x_left - x_sprite_buffer * 1.5 + x_offset, y_left, sprite_scale * select_scale, sprite_scale * select_scale, 0, 1, c_selected_border, c_selected, text_border);
 		}
 		draw_text_outline_size(x_left + x_offset, y_left, text[lang], c_selected_border, c_selected, text_border, text_scale_selected);
 	}
 	else {
-		if ( sprite != noone) {
+		if (sprite != noone) {
 			draw_sprite_ext(sprite, 0, x_left - x_sprite_buffer * 1.5 + x_offset, y_left, sprite_scale, sprite_scale, 0, c_unselected, 1);
 		}
 		draw_text_size(x_left + x_offset, y_left, text[lang], text_scale_normal);
@@ -152,6 +152,11 @@ repeat (ds_height) {
 				
 				draw_set_valign(fa_middle);
 				draw_set_halign(fa_left);
+				
+				// Update value if the user is using a mouse. It is easier to do here.
+				if (mouse_check_button(mb_left) && mouse_x > x_right - slider_radious) {
+					ds_grid[# 4, yy] = clamp((mouse_x - x_right - slider_radious) / len, 0, 100);
+				}
 
 			}
 			else {

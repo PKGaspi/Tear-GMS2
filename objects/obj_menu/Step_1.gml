@@ -34,10 +34,10 @@ if (!global.pause) exit;
 
 var input_up_p		= keyboard_check_pressed(global.key_up) || mouse_wheel_up();
 var input_down_p	= keyboard_check_pressed(global.key_down) || mouse_wheel_down();
-var input_left_p	= keyboard_check_pressed(global.key_left);
-var input_left_h	= keyboard_check(global.key_left);
-var input_right_p	= keyboard_check_pressed(global.key_right);
-var input_right_h	= keyboard_check(global.key_right);
+var input_left_p	= keyboard_check_pressed(global.key_left) || mouse_check_button_pressed(mb_left);
+var input_left_h	= keyboard_check(global.key_left) || mouse_check_button(mb_left);
+var input_right_p	= keyboard_check_pressed(global.key_right) || mouse_check_button_pressed(mb_right);
+var input_right_h	= keyboard_check(global.key_right) || mouse_check_button(mb_right);
 var input_enter_p	= keyboard_check_pressed(global.key_accept) || mouse_check_button_pressed(mb_left);
 var input_run_h     = keyboard_check(global.key_run);
 
