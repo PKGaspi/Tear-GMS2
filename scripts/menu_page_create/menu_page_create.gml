@@ -1,7 +1,7 @@
 /// @desc Creates a menu page.
-/// @arg [["Name1en", "Name1es"],sprite1,type1,entries1...]
-/// @arg [["Name2en", "Name2es"],sprite2,type2,entries2...]
-
+/// @arg entry1 [["Name1en","Name1es"],sprite1,type1,entries1...]
+/// @arg entry2 [["Name2en","Name2es"],sprite2,type2,entries2...]
+/// @arg ...
 var arg;
 for (i = 0; i < argument_count; i++) {
 	arg[i] = argument[i];

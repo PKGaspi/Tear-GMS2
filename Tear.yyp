@@ -258,7 +258,7 @@
             "Key": "279e7599-87f7-4843-878c-7e593df3699f",
             "Value": {
                 "id": "7d4d2cfb-42f5-4de9-afd5-f821d98fec5d",
-                "resourcePath": "scripts\\create_menu_page\\create_menu_page.yy",
+                "resourcePath": "scripts\\menu_page_create\\menu_page_create.yy",
                 "resourceType": "GMScript"
             }
         },

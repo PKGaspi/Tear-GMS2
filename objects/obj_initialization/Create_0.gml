@@ -12,7 +12,6 @@ global.pause				= false; // Whether the game is paused or not.
 global.cutscene				= false; // Whether a cutscene is running or not.
 global.debug_menu			= false; // Whether the debug menu is active or not.
 global.hacked				= false; // Whether some secure file is modified or not.
-global.initialized			= false; // Whether the game has already initialized befor.
 global.cameras				= array_create(0); // Cameras array.
 
 // Video constants.
