@@ -58,10 +58,11 @@ if (v_move_p != 0) {
 }
 
 else if (input_enter_p) {
+	mouse_skip = true;
 	switch (ds_grid[# 2, menu_option[page]]) {
 		case menu_element_type.script_runner: {
 			script_execute(ds_grid[# 3, menu_option[page]]);
-			break;
+			exit;
 		}
 		case menu_element_type.page_transfer: {
 			var menu_entry = menu_option[page];
@@ -74,12 +75,12 @@ else if (input_enter_p) {
 				audio_play_sound(snd_menu_enter, 1, false);
 			}
 			page = ds_grid[# 3, menu_entry];
-			break;
+			exit;
 		}
 		case menu_element_type.toggle: {
 			ds_grid[# 4, menu_option[page]] = !ds_grid[# 4, menu_option[page]];
 			script_execute(ds_grid[# 3, menu_option[page]]);
-			break;
+			exit;
 		}
 	}
 }
@@ -95,7 +96,7 @@ if (h_move_h != 0) {
 			current_val += sign(h_move_p + h_move_h * input_run_h) * abs(current_array[0] - current_array[1]) / 100;
 			ds_grid[# 4, menu_option[page]] = clamp(current_val, current_array[0], current_array[1]);
 			script_execute(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-			break;
+			exit;
 		}
 	}
 }
@@ -115,7 +116,7 @@ if (h_move_p != 0) {
 			}
 			ds_grid[# 4, menu_option[page]] = clamp(new_val, 0, current_len - 1);
 			script_execute(ds_grid[# 3, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-			break;
+			exit;
 		}
 	}
 }

@@ -6,5 +6,10 @@ if (audio_group_is_loaded(audiogroup_music) &&
 		instance_create_layer(0, 0, "Hidden", obj_debug);
 		room_goto(rm_test);
 	}
-	instance_destroy();
+	if (destroy) {
+		instance_destroy();
+	}
+	else {
+		destroy = true;
+	}
 }

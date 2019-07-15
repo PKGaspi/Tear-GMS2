@@ -2,6 +2,7 @@
 
 // Destroy if there is another instance of this object.
 event_inherited();
+destroy = false;
 
 // Load audio groups.
 audio_group_load(audiogroup_music);

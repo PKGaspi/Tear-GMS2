@@ -1,2 +1,8 @@
 /// @description Fixes fullscreen to window size.
-window_set_size(global.RESOLUTIONS[0, global.resolution], global.RESOLUTIONS[1, global.resolution]);	
+set_resolution(global.resolution);
+if (destroy) {
+	instance_destroy();
+}
+else {
+	destroy = true;
+}

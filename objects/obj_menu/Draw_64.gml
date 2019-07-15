@@ -69,8 +69,8 @@ repeat (ds_height) {
 		(x_left + x_offset - x_sprite_buffer * 3 < mouse_x && mouse_x < gwidth - (x_left + x_offset - x_sprite_buffer * 3))) {
 		// If the mouse is in the position of this line.
 		if (menu_option[page] != yy) {
-			menu_option[page] = yy;
 			audio_play_sound(snd_menu_move, 1, false);
+			menu_option[page] = yy;
 		}
 		
 	}
