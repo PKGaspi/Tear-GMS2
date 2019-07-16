@@ -58,7 +58,6 @@ if (v_move_p != 0) {
 }
 
 else if (input_enter_p) {
-	mouse_skip = true;
 	switch (ds_grid[# 2, menu_option[page]]) {
 		case menu_element_type.script_runner: {
 			script_execute(ds_grid[# 3, menu_option[page]]);

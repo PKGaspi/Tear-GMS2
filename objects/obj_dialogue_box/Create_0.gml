@@ -2,7 +2,6 @@
 // Puede escribir su código en este editor
 
 box_sprite = noone;
-spike_sprite = noone;
 
 x1 = 0;
 y1 = 0;

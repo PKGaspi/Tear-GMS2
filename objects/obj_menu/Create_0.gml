@@ -51,7 +51,7 @@ ds_menu_settings = menu_page_create(
 
 ds_menu_video = menu_page_create(
 	[["Fullscreen",					"Pantalla completa"],		spr_settings_video_fullscreen,	menu_element_type.toggle,					toggle_fullscreen,			window_get_fullscreen(),								],
-	[["Resolution",					"Resolución"],				spr_settings_video_resolution,	menu_element_type.shift,					set_resolution,				global.resolution,			get_resolutions()			],
+	[["Resolution",					"Resolución"],				spr_settings_video_resolution,	menu_element_type.shift,					set_resolution,				global.resolution,			get_resolutions_string()	],
 	[["Anti-aliasing",				"Anti-aliasing"],			spr_settings_video_aa,			menu_element_type.shift,					set_antialiasing,			global.antialiasing,		aa_array					],
 	[["V-sync",						"V-sync"],					spr_settings_video_vsync,		menu_element_type.toggle,					toggle_vsync,				global.vsync											],
 	[["Back",						"Atrás"],					spr_back,						menu_element_type.page_transfer,			menu_page.settings,			["Video settings", "Ajustes de vídeo"]					]
