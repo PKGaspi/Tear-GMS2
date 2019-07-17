@@ -1,5 +1,4 @@
 /// @description Draw the dialogue box.
-
 // Draw the actual box.
 draw_window(box_sprite, x1, y1, x2, y2, false);
 

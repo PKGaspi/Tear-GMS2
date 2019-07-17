@@ -18,13 +18,13 @@ var _text = argument5;
 
 var _speaker = argument6;
 
-if (_speaker != noone) {
-	var _speaker_x = _speaker.mouth_x;
-	var _speaker_y = _speaker.mouth_y;
-	var _speaker_name = _speaker.name;
-	var _speaker_voice = _speaker.voice;
-	var _speaker_voice_fast = _speaker.voice_fast;
-	var _speaker_font = _speaker.font;
+if (_speaker != noone) with (_speaker) {
+	var _speaker_x = mouth_x;
+	var _speaker_y = mouth_y;
+	var _speaker_name = name;
+	var _speaker_voice = voice;
+	var _speaker_voice_fast = voice_fast;
+	var _speaker_font = font;
 }
 
 var inst = instance_create_layer(0, 0, "Hidden", obj_dialogue_box);

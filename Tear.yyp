@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "40a556b3-b593-49f9-a8dd-79c7719711d1",
+            "Value": {
+                "id": "000187ca-1fe3-47dc-b4fd-93e4eb28ee21",
+                "resourcePath": "scripts\\dialogue_bubble_create\\dialogue_bubble_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "414837d7-32a1-4ac6-ac1f-356c55abfed5",
             "Value": {
                 "id": "c759ee23-4004-4bcb-b1f3-54f1c80d326d",
@@ -1343,6 +1351,14 @@
             }
         },
         {
+            "Key": "da5339a3-e45d-4bb4-98f0-73e523830394",
+            "Value": {
+                "id": "bb42c7e9-5c04-4bfd-a1b9-a5e4cc7125a7",
+                "resourcePath": "scripts\\gui_mouse_get_y\\gui_mouse_get_y.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "db6774f4-f34b-4850-b03d-90d769269409",
             "Value": {
                 "id": "09c7d177-5c84-4f00-91b8-6e49916d81dd",
@@ -1468,6 +1484,14 @@
                 "id": "4d6edcb3-f578-4218-aeb0-3a1421f2f12a",
                 "resourcePath": "objects\\obj_draw_test\\obj_draw_test.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ea038e0f-8538-4647-87b2-62d7f6fc8624",
+            "Value": {
+                "id": "a8498b69-0e66-4e2b-8cea-fd0ee24c63d9",
+                "resourcePath": "scripts\\gui_mouse_get_x\\gui_mouse_get_x.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1637,6 +1661,7 @@
         "c9e314fa-e9f9-4360-9db8-360573e79a31",
         "87e546bf-85d1-4def-815b-7fd80829fd23",
         "17f90477-f478-4b0f-b80b-596bc0ee7b03",
+        "40a556b3-b593-49f9-a8dd-79c7719711d1",
         "3084b759-21b5-4a73-8328-f5bbd270cbaa",
         "fcddea42-439c-440e-907f-bc9554273848",
         "bb0475de-fada-448c-b757-2b3920467f50",
@@ -1660,6 +1685,8 @@
         "c1ba7c7b-de91-44f7-8000-087943f653fe",
         "bd435e20-d851-46d9-bd02-7923c0f463e3",
         "4e4159c7-5aa7-4791-b1d0-a6e03dc42298",
+        "ea038e0f-8538-4647-87b2-62d7f6fc8624",
+        "da5339a3-e45d-4bb4-98f0-73e523830394",
         "2076d417-d3c6-40d0-b0d3-e8abab444fd3",
         "e870f8b7-a5f5-4550-87c2-28016a07b124",
         "ddb12fb4-e255-4d14-9697-344f85351418",

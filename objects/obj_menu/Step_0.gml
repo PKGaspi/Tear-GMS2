@@ -46,9 +46,12 @@ var v_move_p		= input_down_p - input_up_p;
 var ds_grid			= menu_pages[page];
 var ds_height		= ds_grid_height(ds_grid);
 
-mouse_active = x_mouse_old != mouse_x || y_mouse_old != mouse_y;
-x_mouse_old = mouse_x;
-y_mouse_old = mouse_y;
+var ms_x = window_mouse_get_x();
+var ms_y = window_mouse_get_y();
+
+mouse_active = x_mouse_old != ms_x || y_mouse_old != ms_y;
+x_mouse_old = ms_x;
+y_mouse_old = ms_y;
 
 if (v_move_p != 0) {
 	audio_play_sound(snd_menu_move, 1, false);

@@ -9,9 +9,9 @@
 var _x = argument0;
 var _y = argument1;
 var text = argument2;
-var sep = argument3 * string_height("i");
+var sep = argument3;
 var size = argument5;
-var w = argument4 * string_width("i") * 20 / size;
+var w = argument4 * size;
 
 var scale = (size / 1000) * (global.view_width / font_get_size(draw_get_font()));
 draw_text_ext_transformed(_x, _y, text, sep, w, scale, scale, 0);

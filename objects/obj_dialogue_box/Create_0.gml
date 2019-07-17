@@ -12,8 +12,8 @@ text = noone;
 phrase = 0;
 
 speaker = false;
-speaker_x = 0;
-speaker_y = 0;
+speaker_mouth_x = 0;
+speaker_mouth_y = 0;
 speaker_name = noone;
 speaker_voice = noone;
 speaker_voice_fast = noone;
