@@ -7,7 +7,7 @@ draw_set_halign(fa_left);
 
 // Draw the background.
 draw_set_color(c_black);
-draw_set_alpha(.6);
+draw_set_alpha(.4);
 var total_lines = 1 + (global.debug_menu * menu_lines) + (show_info * info_lines);
 
 draw_rectangle(0, 0, global.view_width, total_lines * text_line_space, false);

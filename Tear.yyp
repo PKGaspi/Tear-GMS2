@@ -239,6 +239,14 @@
             }
         },
         {
+            "Key": "2240b91d-7af0-4dc4-aa4d-26a2b4a35fe5",
+            "Value": {
+                "id": "25c4874b-6666-4a54-8ca8-65d64363bc45",
+                "resourcePath": "fonts\\fnt_dialogue_20\\fnt_dialogue_20.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "226fd3b9-20ea-4ffe-acb9-62b3ed07749a",
             "Value": {
                 "id": "c2ce89c5-de7b-4dab-a149-68eeb30d7327",

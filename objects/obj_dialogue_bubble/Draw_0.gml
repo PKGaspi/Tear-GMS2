@@ -6,11 +6,11 @@ draw_set_font(speaker_font);
 var _text = text[phrase];
 var _text = _text[get_language_num(global.language)];
 
-var font_size = 15;
+var font_size = 5;
 
-var width = 40;
-var height = string_height_ext(_text, 10, width);
-
+var width = 60;
+var height = string_height_ext(_text, -1, width * font_get_size(draw_get_font()) / font_size) * font_size / font_get_size(draw_get_font());
+//height += font_size - (height % font_size);
 
 var offset = - 10;
 with (speaker) {
@@ -23,8 +23,8 @@ var x2 = speaker_mouth_x + speaker_x + offset;
 var y2 = speaker_mouth_y + speaker_y + offset;
 
 // Draw the actual box.
-draw_window(box_sprite, x1, y1, x2, y2, false);
+draw_window(box_sprite, x1, y1, x2, y2, true);
 
 // Draw the text.
-
-draw_text_ext_size(x1 + 1, y1 + 1, _text, -1, width, font_size);
+draw_text_ext_size(x1 + 3, y1 + 3, _text, -1, width, font_size);
+// TODO: test with a fixed sized font.

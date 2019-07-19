@@ -1,12 +1,16 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if (!draw) exit;
-draw_set_font(fnt_menu);
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-//draw_text(90, 90, string(string_width("i")));
-//draw_text_ext_transformed(40, 40, "This is a very long string, let's see how it ends up looking lmao :)", 100, 2000, .03, .03, 0);
 
-//draw_text_size(100, 100, "This is a very long string,\n let's see how it ends up looking lmao :)", 20);
-draw_border(10, 10, 70, 70, 1, c_white);
-draw_text_ext_size(40, 40, long_text, 1, 30, 20);
+/*
+draw_set_color(c_white);
+draw_set_font(fnt_dialogue_20);
+draw_text_ext(20, 20, "This is a test.", 80, 100);
+draw_set_font(fnt_dialogue);
+draw_text_ext_size(20, 20, "This is a test.", 80, 100, 20);
+
+// */
+
+draw_window(spr_dialogue_bubble_white_black, 10, 10, 50, 39, true);
+draw_window(spr_dialogue_bubble_white_black, 20, 21.85, 50, 39, true);
+//draw_window(spr_dialogue_bubble_white_black, 10, 27.8047, 50, 39, true);
+//draw_window(spr_dialogue_bubble_white_black, 10, 30.1, 50, 39, true);

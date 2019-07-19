@@ -4,8 +4,8 @@
 event_inherited();
 
 show_info					= false;
-text_scale					= 6;
-text_line_space				= 2;
+text_scale					= 2;
+text_line_space				= 2.5;
 
 obj_index					= 0;
 rm_index					= 0;

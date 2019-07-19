@@ -11,5 +11,5 @@ var text = argument2;
 var c = argument3;
 var size = argument4;
 
-var scale = (size / 1000) * (global.view_width / font_get_size(draw_get_font()));
+var scale = size / font_get_size(draw_get_font());
 draw_text_transformed_color(_x, _y, text, scale, scale, 0, c, c, c, c, 1);

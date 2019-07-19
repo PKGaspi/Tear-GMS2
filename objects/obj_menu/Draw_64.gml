@@ -28,9 +28,9 @@ var slider_length				= x_buffer_left * 2 / 3;
 var slider_radious				= x_sprite_buffer / 4;
 
 draw_set_font(fnt_menu);
-var text_scale_normal			= 22;
-var text_scale_selected			= 26;
-var text_scale_title			= 50;
+var text_scale_normal			= 5.5;
+var text_scale_selected			= 7;
+var text_scale_title			= 16;
 var text_border					= 1;
 
 var select_scale				= text_scale_selected / text_scale_normal;
