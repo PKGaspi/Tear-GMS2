@@ -9,7 +9,7 @@ y2 = 0;
 
 text = noone;
 text_draw = "";
-char_count = 0;
+char_count = 1;
 text_count = 0;
 
 speaker = false;
@@ -19,5 +19,6 @@ speaker_name = noone;
 speaker_voice = noone;
 speaker_voice_fast = noone;
 speaker_font = fnt_dialogue;
+speaker_talk_speed = 1;
 
 alarm[0] = 1;

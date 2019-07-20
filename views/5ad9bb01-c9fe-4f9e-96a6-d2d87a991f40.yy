@@ -7,6 +7,7 @@
         "2076d417-d3c6-40d0-b0d3-e8abab444fd3",
         "e870f8b7-a5f5-4550-87c2-28016a07b124",
         "ddb12fb4-e255-4d14-9697-344f85351418",
+        "95aec0cc-d9f7-417e-b35c-90ea89587825",
         "b21ad3b6-230f-4f76-b1cd-26fe1536f83c",
         "a3a7f005-3c6e-4195-b3d8-2af0a756ceba",
         "923c1650-ecf0-43a6-82f1-8f3ead8a0eb5",
@@ -16,7 +17,9 @@
         "d0c37f98-1662-4167-916d-1a2ee4485faa",
         "247bcb84-3d75-4485-bdcd-0f54edc9b40f",
         "806753d5-37af-4aa5-a169-e03248250350",
-        "7e47eb92-52ac-4a14-b2aa-5d40b11dab85"
+        "7e47eb92-52ac-4a14-b2aa-5d40b11dab85",
+        "493cfb61-7a87-4bd1-86f3-4bdb76091f9a",
+        "e590af9a-f92d-47da-8d92-864589dd1ef5"
     ],
     "filterType": "GMScript",
     "folderName": "Cutscenes",

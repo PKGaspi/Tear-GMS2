@@ -20,8 +20,12 @@ age					= 17;
 
 mouth_x				= 0;
 mouth_y				= -15;
+
 voice				= snd_voice_test;
 voice_fast			= noone;
+
+talk_speed			= 1;
+
 font				= fnt_dialogue;
 
 player_id			= instance_number(object_index) - 1;

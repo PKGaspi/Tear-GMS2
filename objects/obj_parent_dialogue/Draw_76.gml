@@ -3,8 +3,7 @@
 if (global.pause) exit;
 
 // Check the size of the drawn text.
-var _text = text[text_count];
-var _text = _text[get_language_num(global.language)];
+var _text = array_get(text[text_count], get_language_num(global.language));
 var _text_length = string_length(_text);
 
 // Input variables.
@@ -29,17 +28,18 @@ if (v_move_p != 0) {
 			instance_destroy(self, false);
 			exit;
 		}
-		// Empty drawing text.
-		text_draw = "";
-		char_count = 0;
+		// Reset text and char_count.
+		char_count = 1;
+		_text = array_get(text[text_count], get_language_num(global.language));
 	}
 }
 
 if (char_count < _text_length) {
 	// Increment text size by one char.
-	char_count++;
+	char_count += speaker_talk_speed;
 	text_draw = string_copy(_text, 1, char_count);
-	if (char_count % 3 == 1) {
+	// TODO: Fix this for real talk speeds.
+	if (floor(char_count % 3) == 1) {
 		// Play voice.
 		audio_play_sound(speaker_voice, 1, false);
 	}

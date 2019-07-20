@@ -11,4 +11,7 @@ text = [
 	["* how are you?", "¿Cómo estás?"],
 	["* " + string_lower(long_text), long_text]
 ];
-dialogue_bubble_create(spr_dialogue_bubble_white_black, text, instance_nearest(x, y, obj_player));
+cutscene_create([
+	[cutscene_dialogue_bubble_create, spr_dialogue_bubble_white_black, text, instance_nearest(x, y, obj_player)],
+	[cutscene_wait_le_instances, obj_dialogue_bubble, 0]
+]);

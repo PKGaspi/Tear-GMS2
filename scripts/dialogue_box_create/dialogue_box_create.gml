@@ -19,8 +19,6 @@ var _text = argument5;
 var _speaker = argument6;
 
 if (_speaker != noone) with (_speaker) {
-	var _speaker_x = mouth_x;
-	var _speaker_y = mouth_y;
 	var _speaker_name = name;
 	var _speaker_voice = voice;
 	var _speaker_voice_fast = voice_fast;
@@ -40,11 +38,11 @@ with (inst) {
 	
 	if (_speaker != noone) {
 		speaker = _speaker;
-		speaker_x = _speaker_x;
-		speaker_y = _speaker_y;
 		speaker_name = _speaker_name;
 		speaker_voice = _speaker_voice;
 		speaker_voice_fast = _speaker_voice_fast;
 		speaker_font = _speaker_font;
 	}
 }
+
+return inst;

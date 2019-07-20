@@ -11,4 +11,6 @@ name = noone;
 voice = noone; // TODO: add default voice.
 voice_fast = noone;
 
+talk_speed = 1;
+
 font = fnt_dialogue;
