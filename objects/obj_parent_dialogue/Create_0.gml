@@ -1,5 +1,4 @@
-/// @description Inserte aquí la descripción
-// Puede escribir su código en este editor
+/// @description Variable initialization.
 
 box_sprite = noone;
 

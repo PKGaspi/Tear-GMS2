@@ -10,7 +10,7 @@
         "a2c8e150-b191-4055-9756-12efe1d19355"
     ],
     "filterType": "GMScript",
-    "folderName": "Configuration",
+    "folderName": "Load and save config",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

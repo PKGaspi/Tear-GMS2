@@ -5,16 +5,6 @@
     "name": "obj_dialogue_bubble",
     "eventList": [
         {
-            "id": "e424ac95-b248-42c0-8eea-28b0e6c3d3b1",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "47a346c5-3ac4-4390-8d3e-ea6489c84fed"
-        },
-        {
             "id": "9acf4596-166c-41d9-8c39-21d49f753d6a",
             "modelName": "GMEvent",
             "mvc": "1.0",

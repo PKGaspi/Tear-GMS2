@@ -1,4 +1,5 @@
 /// @description Draw the dialogue box.
+
 if (global.pause) exit;
 
 // Draw the actual box.

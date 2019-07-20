@@ -1,7 +1,7 @@
 /// @description Draw the window.
 
 // Save old drawing parameters.
-var d_par = save_drawing_parameters();
+var d_par = draw_save_parameters();
 
 // Draw main window.
 draw_window_background(spr_window_menu_border_deep_purple, x1, y1, x2, y2, 1, c_black, alpha_back);
@@ -60,4 +60,4 @@ repeat (ar_len) {
 }
 
 // Restore old drawing parameters.
-restore_drawing_parameters(d_par);
+draw_restore_parameters(d_par);

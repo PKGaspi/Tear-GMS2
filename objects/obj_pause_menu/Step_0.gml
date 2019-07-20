@@ -4,8 +4,6 @@ var input_esc_p = keyboard_check_pressed(vk_escape);
 if (input_esc_p) {
 	global.pause = !global.pause;
 	if (global.pause) {
-		// TODO: Make a script and object for a window with animated background and handle it all in that object.
-
 		audio_play_sound(snd_menu_enter, 1, false);
 		// Clean the menu variables.
 		page = 0;

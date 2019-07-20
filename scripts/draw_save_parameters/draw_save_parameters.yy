@@ -1,8 +1,8 @@
 {
-    "id": "db6774f4-f34b-4850-b03d-90d769269409",
+    "id": "f0ccb1d8-c720-454b-8a6a-0bde9110c8fb",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "restore_drawing_parameters",
+    "name": "draw_save_parameters",
     "IsCompatibility": false,
     "IsDnD": false
 }
