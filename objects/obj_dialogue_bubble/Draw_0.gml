@@ -3,8 +3,7 @@
 draw_set_color(c_black);
 draw_set_font(speaker_font);
 // Variables.
-var _text = text[phrase];
-var _text = _text[get_language_num(global.language)];
+var _text = text_draw;
 
 var font_size = 5;
 var font_og_size = font_get_size(draw_get_font());

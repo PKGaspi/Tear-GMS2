@@ -1215,6 +1215,14 @@
             }
         },
         {
+            "Key": "bfb0c3e7-9ceb-4221-8129-2fa4d73aaadf",
+            "Value": {
+                "id": "3fd5adbf-3b4a-4033-8558-a35fb8cf1d56",
+                "resourcePath": "sounds\\snd_voice_test\\snd_voice_test.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "c007b4aa-ac79-436a-af8e-4970af94c47d",
             "Value": {
                 "id": "a8f795cf-b396-4e69-ad76-3e3dbfce0cb2",

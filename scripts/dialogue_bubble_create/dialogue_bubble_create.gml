@@ -18,7 +18,7 @@ if (_speaker != noone) with (_speaker) {
 	var _speaker_font = font;
 }
 
-var inst = instance_create_layer(0, 0, "Hidden", obj_dialogue_bubble);
+var inst = instance_create_layer(0, 0, "Text", obj_dialogue_bubble);
 with (inst) {
 	box_sprite = _sprite;
 	

@@ -9,7 +9,9 @@ x2 = 0;
 y2 = 0;
 
 text = noone;
-phrase = 0;
+text_draw = "";
+char_count = 0;
+text_count = 0;
 
 speaker = false;
 speaker_mouth_x = 0;

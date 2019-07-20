@@ -1,10 +1,14 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+if (!audio_is_playing(msc_test)) {
+	audio_play_sound(msc_test, 1, true);
+}
 text = [
-	["Hi.", "Hola."],
-	[" ", " "],
-	["I hope this is working correctly.", "Espero que esto esté funcionando correctamente."],
-	["How are you?", "¿Cómo estás?"],
-	[long_text, long_text]
+	["* heya.", "Hola."],
+	["* ...", "..."],
+	["* you didn't expect that, did you?", "Espero que esto esté funcionando correctamente."],
+	["* ;)", ";)"],
+	["* how are you?", "¿Cómo estás?"],
+	["* " + string_lower(long_text), long_text]
 ];
 dialogue_bubble_create(spr_dialogue_bubble_white_black, text, instance_nearest(x, y, obj_player));

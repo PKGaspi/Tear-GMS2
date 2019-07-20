@@ -20,7 +20,7 @@ age					= 17;
 
 mouth_x				= 0;
 mouth_y				= -15;
-voice				= noone;
+voice				= snd_voice_test;
 voice_fast			= noone;
 font				= fnt_dialogue;
 
