@@ -15,7 +15,9 @@
         "bb563791-2f84-4554-a6f1-9483fe2dbb1a",
         "a4aa860e-192e-4320-915d-0fbe2099e300",
         "789a430a-eec0-48a6-ac4f-b62de4026c68",
-        "1631bcdd-9ec3-4bfe-aca2-d1cfff89b6a5"
+        "1631bcdd-9ec3-4bfe-aca2-d1cfff89b6a5",
+        "a88a560a-80ba-4e54-8962-fc664af48663",
+        "47a346c5-3ac4-4390-8d3e-ea6489c84fed"
     ],
     "filterType": "GMObject",
     "folderName": "Control",

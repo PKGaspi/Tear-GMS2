@@ -18,7 +18,7 @@ spd = 0;
 offset = 0;
 dir = 0;
 
-dir_x = sign(lengthdir_x(1, dir));
-dir_y = sign(lengthdir_y(1, dir));
+dir_x = 0;
+dir_y = 0;
 
 alarm[0] = 1;

@@ -7,7 +7,7 @@ draw_set_halign(fa_left);
 
 // Draw the background.
 draw_set_color(c_black);
-draw_set_alpha(.6);
+draw_set_alpha(.4);
 var total_lines = 1 + (global.debug_menu * menu_lines) + (show_info * info_lines);
 
 draw_rectangle(0, 0, global.view_width, total_lines * text_line_space, false);
@@ -41,7 +41,8 @@ if (show_info) {
 	draw_text_size(0, line * text_line_space, "Current room: " + room_get_name(room) + " | Room size: " + string(room_width) + "x" + string(room_height), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "Mouse position: " + string(mouse_x) + " " + string(mouse_y), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "FPS: " + string(fps) + " | Number of instancese: " + string(instance_count), text_scale); line++;
-	draw_text_size(0, line * text_line_space, "Display resolution: " + string(global.DISPLAY_WIDTH) + "x" + string(global.DISPLAY_HEIGHT) + " | Window size: " + string(global.RESOLUTIONS[0, global.resolution]) + "x" + string(global.RESOLUTIONS[1, global.resolution]) + " | Fullscreen: " + boolean_to_yesno(global.fullscreen), text_scale); line++;
+	var res = get_resolution();
+	draw_text_size(0, line * text_line_space, "Display resolution: " + string(global.DISPLAY_WIDTH) + "x" + string(global.DISPLAY_HEIGHT) + " | Window size: " + string(res[0]) + "x" + string(res[1]) + " | Fullscreen: " + boolean_to_yesno(global.fullscreen), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "Camera position: " + string(c.x) + " " + string(c.y) + " | Camera following: " + string(c.follow) + " | Camera zoom: " + string(c.zoom), text_scale); line++;
 	draw_text_size(0, line * text_line_space, "Version: v" + string(GM_version) + " | Build date: " + date_datetime_string(GM_build_date), text_scale); line++;
 }

@@ -1,5 +1,7 @@
 /// @description Fixes fullscreen to window size.
-set_resolution(global.resolution);
+var res = get_resolution();
+window_resize(res[0], res[1]);
+
 if (destroy) {
 	instance_destroy();
 }

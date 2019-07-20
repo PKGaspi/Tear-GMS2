@@ -17,6 +17,13 @@ spr_layers[spr_layer_type.jacket]		= spr_jacket_000_d;
 // ----------- INFO -----------
 name				= "Keia";
 age					= 17;
+
+mouth_x				= 0;
+mouth_y				= -15;
+voice				= snd_voice_test;
+voice_fast			= noone;
+font				= fnt_dialogue;
+
 player_id			= instance_number(object_index) - 1;
 
 // ----------- MOVEMENT -----------

@@ -28,17 +28,22 @@ var slider_length				= x_buffer_left * 2 / 3;
 var slider_radious				= x_sprite_buffer / 4;
 
 draw_set_font(fnt_menu);
-var text_scale_normal			= 22;
-var text_scale_selected			= 26;
-var text_scale_title			= 50;
+var text_scale_normal			= 5.5;
+var text_scale_selected			= 7;
+var text_scale_title			= 16;
 var text_border					= 1;
 
 var select_scale				= text_scale_selected / text_scale_normal;
 var select_offset				= x_sprite_buffer / 2;
 
+// Colors for drawing.
 var c_selected					= color_change_endianness($fdd835);
 var c_selected_border			= global.c_deep_purple_0;
 var c_unselected				= c_white;
+
+// Mouse position on window.
+var ms_x = gui_mouse_get_x();
+var ms_y = gui_mouse_get_y();
 
 // ---------- Title ----------
 draw_set_alpha(1);
@@ -65,8 +70,8 @@ repeat (ds_height) {
 	y_left = y_start + (yy * y_buffer);
 	
 	if ((mouse_active) && 
-		(y_left - y_buffer / 2 < mouse_y && mouse_y < y_left + y_buffer / 2) &&
-		(x_left + x_offset - x_sprite_buffer * 3 < mouse_x && mouse_x < gwidth - (x_left + x_offset - x_sprite_buffer * 3))) {
+		(y_left - y_buffer / 2 < ms_y && ms_y < y_left + y_buffer / 2) &&
+		(x_left + x_offset - x_sprite_buffer * 3 < ms_x && ms_x < gwidth - (x_left + x_offset - x_sprite_buffer * 3))) {
 		// If the mouse is in the position of this line.
 		if (menu_option[page] != yy) {
 			audio_play_sound(snd_menu_move, 1, false);
