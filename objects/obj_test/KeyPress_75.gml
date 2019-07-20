@@ -2,6 +2,7 @@
 // Puede escribir su código en este editor
 text = [
 	["Hi.", "Hola."],
+	[" ", " "],
 	["I hope this is working correctly.", "Espero que esto esté funcionando correctamente."],
 	["How are you?", "¿Cómo estás?"],
 	[long_text, long_text]

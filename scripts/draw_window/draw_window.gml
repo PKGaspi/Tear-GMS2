@@ -42,8 +42,14 @@ var x_scale = columns - 2 + extra_column / size;
 var y_scale = rows - 2 + extra_row / size;
 
 // Small scale in case there is an extra column and/or row.
-var x_scale_tile = x_scale / (columns - 2);
-var y_scale_tile = y_scale / (rows - 2);
+if (scale) {
+	var x_scale_tile = 1;
+	var y_scale_tile = 1;
+}
+else {
+	var x_scale_tile = x_scale / (columns - 2);
+	var y_scale_tile = y_scale / (rows - 2);
+}
 
 // ----- DRAWING ------
 draw_set_alpha(1);
