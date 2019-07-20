@@ -154,8 +154,9 @@ repeat (ds_height) {
 				draw_set_halign(fa_left);
 				
 				// Update value if the user is using a mouse. It is easier to do here.
-				if (mouse_check_button(mb_left) && mouse_x > x_right - slider_radious) {
-					ds_grid[# 4, yy] = clamp((mouse_x - x_right - slider_radious) / len, 0, 100);
+				if (mouse_check_button(mb_left) &&
+					x_right - slider_radious < ms_x) {
+					ds_grid[# 4, yy] = clamp((ms_x - x_right - slider_radious) / len, 0, 1);
 				}
 
 			}
