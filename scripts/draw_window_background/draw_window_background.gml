@@ -16,10 +16,10 @@ if (sprite == noone) {
 	exit;
 }
 
-var x1 = argument1;
-var y1 = argument2;
-var x2 = argument3;
-var y2 = argument4;
+var x1 = min(argument1, argument3);
+var y1 = min(argument2, argument4);
+var x2 = max(argument1, argument3);
+var y2 = max(argument2, argument4);
 
 var scale = argument5;
 

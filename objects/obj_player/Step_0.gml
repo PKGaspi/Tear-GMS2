@@ -1,11 +1,19 @@
 /// @description Movement and a lot more.
-if (global.pause || global.cutscene || global.debug_menu) exit; // Finish if movement is not allowed.
+if (global.pause) exit; // Finish if movement is not allowed.
 
 #region // Inputs.
-var h_input_h						= keyboard_check(global.key_right) - keyboard_check(global.key_left);
-var v_input_h						= keyboard_check(global.key_down) - keyboard_check(global.key_up);
-var run_input_h						= keyboard_check(global.key_run);
-var jump_h							= keyboard_check(global.key_jump);
+if (!global.cutscene && !global.debug_menu) {
+	var h_input_h		= keyboard_check(global.key_right) - keyboard_check(global.key_left);
+	var v_input_h		= keyboard_check(global.key_down) - keyboard_check(global.key_up);
+	var run_input_h		= keyboard_check(global.key_run);
+	var jump_h			= keyboard_check(global.key_jump);
+}
+else {
+	var h_input_h		= 0;
+	var v_input_h		= 0;
+	var run_input_h		= 0;
+	var jump_h			= 0;
+}
 #endregion
 #region // Movement.
 if (h_input_h != 0 || v_input_h != 0) {

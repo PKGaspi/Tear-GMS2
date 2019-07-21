@@ -38,7 +38,7 @@ if (char_count < _text_length) {
 	// Increment text size by one char.
 	char_count += speaker_talk_speed;
 	text_draw = string_copy(_text, 1, char_count);
-	// TODO: Fix this for real talk speeds.
+	// TODO: Fix this for non int talk speeds.
 	if (floor(char_count % 3) == 1) {
 		// Play voice.
 		audio_play_sound(speaker_voice, 1, false);
