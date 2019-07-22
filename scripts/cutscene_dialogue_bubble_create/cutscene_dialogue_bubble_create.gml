@@ -3,5 +3,5 @@
 /// @arg1 text Array of arrays of the texts in multiple languages.
 /// @arg2 speaker
 
-dialogue_bubble_create(argument0, argument1, argument2);
+dialogue_bubble_create(argument0, argument1, argument2, argument3);
 cutscene_next_scene();

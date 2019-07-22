@@ -1,4 +1,4 @@
-/// @desc Draws a text with a border and the given font size.
+/// @desc Draws a line with a border and the given width.
 /// @arg0 x1
 /// @arg1 y1
 /// @arg2 x2
