@@ -43,6 +43,14 @@ else {
 	}
 }
 #endregion
+var inst = instance_place(x + x_move, y + y_move, obj_terrain);
+if (inst != noone) {
+	// TODO: Fix not being able to move up when pressing up left
+	// and a wall is on the left. Also fix diagonal collisions.
+	var dist = distance_to_object(inst);
+	x_move = lengthdir_x(dist - 1, dir);
+	y_move = lengthdir_y(dist - 1, dir);
+}
 #region // Add movement. DO NOT TOUCH X AND Y ANYWHERE ELSE!!
 x += x_move;
 y += y_move - z_move;
@@ -53,10 +61,12 @@ x_move = 0;
 y_move = 0;
 #endregion
 
+if (global.cutscene) exit;
 // Collisions.
 #region // Loading box colision.
 var box = instance_place(x, y, obj_parent_collision_box);
 if (box != noone) {
 	with (box) event_perform(ev_other, ev_user0);
+	
 }
 #endregion

@@ -1,7 +1,7 @@
 /// @description Variable initialization.
 
-box_sprite = noone;
-spike_sprite = noone;
+border_color = noone;
+inside_color = noone;
 
 x1 = 0;
 y1 = 0;

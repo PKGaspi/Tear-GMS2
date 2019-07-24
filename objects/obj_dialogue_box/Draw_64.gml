@@ -3,13 +3,14 @@
 if (global.pause) exit;
 
 // Draw the actual box.
-draw_window(box_sprite, x1, y1, x2, y2, false);
+draw_roundrect_outline(x1, y1, x2, y2, border_color, inside_color, 1);
 
 var font_size = 7;
 
 // Draw the text.
 draw_set_font(speaker_font);
-draw_set_color(c_black);
+// TODO: Calculate this color just once.
+draw_set_color(color_for_contrast(inside_color));
 
 var _text = text_draw;
 

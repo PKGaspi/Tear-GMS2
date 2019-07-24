@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "14e2f2ce-bd3f-4522-aa5b-47aa2d55530f",
+            "Value": {
+                "id": "826d69a8-d4a0-419f-b95a-f9baf22d5f59",
+                "resourcePath": "sprites\\spr_debug_magenta_diagonal\\spr_debug_magenta_diagonal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "151f6033-9115-4d2e-ac85-06627595a8d4",
             "Value": {
                 "id": "dbd58795-8e78-4e4f-8b59-50aca25b45fc",
@@ -1463,6 +1471,14 @@
             }
         },
         {
+            "Key": "dd133dd6-af92-480f-93bd-ccaad0fb5998",
+            "Value": {
+                "id": "70ab7640-909a-4c46-9b79-58e0e828f5cb",
+                "resourcePath": "objects\\obj_terrain_diagonal\\obj_terrain_diagonal.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ddb12fb4-e255-4d14-9697-344f85351418",
             "Value": {
                 "id": "9af12288-c6d5-4373-a88e-8614841efdb0",
@@ -1740,6 +1756,14 @@
                 "id": "2234f805-777a-4372-b940-ced7c7d837ee",
                 "resourcePath": "sprites\\spr_settings_control\\spr_settings_control.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fe56ca51-8e3c-4d2d-9c49-ba0859c0814e",
+            "Value": {
+                "id": "0ecb1e4f-bce9-461f-a156-a888a8e436e7",
+                "resourcePath": "objects\\obj_terrain\\obj_terrain.yy",
+                "resourceType": "GMObject"
             }
         }
     ],

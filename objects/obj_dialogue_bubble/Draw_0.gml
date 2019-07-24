@@ -28,6 +28,8 @@ with (speaker) {
 var mouth_x = speaker_mouth_x + speaker_x;
 var mouth_y = speaker_mouth_y + speaker_y;
 
+// TODO: x1 and y1 are fixed for every text. This can be optimized by
+// calculating them once per text in the pre-draw event.
 var x1 = mouth_x - total_width - x_margin - x_offset;
 var y1 = mouth_y - total_height / 2 - y_margin - y_offset;
 var x2 = x1 + width + 2 * x_margin;
@@ -69,18 +71,19 @@ else if (y2_final > view_down) {
 
 // --- DRAWING ---
 
-draw_roundrect_outline(x1, y1, x2, y2, c_black, c_white, 1);
+draw_roundrect_outline(x1, y1, x2, y2, border_color, inside_color, 1);
 // Draw the spike.
 var spike_height = 2;
 if (y2 - y_margin - spike_height >= mouth_y) {
 	// draw_sprite(spike_sprite, 0, x2 - 1, speaker_mouth_y + speaker_y);
 	// draw_triangle_outline(mouth_x - 7, mouth_y, x2 - 1, mouth_y + 1, x2 - 1, mouth_y - 1, c_black, c_white, 1);
-	draw_dialogue_spike(mouth_x + sign(x2 - mouth_x) * 7, mouth_y, mouth_x + min(abs(x1 - mouth_x), x2 - mouth_x), spike_height, c_black, c_white, 1);
+	draw_dialogue_spike(mouth_x + sign(x2 - mouth_x) * 7, mouth_y, mouth_x + min(abs(x1 - mouth_x), x2 - mouth_x), spike_height, border_color, inside_color, 1);
 }
 // Draw the actual box.
 // draw_window(box_sprite, x1, y1, x2, y2, true);
 //draw_roundrect_outline(x1, y1, x2, y2, c_black, c_white, 1);
 
 // Draw the text.
-draw_set_color(c_black);
+// TODO: Calculate this color just once.
+draw_set_color(color_for_contrast(inside_color));
 draw_text_ext_size(x1 + x_margin, y1 + y_margin, text_draw, -1, total_width, font_size);

@@ -12,6 +12,6 @@ text = [
 	["* " + string_lower(long_text), long_text]
 ];
 cutscene_create([
-	[cutscene_dialogue_bubble_create, spr_dialogue_bubble_white_black, spr_dialogue_bubble_spike_white_black, text, instance_nearest(x, y, obj_player)],
-	[cutscene_wait_le_instances, obj_dialogue_bubble, 0]
+	[cutscene_dialogue_bubble_create, c_black, c_white, text, instance_nearest(x, y, obj_player)],
+	[cutscene_wait_le_instances, obj_parent_dialogue, 0]
 ]);

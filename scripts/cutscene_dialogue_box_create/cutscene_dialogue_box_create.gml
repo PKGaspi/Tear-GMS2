@@ -7,5 +7,5 @@
 /// @arg5 text Array of arrays of the texts in multiple languages.
 /// @arg6 speaker
 
-dialogue_box_create(argument0, argument1, argument2, argument3, argument4, argument5, argument6);
+dialogue_box_create(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7);
 cutscene_next_scene();

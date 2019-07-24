@@ -1,11 +1,11 @@
 /// @desc Creates a dialogue bubble with the given text.
-/// @arg0 sprite_box Index of the box sprite to draw.
-/// @arg1 sprite_spike Index of the spike sprite to point at the speaker.
+/// @arg0 border_color
+/// @arg1 inside_color
 /// @arg2 text Array of arrays of the texts in multiple languages.
 /// @arg3 speaker
 
-var _box_sprite = argument0;
-var _spike_sprite = argument1;
+var _border_color = argument0;
+var _inside_color = argument1;
 
 var _text = argument2;
 
@@ -23,8 +23,8 @@ if (_speaker != noone) with (_speaker) {
 
 var inst = instance_create_layer(0, 0, "Text", obj_dialogue_bubble);
 with (inst) {
-	box_sprite = _box_sprite;
-	spike_sprite = _spike_sprite
+	border_color = _border_color;
+	inside_color = _inside_color
 	
 	text = _text;
 	
