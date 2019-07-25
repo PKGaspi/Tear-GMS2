@@ -38,6 +38,8 @@ jump_speed				= 4;
 grav						= -.3;
 move_speed_run_multiplier	= 1.5;
 
+tilemap = layer_tilemap_get_id("Collision");
+
 // Temp.
 //global.cameras[player_id] = instance_create_layer(x, y, "Hidden", obj_camera);
 camera_follow_me(player_id);

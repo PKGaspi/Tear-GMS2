@@ -1,5 +1,6 @@
 /// @description Movement and a lot more.
 if (global.pause) exit; // Finish if movement is not allowed.
+var bbox_side;
 
 #region // Inputs.
 if (!global.cutscene && !global.debug_menu) {
@@ -43,14 +44,37 @@ else {
 	}
 }
 #endregion
-var inst = instance_place(x + x_move, y + y_move, obj_terrain);
-if (inst != noone) {
-	// TODO: Fix not being able to move up when pressing up left
-	// and a wall is on the left. Also fix diagonal collisions.
-	var dist = distance_to_object(inst);
-	x_move = lengthdir_x(dist - 1, dir);
-	y_move = lengthdir_y(dist - 1, dir);
+#region // Terrain collision.
+// TODO: Make this work with the z axis.
+// Horizontal collision.
+if (x_move > 0) bbox_side = bbox_right; else bbox_side = bbox_left;
+if (tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_top) != 0 ||
+	tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_bottom) != 0) {
+	if (x_move > 0) {
+		x -= (x mod 16) - 15;
+		x -= (bbox_right - x);	
+	}
+	else {
+		x -= (x mod 16);
+		x -= (bbox_left - x);
+	}
+	x_move = 0;
+} 
+// Vertical collision.
+if (y_move > 0) bbox_side = bbox_bottom; else bbox_side = bbox_top;
+if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + round(y_move)) != 0 ||
+	tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + round(y_move)) != 0) {
+	if (y_move > 0) {
+		y -= (y mod 16) - 15 
+		y -= (bbox_bottom - y);
+	}
+	else {
+		y -= (y mod 16);
+		y -= (bbox_top - y);
+	}
+	y_move = 0;
 }
+#endregion
 #region // Add movement. DO NOT TOUCH X AND Y ANYWHERE ELSE!!
 x += x_move;
 y += y_move - z_move;
