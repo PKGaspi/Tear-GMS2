@@ -12,8 +12,6 @@ height							= global.view_height;
 width_to						= width;
 height_to						= height;
 
-global.draw_ratio				= global.view_width / global.INTENDED_WIDTH;
-
 camera							= camera_create();
 camera_index					= array_length_1d(global.cameras);
 global.cameras[camera_index]	= self;

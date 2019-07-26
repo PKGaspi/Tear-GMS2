@@ -2,11 +2,27 @@
 
 // Destroy if there is another instance of this object.
 event_inherited();
-destroy = false;
+destroy = 0;
 
 // Load audio groups.
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_soundeffects);
+
+#region // Setup tile collision.
+#macro TILE_SIZE 16
+heights_to_get = 64 //sprite_get_width(spr_ts_collision);
+tiles = heights_to_get / TILE_SIZE;
+
+// Create Tiles
+var layerid = layer_create(0, "Collision");
+tilemapid = layer_tilemap_create(layerid, 0, 0, ts_collision, tiles, 1);
+
+var i = 0;
+repeat (tiles) {
+	tilemap_set(tilemapid, i, i, 0);
+	i++;
+}
+#endregion
 
 // Control variables.
 global.pause				= false; // Whether the game is paused or not.
@@ -20,7 +36,6 @@ global.INTENDED_WIDTH		= 240;
 global.INTENDED_HEIGHT		= 135;
 global.DISPLAY_WIDTH		= display_get_width();
 global.DISPLAY_HEIGHT		= display_get_height();
-
 
 global.RESOLUTIONS = [
 	[960, 540],
@@ -39,18 +54,6 @@ while (res[0] >= global.DISPLAY_WIDTH || res[1] >= global.DISPLAY_HEIGHT) {
 	var len = array_length_1d(global.RESOLUTIONS);
 	var res = global.RESOLUTIONS[len - 1];
 }
-/*
-global.RESOLUTIONS[0, 0]	= global.DISPLAY_WIDTH / 4;
-global.RESOLUTIONS[0, 1]	= global.DISPLAY_WIDTH / 3;
-global.RESOLUTIONS[0, 2]	= global.DISPLAY_WIDTH / 2.5;
-global.RESOLUTIONS[0, 3]	= global.DISPLAY_WIDTH / 2;
-global.RESOLUTIONS[0, 4]	= global.DISPLAY_WIDTH / 1.5;
-global.RESOLUTIONS[1, 0]	= global.DISPLAY_HEIGHT / 4;
-global.RESOLUTIONS[1, 1]	= global.DISPLAY_HEIGHT / 3;
-global.RESOLUTIONS[1, 2]	= global.DISPLAY_HEIGHT / 2;
-global.RESOLUTIONS[1, 3]	= global.DISPLAY_HEIGHT / 1.5;
-global.RESOLUTIONS[1, 4]	= global.DISPLAY_HEIGHT / 1.5;
-*/
 var tmp;
 switch (display_aa) {
 	case 2 : tmp = [0, 2]; break;	

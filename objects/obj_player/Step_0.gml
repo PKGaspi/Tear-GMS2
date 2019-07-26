@@ -51,11 +51,11 @@ if (x_move > 0) bbox_side = bbox_right; else bbox_side = bbox_left;
 if (tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_top) != 0 ||
 	tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_bottom) != 0) {
 	if (x_move > 0) {
-		x -= (x mod 16) - 15;
+		x -= (x mod TILE_SIZE) - (TILE_SIZE - 1);
 		x -= (bbox_right - x);	
 	}
 	else {
-		x -= (x mod 16);
+		x -= (x mod TILE_SIZE);
 		x -= (bbox_left - x);
 	}
 	x_move = 0;
@@ -65,11 +65,11 @@ if (y_move > 0) bbox_side = bbox_bottom; else bbox_side = bbox_top;
 if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + round(y_move)) != 0 ||
 	tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + round(y_move)) != 0) {
 	if (y_move > 0) {
-		y -= (y mod 16) - 15 
+		y -= (y mod TILE_SIZE) - (TILE_SIZE - 1)
 		y -= (bbox_bottom - y);
 	}
 	else {
-		y -= (y mod 16);
+		y -= (y mod TILE_SIZE);
 		y -= (bbox_top - y);
 	}
 	y_move = 0;

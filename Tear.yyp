@@ -111,14 +111,6 @@
             }
         },
         {
-            "Key": "116c5f58-7529-4415-8536-3649d985bcaf",
-            "Value": {
-                "id": "24dc8ffa-f8f5-4af4-9b7c-ae04c569c495",
-                "resourcePath": "sprites\\spr_tileset_collision\\spr_tileset_collision.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "12cf4d9d-5697-408d-bae1-67d4221d1e59",
             "Value": {
                 "id": "98d2194c-fc2c-4a38-8301-55e3c731a613",
@@ -324,6 +316,14 @@
                 "id": "33a7c962-4784-45b2-8c66-5e7cd45518b7",
                 "resourcePath": "scripts\\cutscene_variable_instance_set\\cutscene_variable_instance_set.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2d0e2d44-d1f0-4078-a846-bb014736e511",
+            "Value": {
+                "id": "d4879802-3c45-46c0-a3fc-3278e57ca077",
+                "resourcePath": "sprites\\spr_ts_collision\\spr_ts_collision.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -951,6 +951,14 @@
             }
         },
         {
+            "Key": "8d60d52d-8729-4403-82f6-bf24bf52d9bb",
+            "Value": {
+                "id": "0b45032f-aeb4-4894-aa32-31ff785bfa50",
+                "resourcePath": "tilesets\\ts_collision\\ts_collision.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "8da17e91-b14d-48ba-9ad6-6255e0c215bc",
             "Value": {
                 "id": "a2eace8c-ce21-4cc9-b7ad-c9073eac5f67",
@@ -1124,14 +1132,6 @@
                 "id": "db9b5630-52ad-4c29-a990-9cfacd088297",
                 "resourcePath": "views\\a6a1afd6-6530-4b51-a3ba-a1638856a34b.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "a709420a-372d-4640-b53a-0aff5e719cf9",
-            "Value": {
-                "id": "f726bca1-1a56-4010-bb72-0801588628b8",
-                "resourcePath": "tilesets\\tileset0\\tileset0.yy",
-                "resourceType": "GMTileSet"
             }
         },
         {
@@ -1402,7 +1402,7 @@
             "Key": "c98d2f06-085c-45b1-a4ac-3606edb356c6",
             "Value": {
                 "id": "29a96aed-453b-4048-93b7-474dd9aa092e",
-                "resourcePath": "rooms\\rm_title\\rm_title.yy",
+                "resourcePath": "rooms\\rm_init\\rm_init.yy",
                 "resourceType": "GMRoom"
             }
         },

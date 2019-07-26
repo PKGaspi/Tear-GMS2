@@ -2,14 +2,12 @@
 
 if (audio_group_is_loaded(audiogroup_music) &&
 	audio_group_is_loaded(audiogroup_soundeffects)) {
-	if (debug_mode) {
-		instance_create_layer(0, 0, "Hidden", obj_debug);
-		room_goto(rm_test);
-	}
-	if (destroy) {
+	
+	// Destroy if everything else is initialized.
+	if (destroy >= 3) {
 		instance_destroy();
 	}
 	else {
-		destroy = true;
+		destroy++;
 	}
 }
