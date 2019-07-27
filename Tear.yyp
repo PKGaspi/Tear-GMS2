@@ -967,6 +967,14 @@
             }
         },
         {
+            "Key": "8ded0315-217a-496a-831a-a19130dbbb9a",
+            "Value": {
+                "id": "a4ad6dc1-e0d2-48be-a201-c312c4709e27",
+                "resourcePath": "scripts\\collision_get_distance\\collision_get_distance.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8e67d813-d0e0-4737-85b5-48b4fd662b3c",
             "Value": {
                 "id": "badb71ed-55c3-497b-b3f8-c27c05da7542",
@@ -1850,6 +1858,7 @@
         "4e4159c7-5aa7-4791-b1d0-a6e03dc42298",
         "ea038e0f-8538-4647-87b2-62d7f6fc8624",
         "da5339a3-e45d-4bb4-98f0-73e523830394",
+        "8ded0315-217a-496a-831a-a19130dbbb9a",
         "2076d417-d3c6-40d0-b0d3-e8abab444fd3",
         "e870f8b7-a5f5-4550-87c2-28016a07b124",
         "ddb12fb4-e255-4d14-9697-344f85351418",

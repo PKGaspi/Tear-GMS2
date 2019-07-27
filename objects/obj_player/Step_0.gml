@@ -1,6 +1,6 @@
 /// @description Movement and a lot more.
 if (global.pause) exit; // Finish if movement is not allowed.
-var bbox_side;
+var bbox_side, table;
 
 #region // Inputs.
 if (!global.cutscene && !global.debug_menu) {
@@ -48,8 +48,14 @@ else {
 // TODO: Make this work with the z axis.
 // Horizontal collision.
 if (x_move > 0) bbox_side = bbox_right; else bbox_side = bbox_left;
-if (tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_top) != 0 ||
-	tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_bottom) != 0) {
+var col_top = tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_top);
+var col_bottom = tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_bottom);
+
+// Ignore horizontal collision in case we are on a diagonal wall.
+if (tilemap_get_at_pixel(tilemap, x, bbox_top) >1) col_top = 0;
+if (tilemap_get_at_pixel(tilemap, x, bbox_bottom) > 1 ) col_bottom = 0;
+
+if (col_top != 0 || col_bottom != 0) {
 	if (x_move > 0) {
 		x -= (x mod TILE_SIZE) - (TILE_SIZE - 1);
 		x -= (bbox_right - x);	
@@ -60,20 +66,44 @@ if (tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_top) != 0 ||
 	}
 	x_move = 0;
 } 
+
 // Vertical collision.
-if (y_move > 0) bbox_side = bbox_bottom; else bbox_side = bbox_top;
-if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + round(y_move)) != 0 ||
-	tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + round(y_move)) != 0) {
-	if (y_move > 0) {
-		y -= (y mod TILE_SIZE) - (TILE_SIZE - 1)
-		y -= (bbox_bottom - y);
-	}
-	else {
-		y -= (y mod TILE_SIZE);
-		y -= (bbox_top - y);
-	}
-	y_move = 0;
+
+if (y_move > 0) {
+	bbox_side = bbox_bottom;
+	table = global.collision_heights_top;
 }
+else {
+	bbox_side = bbox_top;
+	table = global.collision_heights_bottom;
+}
+
+if (tilemap_get_at_pixel(tilemap, x, bbox_side + y_move) <= 1) {
+	if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + round(y_move)) != 0 ||
+		tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + round(y_move)) != 0) {
+		if (y_move > 0) {
+			y -= (y mod TILE_SIZE) - (TILE_SIZE - 1)
+			y -= (bbox_bottom - y);
+		}
+		else {
+			y -= (y mod TILE_SIZE);
+			y -= (bbox_top - y);
+		}
+		y_move = 0;
+	}
+}
+else {
+	var dist = collision_get_distance(tilemap, x, bbox_side + y_move, table);
+	if (dist > 0) {
+		if (y_move > 0) {
+			y_move = dist - y mod TILE_SIZE;
+		}
+		else {
+			y_move = dist - y mod TILE_SIZE;
+		}
+	}
+}
+
 #endregion
 #region // Add movement. DO NOT TOUCH X AND Y ANYWHERE ELSE!!
 x += x_move;
@@ -91,6 +121,5 @@ if (global.cutscene) exit;
 var box = instance_place(x, y, obj_parent_collision_box);
 if (box != noone) {
 	with (box) event_perform(ev_other, ev_user0);
-	
 }
 #endregion
