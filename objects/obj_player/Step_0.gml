@@ -1,6 +1,6 @@
 /// @description Movement and a lot more.
 if (global.pause) exit; // Finish if movement is not allowed.
-var bbox_side, table;
+var bbox_side, table, dist;
 
 #region // Inputs.
 if (!global.cutscene && !global.debug_menu) {
@@ -78,32 +78,22 @@ else {
 	table = global.collision_heights_bottom;
 }
 
-if (tilemap_get_at_pixel(tilemap, x, bbox_side + y_move) <= 1) {
-	if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + round(y_move)) != 0 ||
-		tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + round(y_move)) != 0) {
-		if (y_move > 0) {
-			y -= (y mod TILE_SIZE) - (TILE_SIZE - 1)
-			y -= (bbox_bottom - y);
-		}
-		else {
-			y -= (y mod TILE_SIZE);
-			y -= (bbox_top - y);
-		}
-		y_move = 0;
-	}
-}
-else {
-	var dist = collision_get_distance(tilemap, x, bbox_side + y_move, table);
-	if (dist > 0) {
-		if (y_move > 0) {
-			y_move = dist - y mod TILE_SIZE;
-		}
-		else {
-			y_move = dist - y mod TILE_SIZE;
-		}
-	}
-}
 
+dist = max(collision_get_distance(tilemap, bbox_right + x_move, bbox_side + y_move, table));
+
+if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + round(y_move)) != 0 ||
+	tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + round(y_move)) != 0) {
+	if (y_move > 0) {
+		y_move = min(y_move, dist - (bbox_side + y_move) mod TILE_SIZE);
+		//y -= (y mod TILE_SIZE) - (TILE_SIZE - 1)
+		//y -= (bbox_bottom - y);
+	}
+	else {
+		y_move = max(y_move, dist - (bbox_side + y_move) mod TILE_SIZE);
+		//y -= (y mod TILE_SIZE);
+		//y -= (bbox_top - y);
+	}
+	}
 #endregion
 #region // Add movement. DO NOT TOUCH X AND Y ANYWHERE ELSE!!
 x += x_move;
