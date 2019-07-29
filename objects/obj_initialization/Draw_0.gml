@@ -6,19 +6,37 @@ draw_tilemap(tilemapid, 0, 0);
 
 // Create the height arrays.
 global.collision_heights_top = array_create(heights_to_get, 16);
+global.collision_heights_left = array_create(heights_to_get, 16);
 global.collision_heights_bottom = array_create(heights_to_get, 16);
+global.collision_heights_right = array_create(heights_to_get, 16);
 var i = TILE_SIZE; // Start after the empty tile.
 repeat (heights_to_get - TILE_SIZE) {
+	// Top.
 	var check = 0;
 	while (check < TILE_SIZE) {
 		global.collision_heights_top[i] = check;
 		if (surface_getpixel(surface, i, check) != c_black) break;
 		check++;
 	}
+	// Left.
+	check = 0;
+	while (check < TILE_SIZE) {
+		global.collision_heights_left[i] = check;
+		if (surface_getpixel(surface, check + i * TILE_SIZE, i) != c_black) break;
+		check++;
+	}
+	// Bottom.
 	check = TILE_SIZE;
 	while (check > 0) {
 		global.collision_heights_bottom[i] = TILE_SIZE - check;
 		if (surface_getpixel(surface, i, check - 1) != c_black) break;
+		check--;
+	}
+	// Right.
+	check = TILE_SIZE;
+	while (check > 0) {
+		global.collision_heights_right[i] = TILE_SIZE - check;
+		if (surface_getpixel(surface, check + TILE_SIZE * int64(i / TILE_SIZE), i) != c_black) break;
 		check--;
 	}
 	i++;

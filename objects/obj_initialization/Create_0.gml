@@ -7,6 +7,7 @@ destroy = 0;
 // Load audio groups.
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_soundeffects);
+draw_set_circle_precision(64);
 
 #region // Setup tile collision.
 #macro TILE_SIZE 16

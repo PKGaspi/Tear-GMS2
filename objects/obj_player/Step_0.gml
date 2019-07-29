@@ -52,8 +52,8 @@ var col_top = tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_top)
 var col_bottom = tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_bottom);
 
 // Ignore horizontal collision in case we are on a diagonal wall.
-if (tilemap_get_at_pixel(tilemap, x, bbox_top) >1) col_top = 0;
-if (tilemap_get_at_pixel(tilemap, x, bbox_bottom) > 1 ) col_bottom = 0;
+if (tilemap_get_at_pixel(tilemap, x, bbox_top) > 1) col_top = 0;
+if (tilemap_get_at_pixel(tilemap, x, bbox_bottom) > 1) col_bottom = 0;
 
 if (col_top != 0 || col_bottom != 0) {
 	if (x_move > 0) {
@@ -79,21 +79,21 @@ else {
 }
 
 
-dist = max(collision_get_distance(tilemap, bbox_right + x_move, bbox_side + y_move, table));
+dist = max(collision_get_distance(tilemap, x + x_move, bbox_side + y_move, table));
 
-if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + round(y_move)) != 0 ||
-	tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + round(y_move)) != 0) {
+if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + y_move) != 0 ||
+	tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + y_move) != 0) {
 	if (y_move > 0) {
-		y_move = min(y_move, dist - (bbox_side + y_move) mod TILE_SIZE);
+		y_move = min(y_move, max(0, dist - (bbox_side + y_move) mod TILE_SIZE));
 		//y -= (y mod TILE_SIZE) - (TILE_SIZE - 1)
 		//y -= (bbox_bottom - y);
 	}
 	else {
-		y_move = max(y_move, dist - (bbox_side + y_move) mod TILE_SIZE);
+		y_move = - min(abs(y_move), max(0, abs(dist - (bbox_side) mod TILE_SIZE)));
 		//y -= (y mod TILE_SIZE);
 		//y -= (bbox_top - y);
 	}
-	}
+}
 #endregion
 #region // Add movement. DO NOT TOUCH X AND Y ANYWHERE ELSE!!
 x += x_move;
