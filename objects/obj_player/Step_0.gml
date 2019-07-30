@@ -1,6 +1,6 @@
 /// @description Movement and a lot more.
 if (global.pause) exit; // Finish if movement is not allowed.
-var bbox_side, table, height, dist, round_x, round_y;
+var bbox_side, table, width, height, dist, round_x, round_y;
 
 #region // Inputs.
 if (!global.cutscene && !global.debug_menu) {
@@ -49,24 +49,38 @@ else {
 #region // Terrain collision.
 // TODO: Make this work with the z axis.
 // Horizontal collision.
-if (x_move > 0) bbox_side = bbox_right; else bbox_side = bbox_left;
-var col_top = tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_top);
-var col_bottom = tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_bottom);
 
-// Ignore horizontal collision in case we are on a diagonal wall.
+if (x_move > 0) {
+	bbox_side = bbox_right;
+	table = global.collision_heights_left;
+	width = collision_get_width(tilemap, bbox_side + x_move, y, table);
+	dist = bbox_side mod TILE_SIZE - width;
+}
+else {
+	bbox_side = bbox_left;
+	table = global.collision_heights_right;
+	width = collision_get_width(tilemap, bbox_side + x_move, y, table);
+	dist = round(TILE_SIZE - bbox_side mod TILE_SIZE - width + x_move);
+}
+
+if (width != 16 && abs(dist) < abs(x_move)) {
+	x_move = sign(x_move) * abs(dist);
+	round_x = true;
+}
+
 
 // Vertical collision.
 
 if (y_move > 0) {
 	bbox_side = bbox_bottom;
 	table = global.collision_heights_top;
-	height = max(collision_get_distance(tilemap, x, bbox_side + y_move, table));
+	height = collision_get_height(tilemap, x, bbox_side + y_move, table);
 	dist = bbox_side mod TILE_SIZE - height;
 }
 else {
 	bbox_side = bbox_top;
 	table = global.collision_heights_bottom;
-	height = max(collision_get_distance(tilemap, x, bbox_side + y_move, table));
+	height = collision_get_height(tilemap, x, bbox_side + y_move, table);
 	dist = round(TILE_SIZE - bbox_side mod TILE_SIZE - height + y_move);
 }
 

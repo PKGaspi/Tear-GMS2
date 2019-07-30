@@ -12,7 +12,8 @@
         "4e4159c7-5aa7-4791-b1d0-a6e03dc42298",
         "ea038e0f-8538-4647-87b2-62d7f6fc8624",
         "da5339a3-e45d-4bb4-98f0-73e523830394",
-        "8ded0315-217a-496a-831a-a19130dbbb9a"
+        "8ded0315-217a-496a-831a-a19130dbbb9a",
+        "e1404048-f622-4524-a512-c3d10754bc1b"
     ],
     "filterType": "GMScript",
     "folderName": "Coding",

@@ -970,7 +970,7 @@
             "Key": "8ded0315-217a-496a-831a-a19130dbbb9a",
             "Value": {
                 "id": "a4ad6dc1-e0d2-48be-a201-c312c4709e27",
-                "resourcePath": "scripts\\collision_get_distance\\collision_get_distance.yy",
+                "resourcePath": "scripts\\collision_get_height\\collision_get_height.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1543,6 +1543,14 @@
             }
         },
         {
+            "Key": "e1404048-f622-4524-a512-c3d10754bc1b",
+            "Value": {
+                "id": "0fb07e87-33b5-4264-b980-92e21521186d",
+                "resourcePath": "scripts\\collision_get_width\\collision_get_width.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e306a068-7cc6-4f38-8cc4-4b47b5e37377",
             "Value": {
                 "id": "f7e62171-75a7-4d00-8ee4-57cd022fb179",
@@ -1859,6 +1867,7 @@
         "ea038e0f-8538-4647-87b2-62d7f6fc8624",
         "da5339a3-e45d-4bb4-98f0-73e523830394",
         "8ded0315-217a-496a-831a-a19130dbbb9a",
+        "e1404048-f622-4524-a512-c3d10754bc1b",
         "2076d417-d3c6-40d0-b0d3-e8abab444fd3",
         "e870f8b7-a5f5-4550-87c2-28016a07b124",
         "ddb12fb4-e255-4d14-9697-344f85351418",
