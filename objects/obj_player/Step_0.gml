@@ -60,12 +60,13 @@ if (x_move > 0) {
 					collision_get_width(tilemap, bbox_side, bbox_bottom - 1, table));
 	}
 	else if (width != 0) {
+		// Check the collision on the feet.
 		bbox_side = bbox_left + (bbox_right - bbox_left) / 2;
 		width = collision_get_width(tilemap, bbox_side, y, table);
 	}
 	dist = bbox_side mod TILE_SIZE - width;
 }
-else {
+else if (x_move < 0) {
 	bbox_side = bbox_left;
 	table = global.collision_heights_right;
 	width = collision_get_width(tilemap, bbox_side, y, table);
@@ -75,14 +76,16 @@ else {
 					collision_get_width(tilemap, bbox_side, bbox_bottom - 1, table));
 	}
 	else if (width != 0) {
+		// Check the collision on the feet.
 		bbox_side = bbox_left + (bbox_right - bbox_left) / 2;
-	width = collision_get_width(tilemap, bbox_side, y, table);
+		width = collision_get_width(tilemap, bbox_side, y, table);
 	}
 	dist = TILE_SIZE - bbox_side mod TILE_SIZE - width - 1;
 }
 
-if (width != 16 && abs(dist) < abs(x_move)) {
-	x_move = sign(x_move) * abs(dist);
+if (x_move != 0 && width != 16 && abs(dist) < abs(x_move)) {
+	// Stop movement due to a collision.
+	x_move = 0;//sign(x_move) * abs(dist);
 	round_x = true;
 }
 
@@ -95,8 +98,8 @@ if (y_move > 0) {
 	height = collision_get_height(tilemap, x, bbox_side, table);
 	if (height == 16) {
 		// Check that tere is no collision on either side.
-		height *= (collision_get_height(tilemap, bbox_left + 1, bbox_side, table) == 16 &&
-				   collision_get_height(tilemap, bbox_right - 1, bbox_side, table) == 16);
+		height = min(collision_get_height(tilemap, bbox_left + 1, bbox_side, table),
+					 collision_get_height(tilemap, bbox_right - 1, bbox_side, table));
 	}
 	dist = bbox_side mod TILE_SIZE - height;
 }
@@ -106,14 +109,15 @@ else if (y_move < 0) {
 	height = collision_get_height(tilemap, x, bbox_side, table);
 	if (height == 16) {
 		// Check that tere is no collision on either side.
-		height *= (collision_get_height(tilemap, bbox_left + 1, bbox_side, table) == 16 &&
-				   collision_get_height(tilemap, bbox_right - 1, bbox_side, table) == 16);
+		height = min(collision_get_height(tilemap, bbox_left + 1, bbox_side, table),
+					 collision_get_height(tilemap, bbox_right - 1, bbox_side, table));
 	}
 	dist = TILE_SIZE - bbox_side mod TILE_SIZE - height - 1;
 }
 
 if (y_move != 0 && height != 16 && abs(dist) < abs(y_move)) {
-	y_move = sign(y_move) * abs(dist);
+	// Stop movement due to a collision.
+	y_move = 0;//sign(y_move) * abs(dist);
 	round_y = true;
 }
 

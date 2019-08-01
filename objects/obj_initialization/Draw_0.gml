@@ -29,15 +29,15 @@ repeat (heights_to_get - TILE_SIZE) {
 	check = TILE_SIZE;
 	while (check > 0) {
 		global.collision_heights_bottom[i] = TILE_SIZE - check;
-		if (surface_getpixel(surface, i, check - 1) != c_black) break;
 		check--;
+		if (surface_getpixel(surface, i, check) != c_black) break;
 	}
 	// Right.
 	check = TILE_SIZE;
 	while (check > 0) {
 		global.collision_heights_right[i] = TILE_SIZE - check;
-		if (surface_getpixel(surface, check + i - i mod TILE_SIZE, i mod TILE_SIZE) != c_black) break;
 		check--;
+		if (surface_getpixel(surface, check + i - i mod TILE_SIZE, i mod TILE_SIZE) != c_black) break;
 	}
 	i++;
 }
