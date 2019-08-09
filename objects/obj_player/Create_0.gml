@@ -4,15 +4,15 @@
 event_inherited();
 
 // ----------- SPRITES -----------
-spr_layers[spr_layer_type.body]			= spr_body_000_d;
-spr_layers[spr_layer_type.skin]			= spr_skin_000_d;
-spr_layers[spr_layer_type.makeup]		= spr_makeup_000_d;
-spr_layers[spr_layer_type.hairfront]	= spr_hairfront_000_d;
-spr_layers[spr_layer_type.hairback]		= spr_hairback_000_d;
-spr_layers[spr_layer_type.shoes]		= spr_shoes_000_d;
-spr_layers[spr_layer_type.trousers]		= spr_trousers_000_d;
-spr_layers[spr_layer_type.tshirt]		= spr_tshirt_000_d;
-spr_layers[spr_layer_type.jacket]		= spr_jacket_000_d;
+spr_layers[spr_layer_type.body]			= spr_body_keia_d_walk;
+spr_layers[spr_layer_type.face]			= spr_face_keia_d_walk;
+spr_layers[spr_layer_type.makeup]		= spr_makeup_keia_d_walk;
+spr_layers[spr_layer_type.hairfront]	= spr_hairfront_keia_d_walk;
+spr_layers[spr_layer_type.hairback]		= spr_hairback_keia_d_walk;
+spr_layers[spr_layer_type.shoes]		= spr_shoes_keia_d_walk;
+spr_layers[spr_layer_type.trousers]		= spr_trousers_keia_d_walk;
+spr_layers[spr_layer_type.tshirt]		= spr_tshirt_keia_d_walk;
+spr_layers[spr_layer_type.jacket]		= spr_jacket_keia_d_walk;
 
 // ----------- INFO -----------
 name				= "Keia";

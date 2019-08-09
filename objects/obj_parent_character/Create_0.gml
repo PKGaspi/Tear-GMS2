@@ -7,7 +7,7 @@ event_inherited();
 enum spr_layer_type {
 	hairback,
 	body,
-	skin,
+	face,
 	makeup,
 	hairfront,
 	hat,
@@ -16,6 +16,12 @@ enum spr_layer_type {
 	tshirt,
 	jacket,
 	height
+}
+
+enum animation_state {
+	iddle,
+	walking,
+	running
 }
 
 // Create array of layers.

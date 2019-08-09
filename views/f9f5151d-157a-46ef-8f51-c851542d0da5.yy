@@ -4,7 +4,8 @@
     "mvc": "1.1",
     "name": "f9f5151d-157a-46ef-8f51-c851542d0da5",
     "children": [
-        "d1f373f2-9a58-432c-bb55-1d7ccfef04c2"
+        "d1f373f2-9a58-432c-bb55-1d7ccfef04c2",
+        "326ef461-b895-470e-9d19-fde1de074472"
     ],
     "filterType": "GMSprite",
     "folderName": "Trousers",
