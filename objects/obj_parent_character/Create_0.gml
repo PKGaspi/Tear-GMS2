@@ -21,16 +21,21 @@ enum spr_layer_type {
 enum animation_state {
 	iddle,
 	walking,
-	running
+	running,
+	height
 }
 
 // Create array of layers.
 var i = 0;
-repeat (spr_layer_type.height) {
-	spr_layers[i] = noone;	
+repeat (animation_state.height) {
+	spr_layers[i] = array_create(spr_layer_type.height, noone);
 	i++;
 }
+spr_animation = animation_state.iddle;
+spr_frame = 0;
+spr_subimage = 0;
 
+// Character values.
 dir					= 0; // Direction.
 
 x_move				= 0; // To move on x axis.

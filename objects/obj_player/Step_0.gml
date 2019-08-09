@@ -134,6 +134,12 @@ if (round_y) {
 	y = round(y);
 }
 #endregion
+#region // Calculate animation state.
+if (y_move == 0 && x_move == 0) character_set_animation(animation_state.iddle);
+else if (!run_input_h) character_set_animation(animation_state.walking);
+else if (run_input_h) character_set_animation(animation_state.running);
+// Add jumping and more.
+#endregion
 #region // Reset movement at the end of each frame.
 x_move = 0;
 y_move = 0;

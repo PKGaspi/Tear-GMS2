@@ -4,16 +4,31 @@
 event_inherited();
 
 // ----------- SPRITES -----------
-spr_layers[spr_layer_type.body]			= spr_body_keia_d_walk;
-spr_layers[spr_layer_type.face]			= spr_face_keia_d_walk;
-spr_layers[spr_layer_type.makeup]		= spr_makeup_keia_d_walk;
-spr_layers[spr_layer_type.hairfront]	= spr_hairfront_keia_d_walk;
-spr_layers[spr_layer_type.hairback]		= spr_hairback_keia_d_walk;
-spr_layers[spr_layer_type.shoes]		= spr_shoes_keia_d_walk;
-spr_layers[spr_layer_type.trousers]		= spr_trousers_keia_d_walk;
-spr_layers[spr_layer_type.tshirt]		= spr_tshirt_keia_d_walk;
-spr_layers[spr_layer_type.jacket]		= spr_jacket_keia_d_walk;
+var aux = array_create(spr_layer_type.height, noone);
+// Iddle.
+aux[spr_layer_type.body]			= spr_body_keia_d_iddle;
+aux[spr_layer_type.face]			= spr_face_keia_d_iddle;
+aux[spr_layer_type.makeup]			= spr_makeup_keia_d_iddle;
+aux[spr_layer_type.hairfront]		= spr_hairfront_keia_d_iddle;
+aux[spr_layer_type.hairback]		= spr_hairback_keia_d_iddle;
+aux[spr_layer_type.shoes]			= spr_shoes_keia_d_iddle;
+aux[spr_layer_type.trousers]		= spr_trousers_keia_d_iddle;
+aux[spr_layer_type.tshirt]			= spr_tshirt_keia_d_iddle;
+aux[spr_layer_type.jacket]			= spr_jacket_keia_d_iddle;
+array_copy(spr_layers[animation_state.iddle], 0, aux, 0, spr_layer_type.height);
 
+// Walking.
+aux = array_create(spr_layer_type.height, noone);
+aux[spr_layer_type.body]			= spr_body_keia_d_walk;
+aux[spr_layer_type.face]			= spr_face_keia_d_walk;
+aux[spr_layer_type.makeup]			= spr_makeup_keia_d_walk;
+aux[spr_layer_type.hairfront]		= spr_hairfront_keia_d_walk;
+aux[spr_layer_type.hairback]		= spr_hairback_keia_d_walk;
+aux[spr_layer_type.shoes]			= spr_shoes_keia_d_walk;
+aux[spr_layer_type.trousers]		= spr_trousers_keia_d_walk;
+aux[spr_layer_type.tshirt]			= spr_tshirt_keia_d_walk;
+aux[spr_layer_type.jacket]			= spr_jacket_keia_d_walk;
+array_copy(spr_layers[animation_state.walking], 0, aux, 0, spr_layer_type.height);
 // ----------- INFO -----------
 name				= "Keia";
 age					= 17;
