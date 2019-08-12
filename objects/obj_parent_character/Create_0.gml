@@ -20,17 +20,28 @@ enum spr_layer_type {
 
 enum animation_state {
 	iddle,
-	walking,
-	running,
+	walk,
+	run,
 	height
 }
 
 // Create array of layers.
+
+// Create an array for each animation.
 var i = 0;
 repeat (animation_state.height) {
-	spr_layers[i] = array_create(spr_layer_type.height, noone);
+	var j = 0;
+	var arr = array_create(spr_layer_type.height, noone);
+	// Crete an array for each layer.
+	repeat (spr_layer_type.height) {
+		// An entry for each direction.
+		arr[j] = array_create(8, noone);
+		j++;
+	}
+	spr_layers[i] = arr;
 	i++;
 }
+
 spr_animation = animation_state.iddle;
 spr_frame = 0;
 spr_subimage = 0;
