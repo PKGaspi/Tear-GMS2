@@ -9,12 +9,12 @@ enum spr_layer_type {
 	body,
 	face,
 	makeup,
-	hairfront,
 	hat,
 	shoes,
 	trousers,
 	tshirt,
 	jacket,
+	hairfront,
 	height
 }
 

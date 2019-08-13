@@ -10,5 +10,6 @@ var _y = argument2;
 var table = argument3;
 
 var tile = tilemap_get_at_pixel(tilemap, _x, _y);
+if (tile < 0) return 16;
 var distance = table[_x mod TILE_SIZE + tile * TILE_SIZE];
 return distance;
