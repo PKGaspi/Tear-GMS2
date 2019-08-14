@@ -4,16 +4,15 @@
 event_inherited();
 
 // ----------- SPRITES -----------
-spr_layers[spr_layer_type.body]			= spr_body_000_d;
-spr_layers[spr_layer_type.skin]			= spr_skin_000_d;
-spr_layers[spr_layer_type.makeup]		= spr_makeup_000_d;
-spr_layers[spr_layer_type.hairfront]	= spr_hairfront_000_d;
-spr_layers[spr_layer_type.hairback]		= spr_hairback_000_d;
-spr_layers[spr_layer_type.shoes]		= spr_shoes_000_d;
-spr_layers[spr_layer_type.trousers]		= spr_trousers_000_d;
-spr_layers[spr_layer_type.tshirt]		= spr_tshirt_000_d;
-spr_layers[spr_layer_type.jacket]		= spr_jacket_000_d;
-
+character_set_sprite("body_keia", spr_layer_type.body);
+character_set_sprite("jacket_keia", spr_layer_type.jacket);
+character_set_sprite("shoes_keia", spr_layer_type.shoes);
+character_set_sprite("tshirt_keia", spr_layer_type.tshirt);
+character_set_sprite("trousers_keia", spr_layer_type.trousers);
+character_set_sprite("hairback_keia", spr_layer_type.hairback);
+character_set_sprite("hairfront_keia", spr_layer_type.hairfront);
+character_set_sprite("makeup_keia", spr_layer_type.makeup);
+character_set_sprite("face_keia", spr_layer_type.face);
 // ----------- INFO -----------
 name				= "Keia";
 age					= 17;

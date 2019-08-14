@@ -1,6 +1,6 @@
 /// @description Movement and a lot more.
 if (global.pause) exit; // Finish if movement is not allowed.
-var bbox_side;
+var bbox_side, table, width, height, dist, round_x, round_y;
 
 #region // Inputs.
 if (!global.cutscene && !global.debug_menu) {
@@ -17,6 +17,8 @@ else {
 }
 #endregion
 #region // Movement.
+round_x = false;
+round_y = false;
 if (h_input_h != 0 || v_input_h != 0) {
 	// Calculate direction.
 	dir = point_direction(0, 0, h_input_h, v_input_h);
@@ -47,38 +49,96 @@ else {
 #region // Terrain collision.
 // TODO: Make this work with the z axis.
 // Horizontal collision.
-if (x_move > 0) bbox_side = bbox_right; else bbox_side = bbox_left;
-if (tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_top) != 0 ||
-	tilemap_get_at_pixel(tilemap, bbox_side + round(x_move), bbox_bottom) != 0) {
-	if (x_move > 0) {
-		x -= (x mod TILE_SIZE) - (TILE_SIZE - 1);
-		x -= (bbox_right - x);	
+
+if (x_move > 0) {
+	bbox_side = bbox_right;
+	table = global.collision_heights_left;
+	width = collision_get_width(tilemap, bbox_side, y, table);
+	if (width == 16) {
+		// Check that tere is no collision on either side.
+		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1, table),
+					collision_get_width(tilemap, bbox_side, bbox_bottom - 1, table));
 	}
-	else {
-		x -= (x mod TILE_SIZE);
-		x -= (bbox_left - x);
+	else if (width != 0) {
+		// Check the collision on the feet.
+		bbox_side = bbox_left + (bbox_right - bbox_left) / 2;
+		width = collision_get_width(tilemap, bbox_side, y, table);
 	}
-	x_move = 0;
-} 
-// Vertical collision.
-if (y_move > 0) bbox_side = bbox_bottom; else bbox_side = bbox_top;
-if (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + round(y_move)) != 0 ||
-	tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + round(y_move)) != 0) {
-	if (y_move > 0) {
-		y -= (y mod TILE_SIZE) - (TILE_SIZE - 1)
-		y -= (bbox_bottom - y);
-	}
-	else {
-		y -= (y mod TILE_SIZE);
-		y -= (bbox_top - y);
-	}
-	y_move = 0;
+	dist = bbox_side mod TILE_SIZE - width;
 }
+else if (x_move < 0) {
+	bbox_side = bbox_left;
+	table = global.collision_heights_right;
+	width = collision_get_width(tilemap, bbox_side, y, table);
+	if (width == 16) {
+		// Check that tere is no collision on either side.
+		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1, table),
+					collision_get_width(tilemap, bbox_side, bbox_bottom - 1, table));
+	}
+	else if (width != 0) {
+		// Check the collision on the feet.
+		bbox_side = bbox_left + (bbox_right - bbox_left) / 2;
+		width = collision_get_width(tilemap, bbox_side, y, table);
+	}
+	dist = TILE_SIZE - bbox_side mod TILE_SIZE - width - 1;
+}
+
+if (x_move != 0 && width != 16 && abs(dist) < abs(x_move)) {
+	// Stop movement due to a collision.
+	x_move = 0;//sign(x_move) * abs(dist);
+	round_x = true;
+}
+
+
+// Vertical collision.
+
+if (y_move > 0) {
+	bbox_side = bbox_bottom;
+	table = global.collision_heights_top;
+	height = collision_get_height(tilemap, x, bbox_side, table);
+	if (height == 16) {
+		// Check that tere is no collision on either side.
+		height = min(collision_get_height(tilemap, bbox_left + 1, bbox_side, table),
+					 collision_get_height(tilemap, bbox_right - 1, bbox_side, table));
+	}
+	dist = bbox_side mod TILE_SIZE - height;
+}
+else if (y_move < 0) {
+	bbox_side = bbox_top;
+	table = global.collision_heights_bottom;
+	height = collision_get_height(tilemap, x, bbox_side, table);
+	if (height == 16) {
+		// Check that tere is no collision on either side.
+		height = min(collision_get_height(tilemap, bbox_left + 1, bbox_side, table),
+					 collision_get_height(tilemap, bbox_right - 1, bbox_side, table));
+	}
+	dist = TILE_SIZE - bbox_side mod TILE_SIZE - height - 1;
+}
+
+if (y_move != 0 && height != 16 && abs(dist) < abs(y_move)) {
+	// Stop movement due to a collision.
+	y_move = 0;//sign(y_move) * abs(dist);
+	round_y = true;
+}
+
 #endregion
 #region // Add movement. DO NOT TOUCH X AND Y ANYWHERE ELSE!!
 x += x_move;
 y += y_move - z_move;
 z += z_move;
+
+if (round_x) {
+	x = round(x);
+}
+if (round_y) {
+	y = round(y);
+}
+#endregion
+#region // Calculate animation state.
+if (y_move == 0 && x_move == 0) character_set_animation(animation_state.iddle);
+else if (!run_input_h) character_set_animation(animation_state.walk);
+else if (run_input_h) character_set_animation(animation_state.run);
+// Add jumping and more.
 #endregion
 #region // Reset movement at the end of each frame.
 x_move = 0;
@@ -91,6 +151,5 @@ if (global.cutscene) exit;
 var box = instance_place(x, y, obj_parent_collision_box);
 if (box != noone) {
 	with (box) event_perform(ev_other, ev_user0);
-	
 }
 #endregion
