@@ -42,7 +42,7 @@
             "Key": "01163202-79a6-4bcb-b4e7-eebda0b885d6",
             "Value": {
                 "id": "6b40e8e8-f3c1-4bde-ae3f-df9f4ad6f758",
-                "resourcePath": "sprites\\spr_jacket_keia_r_iddle\\spr_jacket_keia_r_iddle.yy",
+                "resourcePath": "sprites\\spr_jacket_keia00_iddle_r\\spr_jacket_keia00_iddle_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -82,7 +82,7 @@
             "Key": "059bce5b-c4ac-447c-af17-a86e8eb11823",
             "Value": {
                 "id": "bc3c32b2-d6ff-480c-9f4c-a8fda7f41bbe",
-                "resourcePath": "sprites\\spr_body_keia_r_iddle\\spr_body_keia_r_iddle.yy",
+                "resourcePath": "sprites\\spr_body_keia00_iddle_r\\spr_body_keia00_iddle_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -90,8 +90,16 @@
             "Key": "0824fe6c-b98e-49d8-87d9-4aa02e2cbed5",
             "Value": {
                 "id": "33aefe65-8a39-4a57-8fa7-95138044b69f",
-                "resourcePath": "sprites\\spr_tshirt_keia_u_iddle\\spr_tshirt_keia_u_iddle.yy",
+                "resourcePath": "sprites\\spr_tshirt_keia00_iddle_u\\spr_tshirt_keia00_iddle_u.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "08b866e0-0364-4414-96f9-f321562f20c3",
+            "Value": {
+                "id": "a9347566-9ac4-42da-b672-03aa1f5fd32d",
+                "resourcePath": "views\\08b866e0-0364-4414-96f9-f321562f20c3.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -122,7 +130,7 @@
             "Key": "0d8afa3e-389c-4185-9190-5c3eff5821b3",
             "Value": {
                 "id": "295e3e67-bee5-4c9e-afc6-9907165444cf",
-                "resourcePath": "sprites\\spr_face_keia_r_iddle\\spr_face_keia_r_iddle.yy",
+                "resourcePath": "sprites\\spr_face_keia00_iddle_r\\spr_face_keia00_iddle_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -130,8 +138,16 @@
             "Key": "1274218b-c8b8-4ba6-ae3c-41724391e11e",
             "Value": {
                 "id": "9fdcc3b9-85ae-49f3-8273-19d56fe7cba4",
-                "resourcePath": "sprites\\spr_hairback_keia_l_walk\\spr_hairback_keia_l_walk.yy",
+                "resourcePath": "sprites\\spr_hairback_keia00_walk_l\\spr_hairback_keia00_walk_l.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "12b20b5c-2afb-4014-a824-dc8ec8d124d2",
+            "Value": {
+                "id": "cfd57f77-1d50-4e0d-a3cf-17a073ec5f47",
+                "resourcePath": "views\\12b20b5c-2afb-4014-a824-dc8ec8d124d2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -183,6 +199,14 @@
             }
         },
         {
+            "Key": "1676464a-192c-4b04-850e-4f615c495ce2",
+            "Value": {
+                "id": "c7e8a3bc-f6f1-4a62-97e7-a05758fd3f96",
+                "resourcePath": "views\\1676464a-192c-4b04-850e-4f615c495ce2.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "16a26ad5-76c2-43fb-97b9-e28a17e6d76c",
             "Value": {
                 "id": "3c4a2334-2de0-4c97-9029-c667f62e43bb",
@@ -204,6 +228,14 @@
                 "id": "e2c9660c-ecb7-4ed6-a456-197b65664428",
                 "resourcePath": "scripts\\boolean_to_yesno\\boolean_to_yesno.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "17eeac03-26a3-4269-bd90-fc38033d8fcb",
+            "Value": {
+                "id": "94a69db6-759d-47f5-a06a-9c56e74854a4",
+                "resourcePath": "views\\17eeac03-26a3-4269-bd90-fc38033d8fcb.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -234,7 +266,7 @@
             "Key": "1914b247-a4e7-410a-ba70-4f3f1469bca5",
             "Value": {
                 "id": "ac219a91-1fc1-43e1-9458-61cb57b6884e",
-                "resourcePath": "sprites\\spr_body_keia_r_walk\\spr_body_keia_r_walk.yy",
+                "resourcePath": "sprites\\spr_body_keia00_walk_r\\spr_body_keia00_walk_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -250,7 +282,7 @@
             "Key": "1b864b49-26c0-439a-829f-c44babf532e8",
             "Value": {
                 "id": "a0527bef-3de5-404f-bc9f-c6fd0a3022be",
-                "resourcePath": "sprites\\spr_jacket_keia_u_walk\\spr_jacket_keia_u_walk.yy",
+                "resourcePath": "sprites\\spr_jacket_keia00_walk_u\\spr_jacket_keia00_walk_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -266,7 +298,7 @@
             "Key": "1d6600fd-2d2f-4610-aefe-4c84f9920d18",
             "Value": {
                 "id": "8b5480dc-2484-4e4d-808c-db225b5da9dd",
-                "resourcePath": "sprites\\spr_hairfront_keia_r_iddle\\spr_hairfront_keia_r_iddle.yy",
+                "resourcePath": "sprites\\spr_hairfront_keia00_iddle_r\\spr_hairfront_keia00_iddle_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -306,7 +338,7 @@
             "Key": "216c1c8e-c0f5-41f9-a7c1-197ef05f2fbb",
             "Value": {
                 "id": "c326a26c-ce85-4468-874e-05dce44ee4db",
-                "resourcePath": "sprites\\spr_jacket_keia_u_iddle\\spr_jacket_keia_u_iddle.yy",
+                "resourcePath": "sprites\\spr_jacket_keia00_iddle_u\\spr_jacket_keia00_iddle_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -330,7 +362,7 @@
             "Key": "230fdf77-9884-4bdb-a10d-7a0e10dc6c61",
             "Value": {
                 "id": "4b6e358f-df66-4992-a7d9-040cd153d0ae",
-                "resourcePath": "sprites\\spr_trousers_keia_u_iddle\\spr_trousers_keia_u_iddle.yy",
+                "resourcePath": "sprites\\spr_trousers_keia00_iddle_u\\spr_trousers_keia00_iddle_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -383,6 +415,14 @@
             }
         },
         {
+            "Key": "2b021cb4-99a8-4a14-9811-c59f2b7e388e",
+            "Value": {
+                "id": "45516745-4127-4fd8-b235-d8b3128b24d6",
+                "resourcePath": "views\\2b021cb4-99a8-4a14-9811-c59f2b7e388e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2d0e2d44-d1f0-4078-a846-bb014736e511",
             "Value": {
                 "id": "d4879802-3c45-46c0-a3fc-3278e57ca077",
@@ -394,7 +434,7 @@
             "Key": "2e103b13-b521-4755-92e8-2573337ae432",
             "Value": {
                 "id": "966797e6-51dc-44a0-b06f-9495b545d52f",
-                "resourcePath": "sprites\\spr_hairback_keia_d_iddle\\spr_hairback_keia_d_iddle.yy",
+                "resourcePath": "sprites\\spr_hairback_keia00_iddle_d\\spr_hairback_keia00_iddle_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -418,7 +458,7 @@
             "Key": "31401569-af80-46ee-8a22-9727e32cf437",
             "Value": {
                 "id": "c4fb7cd3-513b-4c10-bb5a-4798479d734a",
-                "resourcePath": "sprites\\spr_hairfront_keia_u_iddle\\spr_hairfront_keia_u_iddle.yy",
+                "resourcePath": "sprites\\spr_hairfront_keia00_iddle_u\\spr_hairfront_keia00_iddle_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -450,7 +490,7 @@
             "Key": "326ef461-b895-470e-9d19-fde1de074472",
             "Value": {
                 "id": "32e4c64c-45a3-49a6-8af2-8d416c8dc98b",
-                "resourcePath": "sprites\\spr_trousers_keia_d_walk\\spr_trousers_keia_d_walk.yy",
+                "resourcePath": "sprites\\spr_trousers_keia00_walk_d\\spr_trousers_keia00_walk_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -458,7 +498,7 @@
             "Key": "32a2e2c3-bae6-43cc-aa16-55d323aeaeef",
             "Value": {
                 "id": "1055df1c-1546-48ca-8ae2-782034481f39",
-                "resourcePath": "sprites\\spr_tshirt_keia_u_walk\\spr_tshirt_keia_u_walk.yy",
+                "resourcePath": "sprites\\spr_tshirt_keia00_walk_u\\spr_tshirt_keia00_walk_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -490,7 +530,7 @@
             "Key": "36770990-2183-4980-99c8-0ae024051f8f",
             "Value": {
                 "id": "432ea84a-6ffd-44f0-9d61-d4263c8981f1",
-                "resourcePath": "sprites\\spr_hairfront_keia_d_iddle\\spr_hairfront_keia_d_iddle.yy",
+                "resourcePath": "sprites\\spr_hairfront_keia00_iddle_d\\spr_hairfront_keia00_iddle_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -514,7 +554,7 @@
             "Key": "396bf209-6e49-476f-8867-d585ebf53404",
             "Value": {
                 "id": "47ae9658-6105-4a43-9992-ec6926a15eec",
-                "resourcePath": "sprites\\spr_trousers_keia_l_walk\\spr_trousers_keia_l_walk.yy",
+                "resourcePath": "sprites\\spr_trousers_keia00_walk_l\\spr_trousers_keia00_walk_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -538,7 +578,7 @@
             "Key": "3cf6fee6-43fd-46de-a42f-84bc4ab1bbb3",
             "Value": {
                 "id": "523932d6-f144-46d2-aad7-bdb226550d8f",
-                "resourcePath": "sprites\\spr_shoes_keia_r_walk\\spr_shoes_keia_r_walk.yy",
+                "resourcePath": "sprites\\spr_shoes_keia00_walk_r\\spr_shoes_keia00_walk_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -554,7 +594,7 @@
             "Key": "3d5f584a-a50d-42b1-931e-41d30009037e",
             "Value": {
                 "id": "a8227c96-b477-4e97-88e1-dc279ebfb788",
-                "resourcePath": "sprites\\spr_jacket_keia_l_iddle\\spr_jacket_keia_l_iddle.yy",
+                "resourcePath": "sprites\\spr_jacket_keia00_iddle_l\\spr_jacket_keia00_iddle_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -586,7 +626,7 @@
             "Key": "4328cf2b-dfc4-4cab-af18-04760e912d33",
             "Value": {
                 "id": "53f976b5-3111-4195-a35c-af2e6139a70c",
-                "resourcePath": "sprites\\spr_shoes_keia_l_iddle\\spr_shoes_keia_l_iddle.yy",
+                "resourcePath": "sprites\\spr_shoes_keia00_iddle_l\\spr_shoes_keia00_iddle_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -594,7 +634,7 @@
             "Key": "43a98741-ab31-44eb-baa3-fba55cf883c5",
             "Value": {
                 "id": "fac2cfa8-d67e-499e-ae95-f2d757833a5a",
-                "resourcePath": "sprites\\spr_face_keia_l_walk\\spr_face_keia_l_walk.yy",
+                "resourcePath": "sprites\\spr_face_keia00_walk_l\\spr_face_keia00_walk_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -618,7 +658,7 @@
             "Key": "461a97cd-48fa-4f94-b247-3ca7e3fcf7e8",
             "Value": {
                 "id": "52702fac-244c-4a10-8ce4-089ec8734d13",
-                "resourcePath": "sprites\\spr_trousers_keia_r_walk\\spr_trousers_keia_r_walk.yy",
+                "resourcePath": "sprites\\spr_trousers_keia00_walk_r\\spr_trousers_keia00_walk_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -674,7 +714,7 @@
             "Key": "4c1fdb68-a113-4fb6-b3f6-42529cda07c7",
             "Value": {
                 "id": "6da7df6a-7879-4469-9ae3-db3f664f5632",
-                "resourcePath": "sprites\\spr_trousers_keia_r_iddle\\spr_trousers_keia_r_iddle.yy",
+                "resourcePath": "sprites\\spr_trousers_keia00_iddle_r\\spr_trousers_keia00_iddle_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -775,6 +815,14 @@
             }
         },
         {
+            "Key": "53aa165d-d13d-445a-8c0a-0268d9460b62",
+            "Value": {
+                "id": "4dd3c2b8-df21-4c02-b9ec-95b1a52c167c",
+                "resourcePath": "views\\53aa165d-d13d-445a-8c0a-0268d9460b62.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "553bedba-f161-44a9-beb2-645802b58834",
             "Value": {
                 "id": "289ec482-a2be-46aa-a0c2-e119ddb57c28",
@@ -850,7 +898,7 @@
             "Key": "5c8cb496-de9e-4ffb-9891-c8ff46542d67",
             "Value": {
                 "id": "cea3a014-1619-420f-9bb9-0ab1107740d0",
-                "resourcePath": "sprites\\spr_makeup_keia_l_walk\\spr_makeup_keia_l_walk.yy",
+                "resourcePath": "sprites\\spr_makeup_keia00_walk_l\\spr_makeup_keia00_walk_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -858,7 +906,7 @@
             "Key": "5cd463e9-d5dc-40df-b9e8-2da598b79412",
             "Value": {
                 "id": "0320947c-32a1-475f-a722-253c617a7768",
-                "resourcePath": "sprites\\spr_hairfront_keia_l_walk\\spr_hairfront_keia_l_walk.yy",
+                "resourcePath": "sprites\\spr_hairfront_keia00_walk_l\\spr_hairfront_keia00_walk_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -866,7 +914,7 @@
             "Key": "5d702520-dc41-4eb2-a8d9-30f19ae4ecac",
             "Value": {
                 "id": "c204166b-83f1-4b31-889a-231f18b34e3f",
-                "resourcePath": "sprites\\spr_tshirt_keia_d_iddle\\spr_tshirt_keia_d_iddle.yy",
+                "resourcePath": "sprites\\spr_tshirt_keia00_iddle_d\\spr_tshirt_keia00_iddle_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -882,7 +930,7 @@
             "Key": "5e5ef51a-2be3-4894-b9c4-990ffa75ced2",
             "Value": {
                 "id": "de90fdea-36b6-4245-9546-f74e600fa18e",
-                "resourcePath": "sprites\\spr_face_keia_l_iddle\\spr_face_keia_l_iddle.yy",
+                "resourcePath": "sprites\\spr_face_keia00_iddle_l\\spr_face_keia00_iddle_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -890,7 +938,7 @@
             "Key": "5e9b1672-6c3e-4f37-833b-3927913f6289",
             "Value": {
                 "id": "3b9e9cd3-985a-41f2-9387-50691aaa96c5",
-                "resourcePath": "sprites\\spr_tshirt_keia_l_iddle\\spr_tshirt_keia_l_iddle.yy",
+                "resourcePath": "sprites\\spr_tshirt_keia00_iddle_l\\spr_tshirt_keia00_iddle_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -914,7 +962,7 @@
             "Key": "64cb7797-dfe2-4a40-bac9-0d71e26dad66",
             "Value": {
                 "id": "0d27af68-5d91-46bd-a573-d5e888c92a1d",
-                "resourcePath": "sprites\\spr_shoes_keia_d_walk\\spr_shoes_keia_d_walk.yy",
+                "resourcePath": "sprites\\spr_shoes_keia00_walk_d\\spr_shoes_keia00_walk_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -938,7 +986,7 @@
             "Key": "67566705-605e-4a64-b3d6-2329627758ea",
             "Value": {
                 "id": "680f6bac-735c-4ac9-9964-b01f83e136dc",
-                "resourcePath": "sprites\\spr_makeup_keia_l_iddle\\spr_makeup_keia_l_iddle.yy",
+                "resourcePath": "sprites\\spr_makeup_keia00_iddle_l\\spr_makeup_keia00_iddle_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -946,7 +994,7 @@
             "Key": "67e0caf0-31a9-4a84-94a0-ecf0dab2ce8e",
             "Value": {
                 "id": "0255dc93-177b-4659-b4e3-7be876ce7070",
-                "resourcePath": "sprites\\spr_hairback_keia_d_walk\\spr_hairback_keia_d_walk.yy",
+                "resourcePath": "sprites\\spr_hairback_keia00_walk_d\\spr_hairback_keia00_walk_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -962,7 +1010,7 @@
             "Key": "6965a133-e430-4382-bf38-043e53457e0d",
             "Value": {
                 "id": "c1b93e70-a42e-48d3-a632-930c135099b8",
-                "resourcePath": "sprites\\spr_trousers_keia_d_iddle\\spr_trousers_keia_d_iddle.yy",
+                "resourcePath": "sprites\\spr_trousers_keia00_iddle_d\\spr_trousers_keia00_iddle_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1007,6 +1055,14 @@
             }
         },
         {
+            "Key": "78816af7-01e5-4c10-9462-883363dcf7de",
+            "Value": {
+                "id": "014e209e-cbe4-49d8-aec5-fa234773fb5d",
+                "resourcePath": "views\\78816af7-01e5-4c10-9462-883363dcf7de.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "789a430a-eec0-48a6-ac4f-b62de4026c68",
             "Value": {
                 "id": "c0479867-5795-4cb5-894e-a1eed1a1f968",
@@ -1031,6 +1087,14 @@
             }
         },
         {
+            "Key": "798c7489-66d2-40ea-8161-5b62ac179b8c",
+            "Value": {
+                "id": "cd23c2dd-bd84-4f2a-ad25-b8c04adeacec",
+                "resourcePath": "views\\798c7489-66d2-40ea-8161-5b62ac179b8c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "79cf6c92-c13d-47d9-aa3d-9f59a0f56c09",
             "Value": {
                 "id": "a6e440c8-42ad-443c-b38b-a9b59f87ccc7",
@@ -1042,7 +1106,7 @@
             "Key": "7b73d9b8-6d54-4368-9381-75b66ad7260e",
             "Value": {
                 "id": "ef07660d-4944-45d3-8595-19754c593432",
-                "resourcePath": "sprites\\spr_shoes_keia_l_walk\\spr_shoes_keia_l_walk.yy",
+                "resourcePath": "sprites\\spr_shoes_keia00_walk_l\\spr_shoes_keia00_walk_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1058,7 +1122,7 @@
             "Key": "7c24259c-cf4b-4c81-a101-459efa35130d",
             "Value": {
                 "id": "62d5bc97-03ac-4e5f-b104-366308a33386",
-                "resourcePath": "sprites\\spr_face_keia_r_walk\\spr_face_keia_r_walk.yy",
+                "resourcePath": "sprites\\spr_face_keia00_walk_r\\spr_face_keia00_walk_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1090,7 +1154,7 @@
             "Key": "7e4385e4-b2b0-4de3-aa67-e040bcff9c39",
             "Value": {
                 "id": "a7e6d413-9b93-4e43-9cb4-8c0b27142ffe",
-                "resourcePath": "sprites\\spr_hairback_keia_l_iddle\\spr_hairback_keia_l_iddle.yy",
+                "resourcePath": "sprites\\spr_hairback_keia00_iddle_l\\spr_hairback_keia00_iddle_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1143,6 +1207,14 @@
             }
         },
         {
+            "Key": "8293bd9d-7e84-4a3a-8902-52951cad9176",
+            "Value": {
+                "id": "bcfb5f02-cc40-4d91-abcc-1e365ad295f1",
+                "resourcePath": "views\\8293bd9d-7e84-4a3a-8902-52951cad9176.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "82a9737b-a4f4-426d-b970-8619b5b0d9f8",
             "Value": {
                 "id": "0ff7de29-d854-4461-b8ae-eb3f3da86671",
@@ -1154,7 +1226,7 @@
             "Key": "845bda46-0bc9-45be-8a58-bdb152634c26",
             "Value": {
                 "id": "fb357075-c2da-4838-8f8e-2e8a3a4ff865",
-                "resourcePath": "sprites\\spr_makeup_keia_d_walk\\spr_makeup_keia_d_walk.yy",
+                "resourcePath": "sprites\\spr_makeup_keia00_walk_d\\spr_makeup_keia00_walk_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1170,7 +1242,7 @@
             "Key": "871f74ec-5261-436a-9e94-5de6352b16bf",
             "Value": {
                 "id": "99f564ec-4d24-4f58-84d7-c6fd923b29aa",
-                "resourcePath": "sprites\\spr_trousers_keia_l_iddle\\spr_trousers_keia_l_iddle.yy",
+                "resourcePath": "sprites\\spr_trousers_keia00_iddle_l\\spr_trousers_keia00_iddle_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1186,7 +1258,7 @@
             "Key": "885bc540-23b9-409f-9eb3-680ee4e68d60",
             "Value": {
                 "id": "2303412f-a02d-4805-a6ce-ace6bf45e66b",
-                "resourcePath": "sprites\\spr_shoes_keia_u_walk\\spr_shoes_keia_u_walk.yy",
+                "resourcePath": "sprites\\spr_shoes_keia00_walk_u\\spr_shoes_keia00_walk_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1202,7 +1274,7 @@
             "Key": "8965c3bb-3ba3-4f80-be92-c7f24af82e73",
             "Value": {
                 "id": "12dc4f10-ab7c-4cf0-9e0c-e8c168893b36",
-                "resourcePath": "sprites\\spr_tshirt_keia_l_walk\\spr_tshirt_keia_l_walk.yy",
+                "resourcePath": "sprites\\spr_tshirt_keia00_walk_l\\spr_tshirt_keia00_walk_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1258,7 +1330,7 @@
             "Key": "8fe324b5-c915-4ef1-a4e2-347fd599b267",
             "Value": {
                 "id": "62ab3326-239d-4860-ae8f-574b3106775e",
-                "resourcePath": "sprites\\spr_makeup_keia_d_iddle\\spr_makeup_keia_d_iddle.yy",
+                "resourcePath": "sprites\\spr_makeup_keia00_iddle_d\\spr_makeup_keia00_iddle_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1298,8 +1370,16 @@
             "Key": "94eac9c8-ce86-41dd-acdb-90e34fc6d0ac",
             "Value": {
                 "id": "daa12299-cfc3-480f-b9dc-90d81dfa252f",
-                "resourcePath": "sprites\\spr_makeup_keia_r_iddle\\spr_makeup_keia_r_iddle.yy",
+                "resourcePath": "sprites\\spr_makeup_keia00_iddle_r\\spr_makeup_keia00_iddle_r.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "954cd252-597a-4376-b608-8a239961f804",
+            "Value": {
+                "id": "2e559e7d-56bb-41a9-b3bc-a38ee8dd5fd2",
+                "resourcePath": "views\\954cd252-597a-4376-b608-8a239961f804.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1319,6 +1399,14 @@
             }
         },
         {
+            "Key": "96a3cc92-697d-4833-9019-774ec6f86b74",
+            "Value": {
+                "id": "abd1723c-5931-40d2-9928-e0899e519e4a",
+                "resourcePath": "views\\96a3cc92-697d-4833-9019-774ec6f86b74.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "96c366f5-71ab-4823-9a29-30612c50494b",
             "Value": {
                 "id": "8a3fdb9c-cbb4-4253-8181-0b56b05792e7",
@@ -1330,7 +1418,7 @@
             "Key": "9746813a-2497-4348-a509-193d9ac0c2de",
             "Value": {
                 "id": "f9c19009-878b-4406-a9c7-2be880c2e2bf",
-                "resourcePath": "sprites\\spr_shoes_keia_d_iddle\\spr_shoes_keia_d_iddle.yy",
+                "resourcePath": "sprites\\spr_shoes_keia00_iddle_d\\spr_shoes_keia00_iddle_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1362,7 +1450,7 @@
             "Key": "9aa0cdfd-a935-4caf-bfc1-dc96385c5041",
             "Value": {
                 "id": "9111c65b-db30-4bdf-a386-66f542a4bf9b",
-                "resourcePath": "sprites\\spr_hairfront_keia_r_walk\\spr_hairfront_keia_r_walk.yy",
+                "resourcePath": "sprites\\spr_hairfront_keia00_walk_r\\spr_hairfront_keia00_walk_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1410,7 +1498,7 @@
             "Key": "a0d7a040-4297-44e0-8ad9-8920bd976d89",
             "Value": {
                 "id": "95ed62b9-61b5-4497-9780-1e85c292474d",
-                "resourcePath": "sprites\\spr_jacket_keia_d_walk\\spr_jacket_keia_d_walk.yy",
+                "resourcePath": "sprites\\spr_jacket_keia00_walk_d\\spr_jacket_keia00_walk_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1426,7 +1514,7 @@
             "Key": "a2ab7cca-bf6f-4c14-94c5-a44b0fe99e0e",
             "Value": {
                 "id": "52be811a-e509-478d-8a1f-93bf4f5ed5db",
-                "resourcePath": "sprites\\spr_jacket_keia_r_walk\\spr_jacket_keia_r_walk.yy",
+                "resourcePath": "sprites\\spr_jacket_keia00_walk_r\\spr_jacket_keia00_walk_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1442,7 +1530,7 @@
             "Key": "a2fa6eaf-28eb-4517-a37c-4be5c127409e",
             "Value": {
                 "id": "3a5df780-735c-4cdf-9b19-104d6cf9265f",
-                "resourcePath": "sprites\\spr_trousers_keia_u_walk\\spr_trousers_keia_u_walk.yy",
+                "resourcePath": "sprites\\spr_trousers_keia00_walk_u\\spr_trousers_keia00_walk_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1498,8 +1586,16 @@
             "Key": "a9810796-58e1-43ee-ae3c-8983e6899a40",
             "Value": {
                 "id": "5dd6a05e-b01f-4767-852c-508a37a1c17f",
-                "resourcePath": "sprites\\spr_body_keia_l_iddle\\spr_body_keia_l_iddle.yy",
+                "resourcePath": "sprites\\spr_body_keia00_iddle_l\\spr_body_keia00_iddle_l.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a9936bf9-9131-4a4b-b0b7-0067d2b72846",
+            "Value": {
+                "id": "6462cd16-adfd-4400-b42e-98afd6f6ac5a",
+                "resourcePath": "views\\a9936bf9-9131-4a4b-b0b7-0067d2b72846.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1555,6 +1651,14 @@
             "Value": {
                 "id": "5bb31108-d6e7-4599-a0a0-3379fb173e36",
                 "resourcePath": "views\\b391472e-716f-48be-a1f6-fb7536b1aed9.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b635dffc-bf08-4887-9b30-2a461c245b21",
+            "Value": {
+                "id": "6a65f0a2-1505-4ff8-8694-121e6acd2afb",
+                "resourcePath": "views\\b635dffc-bf08-4887-9b30-2a461c245b21.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -1626,7 +1730,7 @@
             "Key": "ba0403be-03e3-450c-b185-fcc1c348e091",
             "Value": {
                 "id": "c87ca098-0f00-4abc-b9c5-23c416e2ebf3",
-                "resourcePath": "sprites\\spr_hairfront_keia_d_walk\\spr_hairfront_keia_d_walk.yy",
+                "resourcePath": "sprites\\spr_hairfront_keia00_walk_d\\spr_hairfront_keia00_walk_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1655,6 +1759,14 @@
             }
         },
         {
+            "Key": "bc7fed6d-1661-40a5-b562-daf1c702aeb0",
+            "Value": {
+                "id": "6ffbb676-ea7c-4670-9dc7-135502d7ea17",
+                "resourcePath": "views\\bc7fed6d-1661-40a5-b562-daf1c702aeb0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bd435e20-d851-46d9-bd02-7923c0f463e3",
             "Value": {
                 "id": "ccd82437-2135-4cb6-af22-4c3927b11445",
@@ -1674,7 +1786,7 @@
             "Key": "bfef4a73-ae60-44ac-8766-eb48b1226ef7",
             "Value": {
                 "id": "ea1db481-13ea-4f02-9172-2b9517061360",
-                "resourcePath": "sprites\\spr_body_keia_d_walk\\spr_body_keia_d_walk.yy",
+                "resourcePath": "sprites\\spr_body_keia00_walk_d\\spr_body_keia00_walk_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1727,6 +1839,14 @@
             }
         },
         {
+            "Key": "c55d7d83-46e4-4030-be38-97d6493ecab5",
+            "Value": {
+                "id": "46154e3e-6fbf-4474-825a-2f38ea393830",
+                "resourcePath": "views\\c55d7d83-46e4-4030-be38-97d6493ecab5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c5d0ad97-b6e6-4f23-af2c-24f8f75b9566",
             "Value": {
                 "id": "340f0f57-068c-4589-951b-3158e48042c4",
@@ -1759,10 +1879,18 @@
             }
         },
         {
+            "Key": "c715866e-f739-4411-99e8-6ae9c9ed76df",
+            "Value": {
+                "id": "1908d719-36a7-49bd-bb02-0ee48626d85e",
+                "resourcePath": "views\\c715866e-f739-4411-99e8-6ae9c9ed76df.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c8592efc-9a3a-411f-89c1-78371b8ca749",
             "Value": {
                 "id": "c9d53a5e-2a91-4cb1-a4c2-c1f8356b04d3",
-                "resourcePath": "sprites\\spr_body_keia_u_walk\\spr_body_keia_u_walk.yy",
+                "resourcePath": "sprites\\spr_body_keia00_walk_u\\spr_body_keia00_walk_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1810,7 +1938,7 @@
             "Key": "cde2b118-b5fc-48f1-9b72-73467c330672",
             "Value": {
                 "id": "67d3ecce-a271-4e4e-8ab5-03c18ecf0f25",
-                "resourcePath": "sprites\\spr_shoes_keia_u_iddle\\spr_shoes_keia_u_iddle.yy",
+                "resourcePath": "sprites\\spr_shoes_keia00_iddle_u\\spr_shoes_keia00_iddle_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1826,7 +1954,7 @@
             "Key": "d1060662-621a-4b22-951b-fce3e7f47158",
             "Value": {
                 "id": "7db84550-26b6-42a4-b11b-31708f32ba74",
-                "resourcePath": "sprites\\spr_face_keia_d_iddle\\spr_face_keia_d_iddle.yy",
+                "resourcePath": "sprites\\spr_face_keia00_iddle_d\\spr_face_keia00_iddle_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1882,7 +2010,7 @@
             "Key": "dd668303-79fc-47f2-90a3-de92c21bfc77",
             "Value": {
                 "id": "cb6527cd-3905-42ca-878d-cbfbbf7f7b5b",
-                "resourcePath": "sprites\\spr_tshirt_keia_r_iddle\\spr_tshirt_keia_r_iddle.yy",
+                "resourcePath": "sprites\\spr_tshirt_keia00_iddle_r\\spr_tshirt_keia00_iddle_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1892,6 +2020,14 @@
                 "id": "9af12288-c6d5-4373-a88e-8614841efdb0",
                 "resourcePath": "scripts\\cutscene_wait\\cutscene_wait.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "de380d0d-63d5-4c02-b6f9-fc2d4b8b1f3d",
+            "Value": {
+                "id": "f7b4a3cf-0dbd-47ea-8122-0a7700e726c4",
+                "resourcePath": "views\\de380d0d-63d5-4c02-b6f9-fc2d4b8b1f3d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1922,7 +2058,7 @@
             "Key": "e1337e9e-8b56-4e32-88f5-72a8bcf1dd29",
             "Value": {
                 "id": "82e9ce28-3f40-4bcf-85b2-fb1bec64f5d6",
-                "resourcePath": "sprites\\spr_hairfront_keia_l_iddle\\spr_hairfront_keia_l_iddle.yy",
+                "resourcePath": "sprites\\spr_hairfront_keia00_iddle_l\\spr_hairfront_keia00_iddle_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1938,7 +2074,7 @@
             "Key": "e1e36251-d6da-4ecb-8ea1-302f6dda8f10",
             "Value": {
                 "id": "a78cc2f1-fe80-4299-837b-b17a904dce32",
-                "resourcePath": "sprites\\spr_makeup_keia_r_walk\\spr_makeup_keia_r_walk.yy",
+                "resourcePath": "sprites\\spr_makeup_keia00_walk_r\\spr_makeup_keia00_walk_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1946,7 +2082,7 @@
             "Key": "e27d5c2e-16d3-44c6-8941-8f203d0ba638",
             "Value": {
                 "id": "272d8e24-d95c-4ce9-8029-bf045b85d009",
-                "resourcePath": "sprites\\spr_face_keia_d_walk\\spr_face_keia_d_walk.yy",
+                "resourcePath": "sprites\\spr_face_keia00_walk_d\\spr_face_keia00_walk_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1962,7 +2098,7 @@
             "Key": "e3400f6d-3c08-4b83-b420-838329c6a4a8",
             "Value": {
                 "id": "9072597e-e08c-4144-be92-7ba6447cbb76",
-                "resourcePath": "sprites\\spr_body_keia_d_iddle\\spr_body_keia_d_iddle.yy",
+                "resourcePath": "sprites\\spr_body_keia00_iddle_d\\spr_body_keia00_iddle_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1986,7 +2122,7 @@
             "Key": "e3d5274d-b861-4ab5-ae59-5e0729ea7542",
             "Value": {
                 "id": "f69c8f43-a793-4d16-9366-a4e27c327750",
-                "resourcePath": "sprites\\spr_body_keia_u_iddle\\spr_body_keia_u_iddle.yy",
+                "resourcePath": "sprites\\spr_body_keia00_iddle_u\\spr_body_keia00_iddle_u.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2002,7 +2138,7 @@
             "Key": "e42f1fe2-3bfb-46e1-bbfc-ebd0bdc58778",
             "Value": {
                 "id": "ca0dd062-b560-4d08-8e60-d8c95ef56311",
-                "resourcePath": "sprites\\spr_jacket_keia_l_walk\\spr_jacket_keia_l_walk.yy",
+                "resourcePath": "sprites\\spr_jacket_keia00_walk_l\\spr_jacket_keia00_walk_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2019,6 +2155,14 @@
             "Value": {
                 "id": "43219d3e-1ea7-4687-a278-518ccf829e40",
                 "resourcePath": "views\\e46f0bf3-b372-4d52-834f-cfb4d9a8a83c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e4f5166e-5862-45ce-a4c6-c630f2bca830",
+            "Value": {
+                "id": "034b4636-4071-49cd-b162-e7171c1b1cf6",
+                "resourcePath": "views\\e4f5166e-5862-45ce-a4c6-c630f2bca830.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -2154,7 +2298,7 @@
             "Key": "f2350349-2e10-4c37-af36-6cca2606bdd3",
             "Value": {
                 "id": "20c80be6-3117-4c1a-8733-b5caa7dccbc2",
-                "resourcePath": "sprites\\spr_shoes_keia_r_iddle\\spr_shoes_keia_r_iddle.yy",
+                "resourcePath": "sprites\\spr_shoes_keia00_iddle_r\\spr_shoes_keia00_iddle_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2162,7 +2306,7 @@
             "Key": "f238cac3-e8e5-416e-ac69-0292196ef8a6",
             "Value": {
                 "id": "42463393-9771-4280-bee6-667747ff6c84",
-                "resourcePath": "sprites\\spr_jacket_keia_d_iddle\\spr_jacket_keia_d_iddle.yy",
+                "resourcePath": "sprites\\spr_jacket_keia00_iddle_d\\spr_jacket_keia00_iddle_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2170,7 +2314,7 @@
             "Key": "f2e7cb59-5542-4a56-bbec-2f80ad9ac1be",
             "Value": {
                 "id": "5822df00-6df5-4e1a-ac3d-2989b9fc2ee8",
-                "resourcePath": "sprites\\spr_body_keia_l_walk\\spr_body_keia_l_walk.yy",
+                "resourcePath": "sprites\\spr_body_keia00_walk_l\\spr_body_keia00_walk_l.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2234,7 +2378,7 @@
             "Key": "fc431481-7b0f-4159-b08b-34191bb76b99",
             "Value": {
                 "id": "ff2df96e-029c-4598-ab06-95657a635403",
-                "resourcePath": "sprites\\spr_tshirt_keia_r_walk\\spr_tshirt_keia_r_walk.yy",
+                "resourcePath": "sprites\\spr_tshirt_keia00_walk_r\\spr_tshirt_keia00_walk_r.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2242,7 +2386,7 @@
             "Key": "fcd4ff00-57ad-4bf8-9825-d9de1e645910",
             "Value": {
                 "id": "ef81da94-9d35-4b02-9570-f1c280705dc8",
-                "resourcePath": "sprites\\spr_tshirt_keia_d_walk\\spr_tshirt_keia_d_walk.yy",
+                "resourcePath": "sprites\\spr_tshirt_keia00_walk_d\\spr_tshirt_keia00_walk_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2258,7 +2402,7 @@
             "Key": "fd5cd5ff-1224-426c-873e-caca1bd437b0",
             "Value": {
                 "id": "e0e5a1fa-4eed-4266-9005-24bbaa013a89",
-                "resourcePath": "sprites\\spr_hairfront_keia_u_walk\\spr_hairfront_keia_u_walk.yy",
+                "resourcePath": "sprites\\spr_hairfront_keia00_walk_u\\spr_hairfront_keia00_walk_u.yy",
                 "resourceType": "GMSprite"
             }
         },
