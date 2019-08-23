@@ -18,10 +18,10 @@ name				= "Keia";
 age					= 17;
 
 mouth_x				= 0;
-mouth_y				= -15;
+mouth_y				= -25;
 
-voice				= snd_voice_test;
-voice_fast			= noone;
+voice				= snd_voice_keia;
+voice_fast			= snd_voice_fast_keia;
 
 talk_speed			= 1;
 
