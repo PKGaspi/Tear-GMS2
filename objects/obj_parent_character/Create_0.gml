@@ -47,7 +47,7 @@ spr_frame = 0;
 spr_subimage = 0;
 
 // Character values.
-dir					= 0; // Direction.
+dir					= 270; // Direction.
 
 x_move				= 0; // To move on x axis.
 y_move				= 0; // To move on y axis.

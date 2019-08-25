@@ -18,7 +18,7 @@ if (x_dest == -1) {
 	}
 	else {
 		x_dest = obj.x + argument1;
-		y_dest = obj.y + argument2;
+		y_dest = obj.y + obj.z + argument2;
 	}
 }
 
@@ -26,21 +26,15 @@ var xx = x_dest;
 var yy = y_dest;
 
 with (obj) {
-	// TODO: Set moving sprite index here.
-	
-	if (spd != 0 && point_distance(x, y, xx, yy) >= spd) {
-		var dir = point_direction(x, y, xx, yy);
+	if (spd != 0 && point_distance(x, y + z, xx, yy) >= spd) {
+		var dir = point_direction(x, y + z, xx, yy);
 		var ldirx = lengthdir_x(spd, dir);
 		var ldiry = lengthdir_y(spd, dir);
 		
-		// Set sprite flipping here.
-		
-		x += ldirx;
-		y += ldiry;
+		x_move = ldirx;
+		y_move = ldiry;
 	}
 	else {
-		// TODO: Set idle sprite here.
-		
 		x = xx;
 		y = yy;
 		

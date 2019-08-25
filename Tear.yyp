@@ -1199,6 +1199,14 @@
             }
         },
         {
+            "Key": "69aa975a-1e73-44c6-b877-34eeea8a5586",
+            "Value": {
+                "id": "5b2eb0df-2e02-4f09-95ef-5765c3b31667",
+                "resourcePath": "scripts\\camera_mirror_vertical\\camera_mirror_vertical.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6a5165ad-e78b-4810-b2da-bc14cc9d70d0",
             "Value": {
                 "id": "cf80fcea-fc98-4aac-a02f-e6da51d39b89",
@@ -2775,6 +2783,14 @@
             }
         },
         {
+            "Key": "ea73c9a7-964e-41ad-b966-76dc7ec25222",
+            "Value": {
+                "id": "bbf0a822-db2a-421f-bbfe-8021f65f7732",
+                "resourcePath": "scripts\\camera_mirror_horizontal\\camera_mirror_horizontal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "eaf71810-ba46-47e2-8783-f44cb5c25a5c",
             "Value": {
                 "id": "56fc7c44-b0c8-461f-adbb-20b1c755861b",
@@ -3053,6 +3069,8 @@
         "e7ffa642-3fa6-4656-bfee-6252f3b6776b",
         "5a52e946-35c0-452b-a173-693260e43e50",
         "230dce48-b046-46e3-b0fc-759ecad84004",
+        "ea73c9a7-964e-41ad-b966-76dc7ec25222",
+        "69aa975a-1e73-44c6-b877-34eeea8a5586",
         "0b6eb58a-b936-499d-b108-28d2e7b80b3c",
         "17563f32-1b12-4910-a064-ec034e1af3a2",
         "e36daa6d-35f7-487a-af9c-e778448af8ce",

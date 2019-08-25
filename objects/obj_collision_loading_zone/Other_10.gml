@@ -1,7 +1,7 @@
 /// @description Generate cutscene.
 
 // Player id and speed.
-var player_id = instance_place(x, y, obj_player);
+var player_id = instance_nearest(x, y, obj_player);
 var player_spd = player_id.move_speed * player_id.move_speed_run_multiplier;
 
 // Ammount and direction to move in the cutscene.

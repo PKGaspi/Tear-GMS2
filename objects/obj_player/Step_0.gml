@@ -21,6 +21,7 @@ round_x = false;
 round_y = false;
 if (h_input_h != 0 || v_input_h != 0) {
 	// Calculate direction.
+	// NOTE: Maybe the direction has to be recalculated somewhere.
 	dir = point_direction(0, 0, h_input_h, v_input_h);
 	x_move += lengthdir_x(move_speed, dir);
 	y_move += lengthdir_y(move_speed, dir);
@@ -53,32 +54,33 @@ else {
 if (x_move > 0) {
 	bbox_side = bbox_right;
 	table = global.collision_heights_left;
-	width = collision_get_width(tilemap, bbox_side, y, table);
+	width = collision_get_width(tilemap, bbox_side, y + z, table);
 	if (width == 16) {
 		// Check that tere is no collision on either side.
-		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1, table),
-					collision_get_width(tilemap, bbox_side, bbox_bottom - 1, table));
+		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1 + z, table),
+					collision_get_width(tilemap, bbox_side, bbox_bottom - 1 + z, table));
 	}
 	else if (width != 0) {
 		// Check the collision on the feet.
 		bbox_side = bbox_left + (bbox_right - bbox_left) / 2;
-		width = collision_get_width(tilemap, bbox_side, y, table);
+		width = collision_get_width(tilemap, bbox_side, y + z, table);
 	}
 	dist = bbox_side mod TILE_SIZE - width;
 }
 else if (x_move < 0) {
 	bbox_side = bbox_left;
 	table = global.collision_heights_right;
-	width = collision_get_width(tilemap, bbox_side, y, table);
+	width = collision_get_width(tilemap, bbox_side, y + z, table);
+	// TODO: Fix down collision not working while jumping.
 	if (width == 16) {
 		// Check that tere is no collision on either side.
-		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1, table),
-					collision_get_width(tilemap, bbox_side, bbox_bottom - 1, table));
+		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1 + z, table),
+					collision_get_width(tilemap, bbox_side, bbox_bottom - 1 + z, table));
 	}
 	else if (width != 0) {
 		// Check the collision on the feet.
 		bbox_side = bbox_left + (bbox_right - bbox_left) / 2;
-		width = collision_get_width(tilemap, bbox_side, y, table);
+		width = collision_get_width(tilemap, bbox_side, y + z, table);
 	}
 	dist = TILE_SIZE - bbox_side mod TILE_SIZE - width - 1;
 }
@@ -93,7 +95,7 @@ if (x_move != 0 && width != 16 && abs(dist) < abs(x_move)) {
 // Vertical collision.
 
 if (y_move > 0) {
-	bbox_side = bbox_bottom;
+	bbox_side = bbox_bottom + 1 + z;
 	table = global.collision_heights_top;
 	height = collision_get_height(tilemap, x, bbox_side, table);
 	if (height == 16) {
@@ -104,7 +106,7 @@ if (y_move > 0) {
 	dist = bbox_side mod TILE_SIZE - height;
 }
 else if (y_move < 0) {
-	bbox_side = bbox_top;
+	bbox_side = bbox_top + z;
 	table = global.collision_heights_bottom;
 	height = collision_get_height(tilemap, x, bbox_side, table);
 	if (height == 16) {
@@ -117,22 +119,38 @@ else if (y_move < 0) {
 
 if (y_move != 0 && height != 16 && abs(dist) < abs(y_move)) {
 	// Stop movement due to a collision.
-	y_move = 0;//sign(y_move) * abs(dist);
-	round_y = true;
+	y_move = 0;//dist;
+	if (z == 0) {
+		round_y = true;
+	}
 }
 
 #endregion
 #region // Add movement. DO NOT TOUCH X AND Y ANYWHERE ELSE!!
+
+// Save previous values.
+var x_prev = x;
+var y_prev = y;
+var z_prev = z;
+
+// Add movement.
 x += x_move;
 y += y_move - z_move;
 z += z_move;
 
+// Round coordinates if it's said to.
 if (round_x) {
 	x = round(x);
 }
 if (round_y) {
 	y = round(y);
 }
+
+// Calculate movement direction.
+if (x_prev != x || y_prev + z_prev != y + z) {
+	dir = round(point_direction(x_prev, y_prev + z_prev, x, y + z)) % 360;
+}
+
 #endregion
 #region // Calculate animation state.
 if (y_move == 0 && x_move == 0) character_set_animation(animation_state.iddle);
@@ -148,7 +166,7 @@ y_move = 0;
 if (global.cutscene) exit;
 // Collisions.
 #region // Loading box colision.
-var box = instance_place(x, y, obj_parent_collision_box);
+var box = instance_place(x, y + z, obj_parent_collision_box);
 if (box != noone) {
 	with (box) event_perform(ev_other, ev_user0);
 }
