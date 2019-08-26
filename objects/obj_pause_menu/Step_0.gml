@@ -4,6 +4,7 @@ var input_esc_p = keyboard_check_pressed(vk_escape);
 if (input_esc_p) {
 	global.pause = !global.pause;
 	if (global.pause) {
+		// Open pause menu.
 		audio_play_sound(snd_menu_enter, 1, false);
 		// Clean the menu variables.
 		page = 0;
@@ -22,7 +23,9 @@ if (input_esc_p) {
 		x_window, y_window, gwidth - x_window, gheight - y_window, false, 1.2, random_dir(), c_black, .7);
 	}
 	else {
+		// Close pause menu.
 		audio_play_sound(snd_menu_leave, 1, false);
+		config_save();
 		// Destroy animated window.
 		instance_destroy(window, false);
 	}

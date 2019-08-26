@@ -31,16 +31,25 @@ if (follow != noone && instance_exists(follow)) {
 	// Calculate new position.
 	x_to = follow.x;
 	y_to = follow.y;
-	// Aplay camera delay.
-	x	+= (x_to - x) / delay;
-	y	+= (y_to - y) / delay;
-	
-	// Stay in place if the following instance goes beyond the limits of the room.
-	if (x - abs(width) / 2 < 0)					x = abs(width) / 2;
-	if (x + abs(width) / 2 > room_width)		x = room_width - abs(width) / 2;
-	if (y - abs(height) / 2 < 0)				y = abs(height) / 2;
-	if (y + abs(height) / 2 > room_height)		y = room_height - abs(height) / 2;
 }
+
+// Apply camera delay.
+x += (x_to - x) / delay;
+y += (y_to - y) / delay;
+	
+// Apply screenshake.
+if (shake_remain != 0) {
+	x += random_range(-shake_remain, shake_remain);
+	y += random_range(-shake_remain, shake_remain);
+	shake_remain = max(0, shake_remain - shake_level / shake_length);
+}
+	
+// Stay in place if the following instance goes beyond the limits of the room.
+if (x - abs(width) / 2 < 0)					x = abs(width) / 2;
+if (x + abs(width) / 2 > room_width)		x = room_width - abs(width) / 2;
+if (y - abs(height) / 2 < 0)				y = abs(height) / 2;
+if (y + abs(height) / 2 > room_height)		y = room_height - abs(height) / 2;
+
 
 // Update view matrix.
 var vm = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);

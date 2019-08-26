@@ -27,6 +27,11 @@ delay							= 1; // Don't go lower than 1.
 zoom							= 1;
 zoom_sp							= 0;
 
+// Setting up screenshake.
+shake_length = 0; // Length of the shake in steps.
+shake_level = 0; // Magniude of the shake in pixels.
+shake_remain = 0;
+
 // Setting up the game window and application surface.
 surface_resize(application_surface, global.DISPLAY_WIDTH, global.DISPLAY_HEIGHT);
 

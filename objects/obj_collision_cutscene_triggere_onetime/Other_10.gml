@@ -8,3 +8,6 @@ if (cutscene_id != -1) {
 		if (cutscene_id == my_id) instance_destroy(self, false);
 	}
 }
+else {
+	instance_destroy();
+}

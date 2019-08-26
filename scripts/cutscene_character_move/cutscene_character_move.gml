@@ -41,7 +41,7 @@ with (obj) {
 		with (other) {
 			x_dest = -1;
 			y_dest = -1;
-			cutscene_next_scene();
+			cutscene_scene_next();
 		}
 	}
 	

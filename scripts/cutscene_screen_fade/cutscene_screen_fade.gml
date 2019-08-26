@@ -10,4 +10,4 @@ else {
 	screen_fade(argument[0], argument[1]);	
 }
 
-cutscene_next_scene();
+cutscene_scene_next();

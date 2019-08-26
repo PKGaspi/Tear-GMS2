@@ -3,4 +3,4 @@
 /// @arg1 value The new value of the varible.
 
 variable_global_set(argument0, argument1);
-cutscene_next_scene();
+cutscene_scene_next();

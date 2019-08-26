@@ -2,4 +2,4 @@
 /// @arg0 id The id of the instance or object to destroy.
 
 instance_destroy(argument0);
-cutscene_next_scene();
+cutscene_scene_next();

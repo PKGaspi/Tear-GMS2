@@ -4,5 +4,5 @@
 /// @arg1 num Minimun number of instances to wait for (<=).
 
 if (instance_number(argument0) <= argument1) {
-	cutscene_next_scene();
+	cutscene_scene_next();
 }

@@ -4,4 +4,4 @@
 /// @arg2 loops Weather the sound loops or not.
 
 audio_play_sound(argument0, argument1, argument2);
-cutscene_next_scene();
+cutscene_scene_next();

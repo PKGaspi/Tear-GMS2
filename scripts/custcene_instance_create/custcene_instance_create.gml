@@ -6,6 +6,6 @@
 /// @return inst_id The id of the new instance.
 
 var inst = instance_create_layer(argument0, argument1, argument2, argument3);
-cutscene_next_scene();
+cutscene_scene_next();
 
 return inst;

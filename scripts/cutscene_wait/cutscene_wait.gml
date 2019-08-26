@@ -7,5 +7,5 @@ timer++;
 
 if (timer >= argument0 * room_speed) {
 	timer = 0;
-	cutscene_next_scene();
+	cutscene_scene_next();
 }

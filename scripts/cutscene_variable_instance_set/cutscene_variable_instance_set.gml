@@ -6,4 +6,4 @@
 with (argument0) {
 	variable_instance_set(id, argument1, argument2);
 }
-cutscene_next_scene();
+cutscene_scene_next();
