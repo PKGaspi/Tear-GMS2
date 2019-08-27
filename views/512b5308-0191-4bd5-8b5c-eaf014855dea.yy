@@ -8,7 +8,7 @@
         "a75162b9-893f-4ccd-9001-06d781828f4a"
     ],
     "filterType": "GMSprite",
-    "folderName": "Hair styles",
+    "folderName": "Hair",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
