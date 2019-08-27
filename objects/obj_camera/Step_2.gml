@@ -36,10 +36,10 @@ if (follow != noone && instance_exists(follow)) {
 	y	+= (y_to - y) / delay;
 	
 	// Stay in place if the following instance goes beyond the limits of the room.
-	if (x - width / 2 < 0)					x = width / 2;
-	if (x + width / 2 > room_width)			x = room_width - width / 2;
-	if (y - height / 2 < 0)					y = height / 2;
-	if (y + height / 2 > room_height)		y = room_height - height / 2;
+	if (x - abs(width) / 2 < 0)					x = abs(width) / 2;
+	if (x + abs(width) / 2 > room_width)		x = room_width - abs(width) / 2;
+	if (y - abs(height) / 2 < 0)				y = abs(height) / 2;
+	if (y + abs(height) / 2 > room_height)		y = room_height - abs(height) / 2;
 }
 
 // Update view matrix.

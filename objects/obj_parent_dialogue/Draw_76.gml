@@ -35,14 +35,15 @@ if (v_move_p != 0) {
 }
 
 if (char_count < _text_length) {
-	// Increment text size by one char.
-	char_count += speaker_talk_speed;
-	text_draw = string_copy(_text, 1, char_count);
 	// TODO: Fix this for non int talk speeds.
 	if (floor(char_count % 3) == 1) {
 		// Play voice.
+		audio_sound_pitch(speaker_voice, random_range(.99, 1.01));
 		audio_play_sound(speaker_voice, 1, false);
 	}
+	// Increase the char count by the speaker talk speed.
+	char_count += speaker_talk_speed;
+	text_draw = string_copy(_text, 1, char_count);
 }
 else if (char_count > _text_length){
 	// Avoid text errors if language was changed.

@@ -4,10 +4,8 @@
     "mvc": "1.1",
     "name": "b67c76d9-83da-4474-a4b2-62f8793cca1b",
     "children": [
-        "1f43b676-4931-4687-b798-5a7cbe5d8ff9",
-        "96c366f5-71ab-4823-9a29-30612c50494b",
-        "13776677-643b-4b70-a245-fd69ee66c7e3",
-        "bfb0c3e7-9ceb-4221-8129-2fa4d73aaadf"
+        "e7c44553-1e53-4703-8c77-8efe4a5c6255",
+        "6c4c6fae-4fd2-4760-b8b4-1b5edaf2e397"
     ],
     "filterType": "GMSound",
     "folderName": "SFX",
