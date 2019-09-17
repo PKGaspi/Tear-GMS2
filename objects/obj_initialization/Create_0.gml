@@ -76,7 +76,7 @@ config_load();
 // Setup camera, menu object and draw object.
 instance_create_layer(x, y, "Menus", obj_camera);
 instance_create_layer(x, y, "Hidden", obj_pause_menu);
-instance_create_layer(x, y, "Hidden", obj_draw_depth);
+instance_create_layer(x, y, "Depth", obj_draw_depth);
 
 alarm[0] = 2; // Fixes fullscreen to window size.
 

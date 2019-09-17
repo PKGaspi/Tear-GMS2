@@ -18,7 +18,7 @@ var ds_bestiary = global.save[? "bestiary"];
 room_goto(rm);
 
 // TODO: Maybe create a script that does this properly (for multiplayer and so idk).
-var player = instance_create_layer(_x, _y, "Characters", obj_player);
+var player = instance_create_layer(_x, _y, "Depth", obj_player);
 player.ds_inventory = ds_inventory;
 player.ds_clothes = ds_clothes;
 player.ds_bestiary = ds_bestiary;
