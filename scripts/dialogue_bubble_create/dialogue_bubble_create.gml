@@ -27,7 +27,6 @@ with (inst) {
 	inside_color = _inside_color
 	
 	text = _text;
-	
 	if (_speaker != noone) {
 		speaker = _speaker;
 		speaker_mouth_x = _speaker_x;
@@ -38,6 +37,8 @@ with (inst) {
 		speaker_talk_speed = _speaker_talk_speed;
 		speaker_font = _speaker_font;
 	}
+	
+	dialogue_update_sizes();
 }
 
 return inst;

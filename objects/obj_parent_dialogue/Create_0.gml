@@ -22,4 +22,7 @@ speaker_voice_fast = noone;
 speaker_font = fnt_dialogue;
 speaker_talk_speed = 1;
 
+font_size = 5;
+max_width = 80;
+
 alarm[0] = 1;

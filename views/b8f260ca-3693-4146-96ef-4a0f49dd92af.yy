@@ -4,16 +4,12 @@
     "mvc": "1.1",
     "name": "b8f260ca-3693-4146-96ef-4a0f49dd92af",
     "children": [
-        "0b6eb58a-b936-499d-b108-28d2e7b80b3c",
-        "17563f32-1b12-4910-a064-ec034e1af3a2",
-        "e36daa6d-35f7-487a-af9c-e778448af8ce",
-        "c1ba7c7b-de91-44f7-8000-087943f653fe",
-        "bd435e20-d851-46d9-bd02-7923c0f463e3",
-        "4e4159c7-5aa7-4791-b1d0-a6e03dc42298",
-        "ea038e0f-8538-4647-87b2-62d7f6fc8624",
-        "da5339a3-e45d-4bb4-98f0-73e523830394",
-        "8ded0315-217a-496a-831a-a19130dbbb9a",
-        "e1404048-f622-4524-a512-c3d10754bc1b"
+        "1be11a17-68dc-4a98-a6b1-95ed16b690ad",
+        "a37bccb7-534c-4bac-ba09-fbe21f8a37ab",
+        "ae1f0bec-28c3-458f-b847-70bd043e6eb8",
+        "2867a3ca-93e7-4047-8e73-f8985bfcf15e",
+        "71db71ae-9682-4005-bc45-83eee2f32b33",
+        "7546f216-cca2-4857-b52e-231a608c24cc"
     ],
     "filterType": "GMScript",
     "folderName": "Coding",

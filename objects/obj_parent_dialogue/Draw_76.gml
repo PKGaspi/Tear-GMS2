@@ -14,10 +14,15 @@ var v_move_p = input_next_p - input_previous_p;
 if (v_move_p != 0) {
 	if (char_count < _text_length) {
 		// Fast show all the current text.
-		char_count = _text_length;
-		text_draw = _text;
+		// Play fast voice sound.
 		audio_stop_sound(speaker_voice);
 		audio_play_sound(speaker_voice_fast, 1, false);
+		// Copy the whole text to the drawing text.
+		char_count = _text_length;
+		text_draw = _text;
+		// Calculate full width and height.
+		width = total_widths[text_count];
+		height = total_heights[text_count];
 	}
 	else {
 		// Go to previous or next text_count.
@@ -40,13 +45,20 @@ if (char_count < _text_length) {
 		// Play voice.
 		audio_sound_pitch(speaker_voice, random_range(.99, 1.01));
 		audio_play_sound(speaker_voice, 1, false);
+		audio_sound_pitch(speaker_voice, 1);
 	}
 	// Increase the char count by the speaker talk speed.
 	char_count += speaker_talk_speed;
 	text_draw = string_copy(_text, 1, char_count);
+	// Calculate new width and height.
+	draw_set_font(speaker_font);
+	width = min(string_width_size(text_draw, font_size), max_width);
+	height = string_height_ext_size(text_draw, -1, max_width, font_size);
 }
 else if (char_count > _text_length){
 	// Avoid text errors if language was changed.
 	char_count = _text_length;
 	text_draw = _text;
+	dialogue_update_sizes();
 }
+

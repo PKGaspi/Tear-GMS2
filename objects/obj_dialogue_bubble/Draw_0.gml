@@ -2,20 +2,13 @@
 
 draw_set_font(speaker_font);
 // Variables.
-var font_size = 5;
-var font_og_size = font_get_size(draw_get_font());
 
 // Text margins.
 var x_margin = 4;
 var y_margin = 2;
 
-var _text = array_get(text[text_count], get_language_num(global.language));
-
-var total_width = min(string_width(_text) * font_size / font_og_size, 80);
-var total_height = string_height_ext(_text, -1, total_width * font_og_size / font_size) * font_size / font_og_size;
-
-var width = min(string_width(text_draw) * font_size / font_og_size, 80);
-var height = string_height_ext(text_draw, -1, total_width * font_og_size / font_size) * font_size / font_og_size;
+var t_w = total_widths[text_count];
+var t_h = total_heights[text_count];
 
 var x_offset = 14;
 var y_offset = 0;
@@ -30,13 +23,13 @@ var mouth_y = speaker_mouth_y + speaker_y;
 
 // TODO: x1 and y1 are fixed for every text. This can be optimized by
 // calculating them once per text in the pre-draw event.
-var x1 = mouth_x - total_width - x_margin - x_offset;
-var y1 = mouth_y - total_height / 2 - y_margin - y_offset;
+var x1 = mouth_x - t_w - x_margin - x_offset;
+var y1 = mouth_y - t_h / 2 - y_margin - y_offset;
 var x2 = x1 + width + 2 * x_margin;
 var y2 = y1 + height + 2 * y_margin;
 
-var x2_final = x1 + total_width + 2 * x_margin;
-var y2_final = y1 + total_height + 2 * y_margin;
+var x2_final = x1 + t_w + 2 * x_margin;
+var y2_final = y1 + t_h + 2 * y_margin;
 // Check if the dialogue is on camera and
 // move it if necessary.
 var camera = global.cameras[0];
@@ -54,7 +47,7 @@ if (x1 < view_left) {
 }
 else if (x2_final > view_right) {
 	// Symmetry to the x of the speaker.
-	x2 = view_right - total_width + width - x_margin;
+	x2 = view_right - t_w + width - x_margin;
 	x1 = x2 - width - 2 * x_margin;
 	mouth_x = view_right;
 }
@@ -86,4 +79,4 @@ if (y2 - y_margin - spike_height >= mouth_y) {
 // Draw the text.
 // TODO: Calculate this color just once.
 draw_set_color(color_for_contrast(inside_color));
-draw_text_ext_size(x1 + x_margin, y1 + y_margin, text_draw, -1, total_width, font_size);
+draw_text_ext_size(x1 + x_margin, y1 + y_margin, text_draw, -1, max_width, font_size);
