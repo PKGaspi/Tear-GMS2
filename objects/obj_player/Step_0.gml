@@ -1,6 +1,6 @@
 /// @description Movement and a lot more.
 if (global.pause) exit; // Finish if movement is not allowed.
-var bbox_side, table, width, height, dist, round_x, round_y;
+var bbox_side, bbox_center, table, width, height, dist, round_x, round_y;
 
 #region // Inputs.
 if (!global.cutscene && !global.debug_menu) {
@@ -49,56 +49,13 @@ else {
 #endregion
 #region // Terrain collision.
 // TODO: Make this work with the z axis.
-// Horizontal collision.
-
-if (x_move > 0) {
-	bbox_side = bbox_right;
-	table = global.collision_heights_left;
-	width = collision_get_width(tilemap, bbox_side, y + z, table);
-	if (width == 16) {
-		// Check that tere is no collision on either side.
-		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1 + z, table),
-					collision_get_width(tilemap, bbox_side, bbox_bottom - 1 + z, table));
-	}
-	else if (width != 0) {
-		// Check the collision on the feet.
-		bbox_side = bbox_left + (bbox_right - bbox_left) / 2;
-		width = collision_get_width(tilemap, bbox_side, y + z, table);
-	}
-	dist = bbox_side mod TILE_SIZE - width;
-}
-else if (x_move < 0) {
-	bbox_side = bbox_left;
-	table = global.collision_heights_right;
-	width = collision_get_width(tilemap, bbox_side, y + z, table);
-	// TODO: Fix down collision not working while jumping.
-	if (width == 16) {
-		// Check that tere is no collision on either side.
-		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1 + z, table),
-					collision_get_width(tilemap, bbox_side, bbox_bottom - 1 + z, table));
-	}
-	else if (width != 0) {
-		// Check the collision on the feet.
-		bbox_side = bbox_left + (bbox_right - bbox_left) / 2;
-		width = collision_get_width(tilemap, bbox_side, y + z, table);
-	}
-	dist = TILE_SIZE - bbox_side mod TILE_SIZE - width - 1;
-}
-
-if (x_move != 0 && width != 16 && abs(dist) < abs(x_move)) {
-	// Stop movement due to a collision.
-	x_move = 0;//sign(x_move) * abs(dist);
-	round_x = true;
-}
-
 
 // Vertical collision.
-
 if (y_move > 0) {
-	bbox_side = bbox_bottom + 1 + z;
+	bbox_side = round(bbox_bottom + z + 1);
 	table = global.collision_heights_top;
 	height = collision_get_height(tilemap, x, bbox_side, table);
-	if (height == 16) {
+	if (height == TILE_SIZE) {
 		// Check that tere is no collision on either side.
 		height = min(collision_get_height(tilemap, bbox_left + 1, bbox_side, table),
 					 collision_get_height(tilemap, bbox_right - 1, bbox_side, table));
@@ -109,7 +66,7 @@ else if (y_move < 0) {
 	bbox_side = bbox_top + z;
 	table = global.collision_heights_bottom;
 	height = collision_get_height(tilemap, x, bbox_side, table);
-	if (height == 16) {
+	if (height == TILE_SIZE) {
 		// Check that tere is no collision on either side.
 		height = min(collision_get_height(tilemap, bbox_left + 1, bbox_side, table),
 					 collision_get_height(tilemap, bbox_right - 1, bbox_side, table));
@@ -117,12 +74,54 @@ else if (y_move < 0) {
 	dist = TILE_SIZE - bbox_side mod TILE_SIZE - height - 1;
 }
 
-if (y_move != 0 && height != 16 && abs(dist) < abs(y_move)) {
+if (y_move != 0 && height != TILE_SIZE && abs(dist) < abs(y_move)) {
 	// Stop movement due to a collision.
-	y_move = 0;//dist;
+	y_move = dist;//dist;
 	if (z == 0) {
 		round_y = true;
 	}
+}
+
+// Horizontal collision.
+if (x_move > 0) {
+	bbox_side = bbox_right;
+	bbox_center = bbox_left + (bbox_right - bbox_left) / 2;
+	table = global.collision_heights_left;
+	width = collision_get_width(tilemap, bbox_side, y + z, table);
+	if (width == TILE_SIZE) {
+		// Check that tere is no collision on either side.
+		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1 + z, table),
+					collision_get_width(tilemap, bbox_side, bbox_bottom - 1 + z, table));
+	}
+	if (width != 0) {
+		// Check the collision on the feet.
+		bbox_side = bbox_left + (bbox_right - bbox_left) / 2; // The center of the collision.
+		width = collision_get_width(tilemap, bbox_side, y + z, table);
+	}
+	dist = bbox_side mod TILE_SIZE - width;
+}
+else if (x_move < 0) {
+	bbox_side = bbox_left;
+	table = global.collision_heights_right;
+	width = collision_get_width(tilemap, bbox_side, y + z, table);
+	// TODO: Fix down collision not working while jumping.
+	if (width == TILE_SIZE) {
+		// Check that tere is no collision on either side.
+		width = min(collision_get_width(tilemap, bbox_side, bbox_top + 1 + z, table),
+					collision_get_width(tilemap, bbox_side, bbox_bottom - 1 + z, table));
+	}
+	if (width != 0) {
+		// Check the collision on the feet.
+		bbox_side = bbox_left + (bbox_right - bbox_left) / 2;
+		width = collision_get_width(tilemap, bbox_side, y + z, table);
+	}
+	dist = TILE_SIZE - bbox_side mod TILE_SIZE - width - 1;
+}
+
+if (x_move != 0 && width != TILE_SIZE && abs(dist) < abs(x_move)) {
+	// Stop movement due to a collision.
+	x_move = dist;//sign(x_move) * abs(dist);
+	round_x = true;
 }
 
 #endregion
